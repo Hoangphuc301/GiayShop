@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary fw-bold">➕ Thêm sản phẩm</h2>
+
+    <form asp-area="Admin" asp-controller="Sanpham" asp-action="them" method="post" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Mã danh mục</label>
+            <input name="Madm" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Mã thương hiệu</label>
+            <input name="Math" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Tên sản phẩm</label>
+            <input name="Tensp" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Giá</label>
+            <input name="Gia" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Mô tả</label>
+            <input name="Mota" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Hình đại diện</label>
+            <input name="Hinhdaidien" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Trạng thái</label>
+            <input name="Trangthai" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6">
+                <a href="@Url.Content("~/Admin/Sanpham")"
+                   class="btn btn-outline-secondary w-100">
+                    Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">
+                    Thêm mới
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>

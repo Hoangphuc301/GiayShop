@@ -1,0 +1,38 @@
+﻿@{
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+	var dm = ViewBag.ThuongHieu;
+}
+
+<div class="container mt-4" style="max-width:700px;">
+	<h2 class="mb-3">Thương hiệu</h2>
+
+	<form asp-area="Admin" asp-controller="ThuongHieu" asp-action="sua" method="post" class="card p-4 shadow-sm">
+		@Html.AntiForgeryToken()
+		<input type="hidden" name="Math" value="@dm.Math" />
+
+		<div class="mb-3">
+			<label class="form-label">Tên thương hiệu</label>
+			<input name="Tenth" value="@dm.Tenth" class="form-control" maxlength="50" />
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Mô tả</label>
+			<textarea name="Mota" class="form-control" rows="3" maxlength="255">@dm.Mota</textarea>
+		</div>
+
+		<div class="mb-3">
+			<label class="form-label">Logo</label>
+			<textarea name="Logo" class="form-control" rows="3" maxlength="255">@dm.Logo</textarea>
+		</div>
+
+		<div class="row mt-3">
+			<div class="col-6">
+				<a href="@Url.Action("Index","ThuongHieu", new { area="Admin"})"
+				   class="btn btn-outline-secondary w-100">Quay lại</a>
+			</div>
+			<div class="col-6">
+				<button type="submit" class="btn btn-primary w-100">Lưu</button>
+			</div>
+		</div>
+	</form>
+</div>

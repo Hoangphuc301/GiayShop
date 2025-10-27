@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var s = ViewBag.Size;
+}
+
+<div class="container mt-4" style="max-width:650px;">
+
+    <div class="mb-3">
+        <label class="form-label">Số size</label>
+        <input name="Tensize" value="@s.Tensize" class="form-control" maxlength="50" />
+    </div>
+
+    <form asp-area="Admin" asp-controller="Size" asp-action="xoa" method="post" class="mt-3">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Masize" value="@s.Masize" />
+
+        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
+        <a href="@Url.Action("Index","Size", new { area="Admin"})" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

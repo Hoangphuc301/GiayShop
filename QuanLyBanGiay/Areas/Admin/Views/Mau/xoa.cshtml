@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var m = ViewBag.Mau;
+}
+
+<div class="container mt-4" style="max-width:650px;">
+    <h2 class="text-danger fw-bold">Xác nhận xóa màu</h2>
+    <p>Bạn có chắc muốn xóa màu giày sau không?</p>
+
+    <div class="card p-3 mt-3 shadow-sm bg-light">
+        <strong>Tên màu:</strong> @m.Tenmau
+    </div>
+
+    <form asp-area="Admin" asp-controller="Mau" asp-action="xoa" method="post" class="mt-4">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Mamau" value="@m.Mamau" />
+
+        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
+        <a href="@Url.Action("Index","Mau", new { area="Admin"})" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

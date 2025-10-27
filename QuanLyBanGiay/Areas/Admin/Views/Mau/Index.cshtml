@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4 text-primary fw-bold">Danh Mục Màu Giày</h2>
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center">
+            @TempData["Success"]
+        </div>
+    }
+
+    <div class="text-end mb-3">
+        <a href="@Url.Action("them")" class="btn btn-success">
+            ➕ Thêm mới
+        </a>
+    </div>
+
+    <table class="table table-bordered table-hover text-center align-middle shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                @* <th>Mã màu</th> *@
+                <th>Tên màu</th>
+                <th style="width: 15%;">Tác vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in ViewBag.Mau)
+            {
+                @* Ẩn mã *@
+                <input type="hidden" name="Mamau" value="@item.Mamau" />
+                <tr>
+                    <td>@item.Tenmau</td>
+                    <td>
+                        <a href="@Url.Action("sua", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-success">✏️ Sửa</a>
+                        <a href="@Url.Action("xoa", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa không?')">🗑️ Xóa</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <div class="text-start mt-3">
+        <a href="@Url.Content("~/Admin")" class="btn btn-outline-secondary">
+            ⬅️ Quay lại
+        </a>
+    </div>
+</div>

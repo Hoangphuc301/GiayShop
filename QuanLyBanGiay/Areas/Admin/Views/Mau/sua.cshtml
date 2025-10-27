@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var m = ViewBag.Mau;
+}
+
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="mb-3">Sửa loại màu</h2>
+
+    <form asp-area="Admin" asp-controller="Mau" asp-action="sua" method="post" class="card p-4 shadow-sm">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Mamau" value="@m.Mamau" />
+
+        <div class="mb-3">
+            <label class="form-label">Tên loại màu</label>
+            <input name="Tenmau" value="@m.Tenmau" class="form-control" maxlength="50" />
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Mau", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">Quay lại</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">Lưu</button>
+            </div>
+        </div>
+    </form>
+</div>

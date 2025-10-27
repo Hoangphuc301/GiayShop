@@ -1,0 +1,129 @@
+﻿@{
+    Layout = null;
+    var title = ViewData["Title"] ?? "Styleofme.vn | Giày Chính Hãng";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Of Me | Giày Chính Hãng</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Thanh thông báo -->
+    <div class="top-bar">
+        FREESHIP toàn quốc cho đơn hàng từ 1.000.000₫
+    </div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+            <img src="~/images/logo.jpg" alt="StyleOfMe Logo" style="height:70px; width:auto; margin-right:10px;">
+        </a>
+
+        <!-- Toggle for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Giày Nam</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Giày Nữ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Thương hiệu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
+
+                <!-- GIỚI THIỆU-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false"> Giới thiệu </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="#">Chính sách ưu đãi</a></li>
+                        <li><a class="dropdown-item" href="#">Chính sách đổi trả & bảo hành</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+            </ul>
+
+            <!-- Tìm kiếm -->
+                <div class="header-icons d-flex align-items-center gap-3">
+                    <form method="get" asp-controller="Product" asp-action="Search" class="d-flex align-items-center">
+                        <input type="text" name="q" placeholder="Tìm kiếm giày..." class="form-control me-2" />
+                        <button type="submit" class="btn btn-outline-dark"><i class="fa fa-search"></i></button>
+                    </form>
+
+                    <!-- Icon người dùng (chuyển hướng tới trang đăng nhập) -->
+                    <a asp-controller="Account" asp-action="Login" class="text-dark d-flex align-items-center">
+                        <i class="fa fa-user fa-lg"></i>
+                    </a>
+
+                    <!-- Icon giỏ hàng -->
+                    <a asp-controller="Cart" asp-action="Index" class="text-dark position-relative d-flex align-items-center">
+                        <i class="fa fa-shopping-cart fa-lg"></i>
+                        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">2</span>
+                    </a>
+                </div>
+
+        </div>
+    </div>
+</nav>
+
+    <!-- Nội dung chính -->
+    <div class="container mt-4 mb-5">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về Styleofme.vn</h5>
+                    <p>Styleofme.vn là hệ thống bán giày chính hãng, phân phối các thương hiệu nổi tiếng như Nike, Adidas, Puma, New Balance...</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Chính sách</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>Hồ Chí Minh, Việt Nam</p>
+                    <p><i class="fa fa-phone me-2"></i>Hotline: 0909 123 456</p>
+                    <p><i class="fa fa-envelope me-2"></i>support@styleofme.vn</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 - Styleofme.vn | Thiết kế bởi <strong>Nhóm SOFM</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

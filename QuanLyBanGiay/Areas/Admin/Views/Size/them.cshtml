@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary fw-bold">➕ Thêm loại kích cỡ</h2>
+
+    <form asp-area="Admin" asp-controller="Size" asp-action="them" method="post" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Số size</label>
+            <input name="Tensize" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6">
+                <a href="@Url.Content("~/Admin/Size")"
+                   class="btn btn-outline-secondary w-100">
+                    Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">
+                    Thêm mới
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var s = ViewBag.Size;
+}
+
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="mb-3">Sửa số kích cỡ</h2>
+
+    <form asp-area="Admin" asp-controller="Size" asp-action="sua" method="post" class="card p-4 shadow-sm">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Masize" value="@s.Masize" />
+
+        <div class="mb-3">
+            <label class="form-label">Số size</label>
+            <input name="Tensize" value="@s.Tensize" class="form-control" maxlength="50" />
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Size", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">Quay lại</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">Lưu</button>
+            </div>
+        </div>
+    </form>
+</div>
