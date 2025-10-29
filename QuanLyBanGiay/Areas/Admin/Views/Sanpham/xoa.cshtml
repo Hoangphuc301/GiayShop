@@ -1,0 +1,60 @@
+﻿@model QuanLyBanGiay.Models.Sanpham
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger fw-bold mb-4">🗑️ Xóa sản phẩm</h2>
+
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row">
+            <dt class="col-sm-3">Mã sản phẩm:</dt>
+            <dd class="col-sm-9">@Model.Masp</dd>
+
+            <dt class="col-sm-3">Mã danh mục:</dt>
+            <dd class="col-sm-9">@Model.MadmNavigation.Tendm</dd>
+
+            <dt class="col-sm-3">Mã thương hiệu:</dt>
+            <dd class="col-sm-9">@Model.MathNavigation.Tenth</dd>
+
+            <dt class="col-sm-3">Tên sản phẩm:</dt>
+            <dd class="col-sm-9">@Model.Tensp</dd>
+
+            <dt class="col-sm-3">Giá:</dt>
+            <dd class="col-sm-9">@Model.Gia.ToString("N0") VNĐ</dd>
+
+            <dt class="col-sm-3">Mô tả:</dt>
+            <dd class="col-sm-9">@Model.Mota</dd>
+
+            <dt class="col-sm-3">Hình đại diện:</dt>
+            <dd class="col-sm-9">
+                <img src="@Model.Hinhdaidien" alt="@Model.Tensp" width="100" />
+            </dd>
+
+            <dt class="col-sm-3">Trạng thái:</dt>
+            <dd class="col-sm-9">@Model.Trangthai</dd>
+        </dl>
+    </div>
+
+    <form asp-area="Admin" asp-controller="Sanpham" asp-action="xoa" method="post" class="mt-4">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Masp" />
+
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa sản phẩm <strong>@Model.Tensp</strong> không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Sanpham", new { area="Admin"})" class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">
+                    🗑️ Xác nhận xóa
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

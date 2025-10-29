@@ -21,8 +21,64 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\html\\home.html",
+      "PackagePath": "staticwebassets\\html\\home.html"
+    },
+    {
       "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Banner.png",
       "PackagePath": "staticwebassets\\images\\Banner.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
+      "PackagePath": "staticwebassets\\images\\Chinhsach\\BoCongThuong.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\Adidas_Logo.svg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg",
+      "PackagePath": "staticwebassets\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\fila_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\fila_logo.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\gucci_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\gucci_logo.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\logo_nike.jpg",
+      "PackagePath": "staticwebassets\\images\\Logo\\logo_nike.jpg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\puma_logo.jpg",
+      "PackagePath": "staticwebassets\\images\\Logo\\puma_logo.jpg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\vans_logo.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg"
     },
     {
       "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",

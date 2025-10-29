@@ -3,23 +3,43 @@
     var dm = ViewBag.Loaisanpham;
 }
 
-<div class="container mt-4" style="max-width:650px;">
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="text-danger fw-bold mb-4">🗑️ Xóa loại sản phẩm</h2>
 
-    <div class="mb-3">
-        <label class="form-label">Tên loại sản phẩm</label>
-        <input name="Tendm" value="@dm.Tendm" class="form-control" maxlength="50" />
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row">
+            <dt class="col-sm-3">Mã danh mục:</dt>
+            <dd class="col-sm-9">@dm.Madm</dd>
+
+            <dt class="col-sm-3">Tên loại sản phẩm:</dt>
+            <dd class="col-sm-9">@dm.Tendm</dd>
+
+            <dt class="col-sm-3">Mô tả:</dt>
+            <dd class="col-sm-9">@dm.Mota</dd>
+        </dl>
     </div>
 
-    <div class="mb-3">
-        <label class="form-label">Mô tả</label>
-        <textarea name="Mota" class="form-control" rows="3" maxlength="255">@dm.Mota</textarea>
-    </div>
-
-    <form asp-area="Admin" asp-controller="Loaisanpham" asp-action="xoa" method="post" class="mt-3">
+    <form asp-area="Admin" asp-controller="Loaisanpham" asp-action="xoa" method="post" class="mt-4">
         @Html.AntiForgeryToken()
         <input type="hidden" name="Madm" value="@dm.Madm" />
 
-        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
-        <a href="@Url.Action("Index","Loaisanpham", new { area="Admin"})" class="btn btn-secondary">Hủy</a>
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa loại sản phẩm <strong>@dm.Tendm</strong> không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Loaisanpham", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">
+                    ⬅️ Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">
+                    🗑️ Xác nhận xóa
+                </button>
+            </div>
+        </div>
     </form>
 </div>

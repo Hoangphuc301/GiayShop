@@ -3,28 +3,64 @@
     var th = ViewBag.ThuongHieu;
 }
 
-<div class="container mt-4" style="max-width:650px;">
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="text-danger fw-bold mb-4">🗑️ Xóa thương hiệu</h2>
 
-    <div class="mb-3">
-        <label class="form-label">Tên loại sản phẩm</label>
-        <input name="Tenth" value="@th.Tenth" class="form-control" maxlength="50" />
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row">
+            <dt class="col-sm-3">Mã thương hiệu:</dt>
+            <dd class="col-sm-9">@th.Math</dd>
+
+            <dt class="col-sm-3">Tên thương hiệu:</dt>
+            <dd class="col-sm-9">@th.Tenth</dd>
+
+            <dt class="col-sm-3">Mô tả:</dt>
+            <dd class="col-sm-9">@th.Mota</dd>
+
+            <dt class="col-sm-3">Logo:</dt>
+            <dd class="col-sm-9">
+                @{
+                    string logoPath = th.Logo;
+                    if (!string.IsNullOrEmpty(logoPath) && !logoPath.StartsWith("/"))
+                    {
+                        logoPath = "/images/ThuongHieu/" + logoPath;
+                    }
+                }
+
+                @if (!string.IsNullOrEmpty(logoPath))
+                {
+                    <img src="@Url.Content(logoPath)"
+                         alt="@th.Tenth"
+                         style="width:120px;height:120px;object-fit:contain;border-radius:8px;border:1px solid #ddd;" />
+                }
+                else
+                {
+                    <span class="text-muted fst-italic">Không có logo</span>
+                }
+            </dd>
+        </dl>
     </div>
 
-    <div class="mb-3">
-        <label class="form-label">Mô tả</label>
-        <textarea name="Mota" class="form-control" rows="3" maxlength="255">@th.Mota</textarea>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label">Logo</label>
-        <textarea name="Logo" class="form-control" rows="3" maxlength="255">@th.Logo</textarea>
-    </div>
-
-    <form asp-area="Admin" asp-controller="ThuongHieu" asp-action="xoa" method="post" class="mt-3">
+    <form asp-area="Admin" asp-controller="ThuongHieu" asp-action="xoa" method="post" class="mt-4">
         @Html.AntiForgeryToken()
         <input type="hidden" name="Math" value="@th.Math" />
 
-        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
-        <a href="@Url.Action("Index","ThuongHieu", new { area="Admin"})" class="btn btn-secondary">Hủy</a>
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa thương hiệu <strong>@th.Tenth</strong> không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","ThuongHieu", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">
+                    ⬅️ Quay lại
+                </a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">
+                    🗑️ Xác nhận xóa
+                </button>
+            </div>
+        </div>
     </form>
 </div>

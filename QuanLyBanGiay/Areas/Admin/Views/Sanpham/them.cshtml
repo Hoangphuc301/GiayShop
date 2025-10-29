@@ -6,15 +6,29 @@
     <h2 class="mb-4 text-primary fw-bold">➕ Thêm sản phẩm</h2>
 
     <form asp-area="Admin" asp-controller="Sanpham" asp-action="them" method="post" class="card p-4 shadow-sm">
+
         <div class="mb-3">
-            <label class="form-label fw-semibold">Mã danh mục</label>
-            <input name="Madm" class="form-control" maxlength="50" required />
+            <label class="form-label fw-semibold">Danh mục</label>
+            <select name="Madm" class="form-select" required>
+                <option value="">-- Chọn danh mục --</option>
+                @foreach (var dm in ViewBag.DanhmucList)
+                {
+                    <option value="@dm.Madm">@dm.Tendm</option>
+                }
+            </select>
         </div>
 
         <div class="mb-3">
-            <label class="form-label fw-semibold">Mã thương hiệu</label>
-            <input name="Math" class="form-control" maxlength="50" required />
+            <label class="form-label fw-semibold">Thương hiệu</label>
+            <select name="Math" class="form-select" required>
+                <option value="">-- Chọn thương hiệu --</option>
+                @foreach (var th in ViewBag.ThuonghieuList)
+                {
+                    <option value="@th.Math">@th.Tenth</option>
+                }
+            </select>
         </div>
+
 
         <div class="mb-3">
             <label class="form-label fw-semibold">Tên sản phẩm</label>
@@ -32,26 +46,28 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label fw-semibold">Hình đại diện</label>
-            <input name="Hinhdaidien" class="form-control" maxlength="50" required />
+            <label class="form-label fw-semibold">Hình sản phẩm</label>
+            <input type="file" name="Hinhdaidien" class="form-control" accept="image/*" />
+            <small class="text-muted">Chọn file hình ảnh (png, jpg, jpeg, svg...)</small>
         </div>
 
         <div class="mb-3">
             <label class="form-label fw-semibold">Trạng thái</label>
-            <input name="Trangthai" class="form-control" maxlength="50" required />
+            <select name="Trangthai" class="form-select" required>
+                <option value="CÒN">CÒN</option>
+                <option value="HẾT HÀNG">HẾT HÀNG</option>
+            </select>
         </div>
+
 
         <div class="row mt-4">
             <div class="col-6">
-                <a href="@Url.Content("~/Admin/Sanpham")"
-                   class="btn btn-outline-secondary w-100">
-                    Quay lại
-                </a>
+                <a href="@Url.Action("Index","Sanpham", new { area="Admin"})" class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
             </div>
 
             <div class="col-6">
                 <button type="submit" class="btn btn-primary w-100">
-                    Thêm mới
+                    ➕ Thêm mới
                 </button>
             </div>
         </div>

@@ -7,12 +7,6 @@
 <div class="container mt-4">
 
     <h2 class="text-center mb-4 text-primary fw-bold">Danh Mục Màu Giày</h2>
-    @if (TempData["Success"] != null)
-    {
-        <div class="alert alert-success text-center">
-            @TempData["Success"]
-        </div>
-    }
 
     <div class="text-end mb-3">
         <a href="@Url.Action("them")" class="btn btn-success">
@@ -23,26 +17,39 @@
     <table class="table table-bordered table-hover text-center align-middle shadow-sm">
         <thead class="table-dark">
             <tr>
-                @* <th>Mã màu</th> *@
                 <th>Tên màu</th>
+                <th>Hiển thị</th>
                 <th style="width: 15%;">Tác vụ</th>
             </tr>
         </thead>
         <tbody>
-
             @foreach (var item in ViewBag.Mau)
             {
-                @* Ẩn mã *@
-                <input type="hidden" name="Mamau" value="@item.Mamau" />
                 <tr>
                     <td>@item.Tenmau</td>
                     <td>
-                        <a href="@Url.Action("sua", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-success">✏️ Sửa</a>
-                        <a href="@Url.Action("xoa", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa không?')">🗑️ Xóa</a>
+                        <div style="
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            border: 1px solid #ccc;
+                            margin: auto;
+                            background-color: @Hienthimau(item.Tenmau);
+                            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+                            ">
+                        </div>
+
+                    </td>
+                    <td>
+                        <a href="@Url.Action("sua", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-success btn-sm">
+                            ✏️ Sửa
+                        </a>
+                        <a href="@Url.Action("xoa", "Mau", new { area = "Admin", id = item.Mamau })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa không?')">
+                            🗑️ Xóa
+                        </a>
                     </td>
                 </tr>
             }
-
         </tbody>
     </table>
 
@@ -52,3 +59,70 @@
         </a>
     </div>
 </div>
+
+@functions {
+    string Hienthimau(string tenMau)
+    {
+        switch (tenMau.ToLower())
+        {
+            case "đen": return "#000000";
+            case "trắng": return "#FFFFFF";
+            case "xám": return "#808080";
+            case "đỏ": return "#FF0000";
+            case "xanh dương": return "#0000FF";
+            case "xanh lá": return "#008000";
+            case "vàng": return "#FFFF00";
+            case "nâu": return "#A52A2A";
+            case "cam": return "#FFA500";
+            case "tím": return "#800080";
+            case "hồng": return "#FFC0CB";
+            case "be": return "#F5F5DC";
+            case "nâu đất": return "#8B4513";
+            case "tan": return "#D2B48C";
+            case "caramel": return "#A66A2C";
+            case "coffee": return "#4B3621";
+            case "chestnut": return "#954535";
+            case "burgundy": return "#800020";
+            case "oxblood": return "#4A0000";
+            case "khaki": return "#C3B091";
+            case "olive": return "#556B2F";
+            case "xanh olive": return "#6B8E23";
+            case "xanh navy": return "#000080";
+            case "charcoal": return "#36454F";
+            case "than": return "#2F4F4F";
+            case "cement": return "#B2BEB5";
+            case "cream": return "#FFFDD0";
+            case "ivory": return "#FFFFF0";
+            case "xanh pastel": return "#AEC6CF";
+            case "xanh ngọc": return "#40E0D0";
+            case "xanh mint": return "#98FF98";
+            case "xanh da trời": return "#87CEEB";
+            case "xanh lam": return "#4682B4";
+            case "xanh cobalt": return "#0047AB";
+            case "xanh xám": return "#708090";
+            case "xanh neon": return "#39FF14";
+            case "hồng pastel": return "#FFD1DC";
+            case "blush pink": return "#FFB6C1";
+            case "hồng đậm": return "#FF69B4";
+            case "tím lavender": return "#E6E6FA";
+            case "tím violet": return "#9400D3";
+            case "vàng đồng": return "#B87333";
+            case "vàng gold": return "#FFD700";
+            case "bạc": return "#C0C0C0";
+            case "metallic bạc": return "#C0C0C0";
+            case "metallic vàng": return "#D4AF37";
+            case "xanh ngọc lam": return "#48D1CC";
+            case "đồng": return "#CD7F32";
+            case "rose gold": return "#B76E79";
+            case "gunmetal": return "#2A3439";
+            case "metallic": return "#B0C4DE";
+            case "smoke": return "#738678";
+            case "sand": return "#C2B280";
+            case "off white": return "#FAF9F6";
+            case "indigo": return "#4B0082";
+            case "xanh chàm": return "#4B0082";
+
+            default: return "transparent";
+        }
+    }
+}

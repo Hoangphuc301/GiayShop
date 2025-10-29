@@ -3,19 +3,40 @@
     var m = ViewBag.Mau;
 }
 
-<div class="container mt-4" style="max-width:650px;">
-    <h2 class="text-danger fw-bold">Xác nhận xóa màu</h2>
-    <p>Bạn có chắc muốn xóa màu giày sau không?</p>
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="text-danger fw-bold mb-4">🗑️ Xóa màu giày</h2>
 
-    <div class="card p-3 mt-3 shadow-sm bg-light">
-        <strong>Tên màu:</strong> @m.Tenmau
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row">
+            <dt class="col-sm-3">Mã màu:</dt>
+            <dd class="col-sm-9">@m.Mamau</dd>
+
+            <dt class="col-sm-3">Tên màu:</dt>
+            <dd class="col-sm-9">@m.Tenmau</dd>
+        </dl>
     </div>
 
     <form asp-area="Admin" asp-controller="Mau" asp-action="xoa" method="post" class="mt-4">
         @Html.AntiForgeryToken()
         <input type="hidden" name="Mamau" value="@m.Mamau" />
 
-        <button type="submit" class="btn btn-danger">🗑️ Xóa</button>
-        <a href="@Url.Action("Index","Mau", new { area="Admin"})" class="btn btn-secondary">Hủy</a>
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa màu giày <strong>@m.Tenmau</strong> không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Mau", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">
+                    ⬅️ Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">
+                    🗑️ Xác nhận xóa
+                </button>
+            </div>
+        </div>
     </form>
 </div>

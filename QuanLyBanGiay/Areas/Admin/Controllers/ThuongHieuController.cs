@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NuGet.ProjectModel;
 using QuanLyBanGiay.Models;
 
 namespace QuanLyBanGiay.Areas.Admin.Controllers
@@ -20,14 +21,31 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult them(Thuonghieu th)
+        public ActionResult them(Thuonghieu th, IFormFile LogoFile)
         {
+            if (LogoFile != null && LogoFile.Length > 0)
+            {
+                var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "Logo");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                var fileName = Path.GetFileName(LogoFile.FileName);
+
+                var filePath = Path.Combine(uploadFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    LogoFile.CopyTo(stream);
+                }
+                th.Logo = fileName;
+            }
+
             db.Thuonghieus.Add(th);
             db.SaveChanges();
-
-
             return RedirectToAction("Index");
         }
+
 
         //Sửa
         [HttpGet]
@@ -37,36 +55,47 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             if (th == null)
             {
                 return RedirectToAction("Index");
-            }
-            ViewBag.ThuongHieu = th;
+			}
+
+			ViewBag.ThuongHieu = th;
             return View(th);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult sua(Thuonghieu th)
-        {
-            if (ModelState.IsValid)
-            {
-                var thuonghieu = db.Thuonghieus.Find(th.Math);
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult sua(Thuonghieu th, IFormFile? LogoFile)
+		{
+			var thuonghieu = db.Thuonghieus.Find(th.Math);
+			if (thuonghieu == null)
+			{
+				ModelState.AddModelError("", "Sản phẩm này không tồn tại hoặc đã bị xóa.");
+				return View(th);
+			}
 
-                if (thuonghieu == null)
-                {
-                    ModelState.AddModelError("", "Thương hiệu này không tồn tại hoặc đã bị xóa.");
-                    return View();
-                }
-                thuonghieu.Tenth = th.Tenth;
-                thuonghieu.Mota = th.Mota;
-                thuonghieu.Logo = th.Logo;
+			if (LogoFile != null && LogoFile.Length > 0)
+			{
+				var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "Logo");
+				if (!Directory.Exists(uploadFolder))
+					Directory.CreateDirectory(uploadFolder);
 
-                db.SaveChanges();
+				var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(LogoFile.FileName)}";
+				var filePath = Path.Combine(uploadFolder, fileName);
 
-                return RedirectToAction("Index");
-            }
-            return View(th);
-        }
+				using (var stream = new FileStream(filePath, FileMode.Create))
+				{
+					LogoFile.CopyTo(stream);
+				}
 
-        //Xóa
-        [HttpGet]
+				thuonghieu.Logo = fileName;
+			}
+
+			thuonghieu.Tenth = th.Tenth;
+			thuonghieu.Mota = th.Mota;
+			db.SaveChanges();
+			return RedirectToAction("Index");
+		}
+
+		//Xóa
+		[HttpGet]
         public IActionResult xoa(int id)
         {
             var th = db.Thuonghieus.Find(id);
@@ -92,7 +121,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             db.Thuonghieus.Remove(th);
             db.SaveChanges();
 
-            TempData["Success"] = "Xóa thương hiệu thành công!";
             return RedirectToAction("Index");
         }
 

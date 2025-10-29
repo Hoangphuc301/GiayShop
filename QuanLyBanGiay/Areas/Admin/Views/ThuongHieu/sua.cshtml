@@ -1,28 +1,33 @@
 ﻿@{
 	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-	var dm = ViewBag.ThuongHieu;
+	var th = ViewBag.ThuongHieu;
 }
 
 <div class="container mt-4" style="max-width:700px;">
 	<h2 class="mb-3">Thương hiệu</h2>
 
-	<form asp-area="Admin" asp-controller="ThuongHieu" asp-action="sua" method="post" class="card p-4 shadow-sm">
+	<form asp-area="Admin" asp-controller="ThuongHieu" asp-action="sua" method="post" class="card p-4 shadow-sm" enctype="multipart/form-data">
 		@Html.AntiForgeryToken()
-		<input type="hidden" name="Math" value="@dm.Math" />
+		<input type="hidden" name="Math" value="@th.Math" />
 
 		<div class="mb-3">
 			<label class="form-label">Tên thương hiệu</label>
-			<input name="Tenth" value="@dm.Tenth" class="form-control" maxlength="50" />
+			<input name="Tenth" value="@th.Tenth" class="form-control" maxlength="50" />
 		</div>
 
 		<div class="mb-3">
 			<label class="form-label">Mô tả</label>
-			<textarea name="Mota" class="form-control" rows="3" maxlength="255">@dm.Mota</textarea>
+			<textarea name="Mota" class="form-control" rows="3" maxlength="255">@th.Mota</textarea>
 		</div>
 
 		<div class="mb-3">
-			<label class="form-label">Logo</label>
-			<textarea name="Logo" class="form-control" rows="3" maxlength="255">@dm.Logo</textarea>
+			<label class="form-label fw-semibold">Logo</label>
+			<div class="text-center">
+				<img src="@(Url.Content("~/images/Logo/" + @th.Logo))"
+					 alt="Ảnh logo"
+					 style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd;" />
+				<input type="file" name="LogoFile" class="form-control form-control-sm mt-2" accept="image/*" style="width: 200px; margin: 0 auto;" />
+			</div>
 		</div>
 
 		<div class="row mt-3">

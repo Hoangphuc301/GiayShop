@@ -58,8 +58,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Sanpham/sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVxzdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Sanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVx0aGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Sanpham/xoa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
@@ -80,6 +88,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Size/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVx4b2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFpa2hvYW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/them.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFpa2hvYW5cdGhlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Code_C\#/ThucTapChuyenNganh/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/Index.cshtml]
