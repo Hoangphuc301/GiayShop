@@ -254,3 +254,4 @@ E:\Code_C#\ThucTapChuyenNganh\QuanLyBanGiay\obj\Debug\net6.0\refint\QuanLyBanGia
 E:\Code_C#\ThucTapChuyenNganh\QuanLyBanGiay\obj\Debug\net6.0\QuanLyBanGiay.pdb
 E:\Code_C#\ThucTapChuyenNganh\QuanLyBanGiay\obj\Debug\net6.0\QuanLyBanGiay.genruntimeconfig.cache
 E:\Code_C#\ThucTapChuyenNganh\QuanLyBanGiay\obj\Debug\net6.0\ref\QuanLyBanGiay.dll
+E:\Code_C#\ThucTapChuyenNganh\QuanLyBanGiay\bin\Debug\net6.0\BCrypt.Net-Next.dll

@@ -107,6 +107,7 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        //xóa
         [HttpGet]
         public ActionResult xoa(int id)
         {

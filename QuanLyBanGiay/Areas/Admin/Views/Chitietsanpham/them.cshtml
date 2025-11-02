@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary fw-bold">➕ Thêm chi tiết sản phẩm</h2>
+
+    <form asp-area="Admin" asp-controller="Chitietsanpham" asp-action="them" method="post" class="card p-4 shadow-sm">
+        @Html.AntiForgeryToken()
+
+        <!-- Sản phẩm -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Sản phẩm</label>
+            <select name="Masp" class="form-select" required>
+                <option value="">-- Chọn sản phẩm --</option>
+                @foreach (var sp in ViewBag.SanPhamList)
+                {
+                    <option value="@sp.Masp">@sp.Tensp</option>
+                }
+            </select>
+        </div>
+
+        <!-- Màu sắc -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Màu sắc</label>
+            <select name="Mamau" class="form-select" required>
+                <option value="">-- Chọn màu --</option>
+                @foreach (var mau in ViewBag.MauList)
+                {
+                    <option value="@mau.Mamau">@mau.Tenmau</option>
+                }
+            </select>
+        </div>
+
+        <!-- Kích thước -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Kích thước</label>
+            <select name="Masize" class="form-select" required>
+                <option value="">-- Chọn size --</option>
+                @foreach (var size in ViewBag.SizeList)
+                {
+                    <option value="@size.Masize">@size.Tensize</option>
+                }
+            </select>
+        </div>
+
+        <!-- Số lượng tồn -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Số lượng tồn</label>
+            <input name="Slton" type="number" class="form-control" min="0" value="0" required />
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Chitietsanpham", new { area="Admin"})" class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">
+                    ➕ Thêm mới
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

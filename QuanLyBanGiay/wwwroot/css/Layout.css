@@ -1,0 +1,93 @@
+﻿.footer {
+    background: #000;
+    color: #eee;
+    padding: 60px 0 30px;
+    font-size: 15px;
+    border-top: 1px solid #222;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .footer .container {
+        max-width: 1200px;
+    }
+
+    .footer .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+
+    .footer h5 {
+        font-weight: 700;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 18px;
+        position: relative;
+        letter-spacing: 0.5px;
+    }
+
+        .footer h5::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+        }
+
+    .footer p {
+        line-height: 1.8;
+        margin-bottom: 8px;
+        color: #ccc;
+    }
+
+    .footer a {
+        color: #ccc;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+
+    .footer i {
+        color: #fff;
+        margin-right: 8px;
+    }
+
+    .footer .col-md-4 {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 15px;
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+    .footer-bottom strong {
+        color: #fff;
+        font-weight: 600;
+    }
+
+/* logo Bộ Công Thương */
+.footer img.boCongThuong {
+    margin-top: 10px;
+    width: 130px;
+}

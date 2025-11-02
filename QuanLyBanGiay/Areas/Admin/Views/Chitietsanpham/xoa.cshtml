@@ -1,0 +1,50 @@
+﻿@model QuanLyBanGiay.Models.ChitietSanpham
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="text-danger fw-bold mb-4">Xóa chi tiết sản phẩm</h2>
+
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row mb-0">
+            <dt class="col-sm-4">Mã chi tiết SP:</dt>
+            <dd class="col-sm-8">@Model.Mactsp</dd>
+
+            <dt class="col-sm-4">Sản phẩm:</dt>
+            <dd class="col-sm-8">@Model.MaspNavigation?.Tensp</dd>
+
+            <dt class="col-sm-4">Màu sắc:</dt>
+            <dd class="col-sm-8">@Model.MamauNavigation?.Tenmau</dd>
+
+            <dt class="col-sm-4">Kích cỡ (Size):</dt>
+            <dd class="col-sm-8">@Model.MasizeNavigation?.Tensize</dd>
+
+            <dt class="col-sm-4">Số lượng tồn:</dt>
+            <dd class="col-sm-8">@Model.Slton</dd>
+        </dl>
+    </div>
+
+    <form asp-area="Admin" asp-controller="Chitietsanpham" asp-action="xoa" method="post" class="mt-4">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Mactsp" />
+
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa chi tiết sản phẩm
+            <strong>@Model.MaspNavigation?.Tensp</strong>
+            (màu <strong>@Model.MamauNavigation?.Tenmau</strong>,
+            size <strong>@Model.MasizeNavigation?.Tensize</strong>) không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Chitietsanpham", new { area="Admin"})"
+                   class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">🗑️ Xác nhận xóa</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\QuanLyBanGiay.bundle.scp.css"
     },
     {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\Layout.css",
+      "PackagePath": "staticwebassets\\css\\Layout.css"
+    },
+    {
       "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
       "PackagePath": "staticwebassets\\images\\Chinhsach\\BoCongThuong.png"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
     {
       "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",

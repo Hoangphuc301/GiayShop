@@ -5,6 +5,16 @@
 <div class="container mt-5" style="max-width: 500px;">
     <h2 class="text-center mb-4">Đăng nhập tài khoản</h2>
 
+    @* Báo lỗi đăng nhập *@
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+            <i class="fa fa-exclamation-circle me-2"></i>
+            @ViewBag.Error
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
     <form asp-controller="Account" asp-action="Login" method="post">
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
