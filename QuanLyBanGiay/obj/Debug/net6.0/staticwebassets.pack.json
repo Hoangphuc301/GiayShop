@@ -1,327 +1,343 @@
 {
   "Files": [
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\QuanLyBanGiay.bundle.scp.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\QuanLyBanGiay.bundle.scp.css",
       "PackagePath": "staticwebassets\\QuanLyBanGiay.bundle.scp.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\Layout.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Layout.css",
       "PackagePath": "staticwebassets\\css\\Layout.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\homeAdmin.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\homeAdmin.css",
       "PackagePath": "staticwebassets\\css\\homeAdmin.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\html\\home.html",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\html\\home.html",
       "PackagePath": "staticwebassets\\html\\home.html"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Banner.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Banner.png",
       "PackagePath": "staticwebassets\\images\\Banner.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
       "PackagePath": "staticwebassets\\images\\Chinhsach\\BoCongThuong.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\Adidas_Logo.svg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\fila_logo.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e9f9cd40-ba61-40b7-afad-007451c96736_logo_nike.jpg",
+      "PackagePath": "staticwebassets\\images\\Logo\\e9f9cd40-ba61-40b7-afad-007451c96736_logo_nike.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\fila_logo.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\gucci_logo.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\gucci_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\gucci_logo.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\logo_nike.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\logo_nike.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\logo_nike.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\puma_logo.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\puma_logo.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\puma_logo.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\vans_logo.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giay-Loafer-cao-cap-GUCCI-Den-3.jpg",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\Giay-Loafer-cao-cap-GUCCI-Den-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\nike_vista.jpg",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\nike_vista.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",
       "PackagePath": "staticwebassets\\images\\logo.jpg"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

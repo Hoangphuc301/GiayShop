@@ -1,5 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Trang chủ - StyleOfMe";
+
+    var danhmuc = ViewBag.DanhMuc as List<QuanLyBanGiay.Models.Danhmuc> ?? new List<QuanLyBanGiay.Models.Danhmuc>();
+    var thuonghieu = ViewBag.ThuongHieu as List<QuanLyBanGiay.Models.Thuonghieu> ?? new List<QuanLyBanGiay.Models.Thuonghieu>();
+    var mausac = ViewBag.Mau as List<QuanLyBanGiay.Models.Mau> ?? new List<QuanLyBanGiay.Models.Mau>();
+    var sizes = ViewBag.Size as List<QuanLyBanGiay.Models.Size> ?? new List<QuanLyBanGiay.Models.Size>();
+
+    var danhMucSanPham = ViewBag.DanhMucSanPham as List<QuanLyBanGiay.Models.Danhmuc> ?? new List<QuanLyBanGiay.Models.Danhmuc>();
 }
 
 <div class="container mt-4">
@@ -10,22 +17,114 @@
 
     <!-- Banner chính -->
     <div class="banner mb-5 text-center">
-        <img src="~/images/Banner.png" alt="Banner Giày">
+        <img src="~/images/Banner.png" alt="Banner Giày" style="max-width:100%; height:auto;" />
     </div>
 
-    <!-- Danh sách loại giày -->
-    <div class="row text-center">
-        <div class="col-md-4 mb-4">
-            <img src="~/images/giay-nam.jpg" alt="Giày nam" class="img-fluid rounded shadow-sm">
-            <h5 class="mt-3">Giày Nam</h5>
-        </div>
-        <div class="col-md-4 mb-4">
-            <img src="~/images/giay-nu.jpg" alt="Giày nữ" class="img-fluid rounded shadow-sm">
-            <h5 class="mt-3">Giày Nữ</h5>
-        </div>
-        <div class="col-md-4 mb-4">
-            <img src="~/images/giay-sneaker.jpg" alt="Sneaker" class="img-fluid rounded shadow-sm">
-            <h5 class="mt-3">Sneaker</h5>
-        </div>
+    <!-- BỘ LỌC -->
+    <div class="container mt-4 mb-4">
+        <form method="get" asp-action="Index" asp-controller="Home" class="row justify-content-center g-2 text-center">
+
+            <!-- Danh mục -->
+            <div class="col-6 col-md-2">
+                <select name="madm" class="form-select">
+                    <option value="">Danh mục</option>
+                    @foreach (var dm in danhmuc)
+                    {
+                        <option value="@dm.Madm">@dm.Tendm</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Thương hiệu -->
+            <div class="col-6 col-md-2">
+                <select name="math" class="form-select">
+                    <option value="">Thương hiệu</option>
+                    @foreach (var th in thuonghieu)
+                    {
+                        <option value="@th.Math">@th.Tenth</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Mức giá -->
+            <div class="col-6 col-md-2">
+                <select name="gia" class="form-select">
+                    <option value="">Mức giá</option>
+                    <option value="1">Dưới 1 triệu</option>
+                    <option value="2">1 - 2 triệu</option>
+                    <option value="3">2 - 3 triệu</option>
+                    <option value="4">Trên 3 triệu</option>
+                </select>
+            </div>
+
+            <!-- Màu sắc -->
+            <div class="col-6 col-md-2">
+                <select name="mamau" class="form-select">
+                    <option value="">Màu sắc</option>
+                    @foreach (var mau in mausac)
+                    {
+                        <option value="@mau.Mamau">@mau.Tenmau</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Kích cỡ -->
+            <div class="col-6 col-md-2">
+                <select name="masize" class="form-select">
+                    <option value="">Kích cỡ</option>
+                    @foreach (var sz in sizes)
+                    {
+                        <option value="@sz.Masize">@sz.Tensize</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Nút lọc -->
+            <div class="col-12 col-md-2">
+                <button type="submit" class="btn btn-dark w-100">
+                    <i class="bi bi-funnel"></i> Lọc sản phẩm
+                </button>
+            </div>
+        </form>
     </div>
+
+    <!-- DANH SÁCH SẢN PHẨM THEO DANH MỤC (mỗi danh mục có thể có Sanphams = null hoặc empty) -->
+    <div class="container mt-5">
+        @if (danhMucSanPham != null && danhMucSanPham.Any())
+        {
+            foreach (var dm in danhMucSanPham)
+            {
+                if (dm == null) { continue; }
+                var sanphams = dm.Sanphams ?? new List<QuanLyBanGiay.Models.Sanpham>();
+                if (!sanphams.Any()) { continue; } 
+
+                <h3 class="fw-bold text-uppercase mb-4">@dm.Tendm</h3>
+                <div class="product-grid">
+                    @foreach (var sp in sanphams.Take(4))
+                    {
+                        <div class="product-card">
+                            <img src="~/images/Sanpham/@sp.Hinhdaidien" alt="@sp.Tensp" class="product-img" />
+                            <h5 class="mt-2">@sp.Tensp</h5>
+                            <p class="brand text-muted">@sp.MathNavigation?.Tenth</p>
+                            <p class="price">@string.Format("{0:#,##0} VNĐ", sp.Gia)</p>
+
+                            <a asp-controller="Sanpham"
+                               asp-action="Chitiet"
+                               asp-route-id="@sp.Masp"
+                               class="btn btn-outline-dark btn-sm mt-2">
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="text-center">
+                <p class="text-muted">Chưa có sản phẩm để hiển thị.</p>
+            </div>
+        }
+    </div>
+
 </div>

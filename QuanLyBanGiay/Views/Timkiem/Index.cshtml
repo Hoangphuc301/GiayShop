@@ -4,31 +4,126 @@
     <h3>Kết quả tìm kiếm cho: "@ViewBag.Keyword"</h3>
     <hr />
 
-    @if (!Model.Any())
-    {
-        <p class="text-muted">Không tìm thấy sản phẩm nào phù hợp.</p>
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div style="height:150px; display:flex; justify-content:center; align-items:center; margin-top:15px;">
-                            <img src="@(Url.Content("~/images/Sanpham/" + item.Hinhdaidien))"
-                                 alt="@item.Tensp"
-                                 style="max-width:100%; max-height:100%; object-fit:contain; border-radius:8px;" />
-                        </div>
+    <div class="row">
+        <!-- ====== CỘT BỘ LỌC SẢN PHẨM ====== -->
+        <div class="col-md-3">
+            <form method="get" asp-action="Index" asp-controller="Timkiem">
+                <input type="hidden" name="q" value="@ViewBag.Keyword" />
+                <h5 class="mb-3">Bộ lọc sản phẩm</h5>
 
-                        <div class="card-body text-center">
-                            <h6>@item.Tensp</h6>
-                            <p class="fw-bold text-danger">@String.Format("{0:N0} ₫", item.Gia)</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
-                        </div>
+                <!-- Lọc Danh Mục -->
+                <div class="mb-3">
+                    <h6>Danh mục</h6>
+                    @if (ViewBag.DanhMuc != null)
+                    {
+                        foreach (var dm in ViewBag.DanhMuc as List<QuanLyBanGiay.Models.Danhmuc>)
+                        {
+                            <div>
+                                <input type="checkbox" name="madm" value="@dm.Madm"
+                                @(Context.Request.Query["madm"].Contains(dm.Madm.ToString()) ? "checked" : "") />
+                                <label>@dm.Tendm</label>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Lọc Thương Hiệu -->
+                <div class="mb-3">
+                    <h6>Thương hiệu</h6>
+                    @if (ViewBag.ThuongHieu != null)
+                    {
+                        foreach (var th in ViewBag.ThuongHieu as List<QuanLyBanGiay.Models.Thuonghieu>)
+                        {
+                            <div>
+                                <input type="checkbox" name="math" value="@th.Math"
+                                @(Context.Request.Query["math"].Contains(th.Math.ToString()) ? "checked" : "") />
+                                <label>@th.Tenth</label>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Lọc theo Giá -->
+                <div class="mb-3">
+                    <h6>Giá</h6>
+                    <div>
+                        <input type="radio" name="gia" value="1" @(Context.Request.Query["gia"] == "1" ? "checked" : "") /> Dưới 1.000.000₫
                     </div>
+                    <div>
+                        <input type="radio" name="gia" value="2" @(Context.Request.Query["gia"] == "2" ? "checked" : "") /> 1.000.000₫ – 2.000.000₫
+                    </div>
+                    <div>
+                        <input type="radio" name="gia" value="3" @(Context.Request.Query["gia"] == "3" ? "checked" : "") /> 2.000.000₫ – 3.000.000₫
+                    </div>
+                    <div>
+                        <input type="radio" name="gia" value="4" @(Context.Request.Query["gia"] == "4" ? "checked" : "") /> Trên 3.000.000₫
+                    </div>
+                </div>
+
+                <!-- Lọc Màu -->
+                <div class="mb-3">
+                    <h6>Màu sắc</h6>
+                    @if (ViewBag.Mau != null)
+                    {
+                        foreach (var mau in ViewBag.Mau as List<QuanLyBanGiay.Models.Mau>)
+                        {
+                            <div>
+                                <input type="checkbox" name="mamau" value="@mau.Mamau"
+                                @(Context.Request.Query["mamau"].Contains(mau.Mamau.ToString()) ? "checked" : "") />
+                                <label>@mau.Tenmau</label>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Lọc Size -->
+                <div class="mb-3">
+                    <h6>Kích cỡ</h6>
+                    @if (ViewBag.Size != null)
+                    {
+                        foreach (var sz in ViewBag.Size as List<QuanLyBanGiay.Models.Size>)
+                        {
+                            <div>
+                                <input type="checkbox" name="masize" value="@sz.Masize"
+                                @(Context.Request.Query["masize"].Contains(sz.Masize.ToString()) ? "checked" : "") />
+                                <label>@sz.Tensize</label>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-sm mt-2 w-100">Áp dụng lọc</button>
+            </form>
+        </div>
+
+        <!-- ====== CỘT HIỂN THỊ KẾT QUẢ ====== -->
+        <div class="col-md-9">
+            @if (!Model.Any())
+            {
+                <p class="text-muted">Không tìm thấy sản phẩm nào phù hợp.</p>
+            }
+            else
+            {
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm text-center">
+                                <div style="height:150px; display:flex; justify-content:center; align-items:center; margin-top:10px;">
+                                    <img src="@(Url.Content("~/images/Sanpham/" + item.Hinhdaidien))"
+                                         alt="@item.Tensp"
+                                         style="max-width:100%; max-height:100%; object-fit:contain;" />
+                                </div>
+                                <div class="card-body">
+                                    <h6>@item.Tensp</h6>
+                                    <p class="fw-bold text-danger">@String.Format("{0:N0} ₫", item.Gia)</p>
+                                    <a href="#" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             }
         </div>
-    }
+    </div>
 </div>
