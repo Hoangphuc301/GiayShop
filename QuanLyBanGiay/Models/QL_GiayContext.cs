@@ -35,7 +35,7 @@ namespace QuanLyBanGiay.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=QL_GIAY;Integrated Security=True;Encrypt=False");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-6OJC3FAO\\SQLEXPRESS01;Database=QL_Giay;Trusted_Connection=True;");
             }
         }
 
@@ -44,7 +44,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<ChitietDonhang>(entity =>
             {
                 entity.HasKey(e => new { e.Madh, e.Mactsp })
-                    .HasName("PK__CHITIET___2F6F1C68C2F9A9E8");
+                    .HasName("PK__CHITIET___2F6F1C688CD988B2");
 
                 entity.ToTable("CHITIET_DONHANG");
 
@@ -79,7 +79,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<ChitietGiohang>(entity =>
             {
                 entity.HasKey(e => new { e.Makh, e.Mactsp })
-                    .HasName("PK__CHITIET___2F6F4503F80F0C3A");
+                    .HasName("PK__CHITIET___2F6F45039AC62409");
 
                 entity.ToTable("CHITIET_GIOHANG");
 
@@ -96,7 +96,6 @@ namespace QuanLyBanGiay.Models
                 entity.HasOne(d => d.MactspNavigation)
                     .WithMany(p => p.ChitietGiohangs)
                     .HasForeignKey(d => d.Mactsp)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__CHITIET_G__MACTS__5535A963");
 
                 entity.HasOne(d => d.MakhNavigation)
@@ -109,7 +108,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<ChitietSanpham>(entity =>
             {
                 entity.HasKey(e => e.Mactsp)
-                    .HasName("PK__CHITIET___F501C2F52C51BFB9");
+                    .HasName("PK__CHITIET___F501C2F57E7AE6CC");
 
                 entity.ToTable("CHITIET_SANPHAM");
 
@@ -140,14 +139,13 @@ namespace QuanLyBanGiay.Models
                 entity.HasOne(d => d.MaspNavigation)
                     .WithMany(p => p.ChitietSanphams)
                     .HasForeignKey(d => d.Masp)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__CHITIET_SA__MASP__4E88ABD4");
             });
 
             modelBuilder.Entity<Danhmuc>(entity =>
             {
                 entity.HasKey(e => e.Madm)
-                    .HasName("PK__DANHMUC__603F005CD2A8D17E");
+                    .HasName("PK__DANHMUC__603F005C468FB43D");
 
                 entity.ToTable("DANHMUC");
 
@@ -165,7 +163,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Donhang>(entity =>
             {
                 entity.HasKey(e => e.Madh)
-                    .HasName("PK__DONHANG__603F0047B61BB957");
+                    .HasName("PK__DONHANG__603F004776DE4EE0");
 
                 entity.ToTable("DONHANG");
 
@@ -233,7 +231,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Khachhang>(entity =>
             {
                 entity.HasKey(e => e.Makh)
-                    .HasName("PK__KHACHHAN__603F592C69DBB024");
+                    .HasName("PK__KHACHHAN__603F592CABDD7B70");
 
                 entity.ToTable("KHACHHANG");
 
@@ -264,7 +262,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Mau>(entity =>
             {
                 entity.HasKey(e => e.Mamau)
-                    .HasName("PK__MAU__7B7346CFE13272E2");
+                    .HasName("PK__MAU__7B7346CF1DCCFB99");
 
                 entity.ToTable("MAU");
 
@@ -278,7 +276,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Phuongthucthanhtoan>(entity =>
             {
                 entity.HasKey(e => e.Mapttt)
-                    .HasName("PK__PHUONGTH__4F6B743E7B453816");
+                    .HasName("PK__PHUONGTH__4F6B743E047617E3");
 
                 entity.ToTable("PHUONGTHUCTHANHTOAN");
 
@@ -292,7 +290,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Sanpham>(entity =>
             {
                 entity.HasKey(e => e.Masp)
-                    .HasName("PK__SANPHAM__60228A3217416833");
+                    .HasName("PK__SANPHAM__60228A3203A8CDD7");
 
                 entity.ToTable("SANPHAM");
 
@@ -336,7 +334,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Size>(entity =>
             {
                 entity.HasKey(e => e.Masize)
-                    .HasName("PK__SIZE__3DD4402BE3B3201A");
+                    .HasName("PK__SIZE__3DD4402B8C8AB7DF");
 
                 entity.ToTable("SIZE");
 
@@ -350,14 +348,16 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Taikhoan>(entity =>
             {
                 entity.HasKey(e => e.Matk)
-                    .HasName("PK__TAIKHOAN__602372163DA79437");
+                    .HasName("PK__TAIKHOAN__60237216C7E3E363");
 
                 entity.ToTable("TAIKHOAN");
 
-                entity.HasIndex(e => e.Email, "UQ__TAIKHOAN__161CF72406A0E3D3")
+                entity.HasIndex(e => e.Email, "UQ__TAIKHOAN__161CF724B5A895B5")
                     .IsUnique();
 
                 entity.Property(e => e.Matk).HasColumnName("MATK");
+
+                entity.Property(e => e.DaXacNhan).HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(100)
@@ -367,9 +367,15 @@ namespace QuanLyBanGiay.Models
                     .HasMaxLength(10)
                     .HasColumnName("LOAITK");
 
+                entity.Property(e => e.MaXacNhan).HasMaxLength(10);
+
                 entity.Property(e => e.Matkhau)
                     .HasMaxLength(100)
                     .HasColumnName("MATKHAU");
+
+                entity.Property(e => e.ThoiGianTaoOtp)
+                    .HasColumnType("datetime")
+                    .HasColumnName("ThoiGianTaoOTP");
 
                 entity.Property(e => e.Trangthai)
                     .HasColumnName("TRANGTHAI")
@@ -379,7 +385,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Thuonghieu>(entity =>
             {
                 entity.HasKey(e => e.Math)
-                    .HasName("PK__THUONGHI__6023721B9A26E65B");
+                    .HasName("PK__THUONGHI__6023721B5000B73E");
 
                 entity.ToTable("THUONGHIEU");
 
@@ -401,7 +407,7 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Voucher>(entity =>
             {
                 entity.HasKey(e => e.Mavoucher)
-                    .HasName("PK__VOUCHER__56FC9ADEE4562DEA");
+                    .HasName("PK__VOUCHER__56FC9ADEC3E8C892");
 
                 entity.ToTable("VOUCHER");
 

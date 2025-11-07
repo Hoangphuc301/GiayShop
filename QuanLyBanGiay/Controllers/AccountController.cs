@@ -1,16 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuanLyBanGiay.Models;
-using System.Linq;
-using Microsoft.AspNetCore.Http;
 using System;
-using Microsoft.CodeAnalysis.Scripting;
+using System.Linq;
 using BCrypt.Net;
+using MailKit.Net.Smtp;
+using MimeKit;
+using Microsoft.Extensions.Configuration;
+
 
 namespace QuanLyBanGiay.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IConfiguration _config;
         private QL_GiayContext db = new QL_GiayContext();
+
+        public AccountController(IConfiguration config)
+        {
+            _config = config;
+        }
+
+        //Đăng nhập
         [HttpGet]
         public IActionResult Login()
         {
@@ -49,83 +59,154 @@ namespace QuanLyBanGiay.Controllers
             return View();
         }
 
+        private void SendOtpEmail(string toEmail, string subject, string htmlBody)
+        {
+            var host = _config["EmailSmtp:Host"];
+            var port = int.Parse(_config["EmailSmtp:Port"]);
+            var user = _config["EmailSmtp:Username"];
+            var pass = _config["EmailSmtp:Password"];
+            var fromEmail = _config["EmailSmtp:FromEmail"];
+            var fromName = _config["EmailSmtp:FromName"];
+            // Tạo 
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress(fromName, fromEmail));
+            message.To.Add(MailboxAddress.Parse(toEmail));
+            message.Subject = subject;
+            message.Body = new BodyBuilder { HtmlBody = htmlBody }.ToMessageBody();
+            // Gửi email
+            using var smtp = new SmtpClient();
+            smtp.Connect(host, port, MailKit.Security.SecureSocketOptions.StartTls);
+            smtp.Authenticate(user, pass);
+            smtp.Send(message);
+            smtp.Disconnect(true);
+        }
+
+        //Đăng ký
         [HttpGet]
         public IActionResult FormRegister()
         {
             return View();
         }
+
         [HttpPost]
-        [ValidateAntiForgeryToken] // Bảo vệ chống tấn công CSRF (Cross site request forgery)
-        public IActionResult FormRegister(string Email, string Matkhau, string NhapLaiMatkhau)
+        [ValidateAntiForgeryToken]
+        public IActionResult FormRegister(string Email, string Matkhau, string NhapLaiMatkhau, string Otp)
         {
-            bool hasError = false; //Đặt cờ kiểm tra lỗi
+            bool hasError = false;
 
-            // Kiểm tra email
-            if (string.IsNullOrWhiteSpace(Email))
+            if (string.IsNullOrEmpty(Otp))
             {
-                ViewBag.EmailError = "Vui lòng nhập email";
-                hasError = true;
-            }
-            else if (!new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(Email))
-            {
-                ViewBag.EmailError = "Địa chỉ email không hợp lệ";
-                hasError = true;
-            }
-            else if (db.Taikhoans.Any(u => u.Email == Email)) //Trong linq .Any() kiểm tra tồn tại
-            {
-                ViewBag.EmailError = "Email đã được sử dụng";
-                hasError = true;
-            }
+                //Kiểm tra dữ liệu nhập vào
+                if (string.IsNullOrWhiteSpace(Email))
+                {
+                    ViewBag.EmailError = "Vui lòng nhập email";
+                    hasError = true;
+                }
+                else if (!new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(Email))
+                {
+                    ViewBag.EmailError = "Email không hợp lệ";
+                    hasError = true;
+                }
+                else if (db.Taikhoans.Any(u => u.Email.Trim().ToLower() == Email.Trim().ToLower()))
+                {
+                    ViewBag.EmailError = "Email đã được sử dụng";
+                    hasError = true;
+                }
 
-            // Kiểm tra mật khẩu
-            if (string.IsNullOrWhiteSpace(Matkhau))
-            {
-                ViewBag.PasswordError = "Vui lòng nhập mật khẩu";
-                hasError = true;
-            }
-            else if (Matkhau.Length < 5)
-            {
-                ViewBag.PasswordError = "Mật khẩu phải có ít nhất 5 ký tự";
-                hasError = true;
-            }
+                if (string.IsNullOrWhiteSpace(Matkhau))
+                {
+                    ViewBag.PasswordError = "Vui lòng nhập mật khẩu";
+                    hasError = true;
+                }
+                else if (Matkhau.Length < 5)
+                {
+                    ViewBag.PasswordError = "Mật khẩu phải có ít nhất 5 ký tự";
+                    hasError = true;
+                }
 
-            // Kiểm tra nhập lại mật khẩu
-            if (string.IsNullOrWhiteSpace(NhapLaiMatkhau))
-            {
-                ViewBag.ConfirmPasswordError = "Vui lòng nhập lại mật khẩu";
-                hasError = true;
-            }
-            else if (Matkhau != NhapLaiMatkhau)
-            {
-                ViewBag.ConfirmPasswordError = "Mật khẩu nhập lại không khớp";
-                hasError = true;
-            }
+                if (string.IsNullOrWhiteSpace(NhapLaiMatkhau) || Matkhau != NhapLaiMatkhau)
+                {
+                    ViewBag.ConfirmPasswordError = "Mật khẩu nhập lại không khớp";
+                    hasError = true;
+                }
+                // Nếu có lỗi, trả về view với thông báo lỗi
+                if (hasError)
+                {
+                    ViewBag.EmailValue = Email;
+                    return View();
+                }
 
-            if (hasError)
+                //Tạo OTP
+                string otp = new Random().Next(100000, 999999).ToString();
+                TempData["Reg_Email"] = Email.Trim();
+                TempData["Reg_Password"] = Matkhau;
+                TempData["Reg_Otp"] = otp;
+                TempData["Reg_Time"] = DateTime.Now;
+                TempData.Keep();
+                //Gửi OTP
+                try
+                {
+                    string subject = "Mã xác nhận đăng ký tài khoản SOFM";
+                    string body = $"<p>Mã xác nhận của bạn là: <b>{otp}</b></p><p>Mã có hiệu lực trong 5 phút.</p>";
+                    SendOtpEmail(Email, subject, body);
+
+                    ViewBag.ShowOtpInput = true;
+                    ViewBag.EmailValue = Email;
+                    ViewBag.Success = "Mã xác nhận đã được gửi đến email của bạn!";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.EmailError = "Gửi email thất bại: " + ex.Message;
+                }
+
+                return View();
+            }
+            // Xác thực OTP
+            var storedOtp = TempData["Reg_Otp"] as string;
+            var storedEmail = TempData["Reg_Email"] as string;
+            var storedPassword = TempData["Reg_Password"] as string;
+            var storedTime = TempData["Reg_Time"] as DateTime?;
+
+            if (storedOtp == null || storedEmail == null || storedPassword == null || storedTime == null)
             {
-                ViewBag.EmailValue = Email; // giữ lại email và gửi lên form
+                ViewBag.EmailError = "Phiên đăng ký đã hết hạn, vui lòng đăng ký lại.";
                 return View();
             }
 
-            // Mã hóa mật khẩu
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(Matkhau);
-
-            // Tạo tài khoản mới
-            var newUser = new Taikhoan
+            if ((DateTime.Now - storedTime.Value).TotalMinutes > 5)
             {
-                Email = Email,
-                Matkhau = hashedPassword,
-                Loaitk = "USER",
-                Trangthai = true
-            };
+                ViewBag.OtpError = "Mã xác nhận đã hết hạn. Vui lòng đăng ký lại.";
+                return View();
+            }
+            // Kiểm tra OTP
+            if (Otp == storedOtp && string.Equals(Email?.Trim(), storedEmail.Trim(), StringComparison.OrdinalIgnoreCase))
+            {
+                var newUser = new Taikhoan
+                {
+                    Email = storedEmail,
+                    Matkhau = BCrypt.Net.BCrypt.HashPassword(storedPassword),
+                    Loaitk = "USER",
+                    Trangthai = true
+                };
+                db.Taikhoans.Add(newUser);
+                db.SaveChanges();
 
-            db.Taikhoans.Add(newUser);
-            db.SaveChanges();
-
-            ViewBag.Success = "Đăng ký thành công! Giờ bạn có thể đăng nhập.";
-            return View();
+                TempData.Clear();
+                ViewBag.Success = "Đăng ký thành công! Bạn có thể đăng nhập.";
+                return View();
+            }
+            else
+            {
+                // OTP không đúng
+                ViewBag.ShowOtpInput = true;
+                ViewBag.EmailValue = storedEmail;
+                ViewBag.OtpError = "Mã xác nhận không đúng.";
+                TempData.Keep();
+                return View();
+            }
         }
 
+        //Đăng xuất
         public IActionResult Logout()
         {
             // Xóa session khi đăng xuất
@@ -133,6 +214,106 @@ namespace QuanLyBanGiay.Controllers
             // Xóa cookie
             Response.Cookies.Delete("UserEmail");
             return RedirectToAction("Index", "Home");
+        }
+
+        //Quên mật khẩu
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ForgotPassword(string Email, string Otp, string NewPassword)
+        {
+            // Nếu chưa nhập OTP -> Gửi mã
+            if (string.IsNullOrEmpty(Otp))
+            {
+                if (string.IsNullOrWhiteSpace(Email))
+                {
+                    ViewBag.Error = "Vui lòng nhập email của bạn.";
+                    return View();
+                }
+                var user = db.Taikhoans.FirstOrDefault(u => u.Email == Email && u.Trangthai == true);
+                if (user == null)
+                {
+                    ViewBag.Error = "Không tìm thấy tài khoản với email này.";
+                    return View();
+                }
+
+                // Tạo OTP
+                string otp = new Random().Next(100000, 999999).ToString();
+                TempData["Reset_Email"] = Email;
+                TempData["Reset_Otp"] = otp;
+                TempData["Reset_Time"] = DateTime.Now;
+                TempData.Keep();
+
+                try
+                {
+                    string subject = "Mã xác nhận đặt lại mật khẩu - SOFM Shoes";
+                    string body = $"<p>Mã xác nhận của bạn là: <b>{otp}</b></p><p>Mã có hiệu lực trong 5 phút.</p>";
+                    SendOtpEmail(Email, subject, body);
+
+                    ViewBag.Success = "Mã xác nhận đã được gửi đến email của bạn!";
+                    ViewBag.ShowOtpInput = true;
+                    ViewBag.EmailValue = Email;
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Error = "Không thể gửi email: " + ex.Message;
+                }
+
+                return View();
+            }
+
+            //Nhập OTP và mật khẩu mới
+            var storedOtp = TempData["Reset_Otp"] as string;
+            var storedEmail = TempData["Reset_Email"] as string;
+            var storedTime = TempData["Reset_Time"] as DateTime?;
+            // Kiểm tra OTP
+            if (storedOtp == null || storedEmail == null || storedTime == null)
+            {
+                ViewBag.Error = "Phiên khôi phục đã hết hạn, vui lòng thử lại.";
+                return View();
+            }
+
+            if ((DateTime.Now - storedTime.Value).TotalMinutes > 5)
+            {
+                ViewBag.Error = "Mã xác nhận đã hết hạn, vui lòng gửi lại.";
+                return View();
+            }
+
+            if (Otp != storedOtp)
+            {
+                ViewBag.OtpError = "Mã xác nhận không đúng.";
+                ViewBag.ShowOtpInput = true;
+                ViewBag.EmailValue = storedEmail;
+                TempData.Keep();
+                return View();
+            }
+            // Kiểm tra mật khẩu mới
+            if (string.IsNullOrWhiteSpace(NewPassword) || NewPassword.Length < 5)
+            {
+                ViewBag.PasswordError = "Mật khẩu mới phải có ít nhất 5 ký tự.";
+                ViewBag.ShowOtpInput = true;
+                ViewBag.EmailValue = storedEmail;
+                TempData.Keep();
+                return View();
+            }
+
+            // Cập nhật mật khẩu mới
+            var userReset = db.Taikhoans.FirstOrDefault(u => u.Email == storedEmail);
+            if (userReset != null)
+            {
+                userReset.Matkhau = BCrypt.Net.BCrypt.HashPassword(NewPassword);
+                db.SaveChanges();
+
+                TempData.Clear();
+                ViewBag.Success = "Mật khẩu đã được đổi thành công! Bạn có thể đăng nhập lại.";
+                return View();
+            }
+
+            ViewBag.Error = "Có lỗi xảy ra khi cập nhật mật khẩu.";
+            return View();
         }
     }
 }
