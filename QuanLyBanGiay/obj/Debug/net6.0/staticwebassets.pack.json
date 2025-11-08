@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\chitiet.css",
+      "PackagePath": "staticwebassets\\css\\chitiet.css"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\homeAdmin.css",
       "PackagePath": "staticwebassets\\css\\homeAdmin.css"
     },
