@@ -1,0 +1,35 @@
+﻿@model IEnumerable<QuanLyBanGiay.Models.Sanpham>
+@{
+    ViewData["Title"] = "Sản phẩm thương hiệu " + (ViewBag.TenThuongHieu ?? "");
+}
+
+<link rel="stylesheet" href="~/css/SanPhamTheoThuongHieu.css" />
+
+<div class="container mt-5">
+    <h3 class="fw-bold text-uppercase mb-4 text-center text-primary">
+        @ViewData["Title"]
+    </h3>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="product-grid">
+            @foreach (var sp in Model)
+            {
+                <div class="product-card">
+                    <img src="~/images/Sanpham/@sp.Hinhdaidien" alt="@sp.Tensp" class="product-img" />
+                    <h5 class="mt-2">@sp.Tensp</h5>
+                    <p class="brand text-muted">@sp.MathNavigation?.Tenth</p>
+                    <p class="price">@string.Format("{0:#,##0} VNĐ", sp.Gia)</p>
+
+                    <a asp-controller="#" asp-action="#" asp-route-id="@sp.Masp" class="btn btn-outline-dark btn-sm mt-2">
+                        Xem chi tiết
+                    </a>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-muted">Hiện chưa có sản phẩm nào cho thương hiệu này.</p>
+    }
+</div>

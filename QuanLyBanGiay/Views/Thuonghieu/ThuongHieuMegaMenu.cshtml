@@ -1,0 +1,37 @@
+﻿@model IEnumerable<QuanLyBanGiay.Models.Thuonghieu>
+
+<link rel="stylesheet" href="~/css/MenuThuongHieu.css" />
+
+<li class="nav-item dropdown position-static">
+    <a class="nav-link dropdown-toggle" href="#" id="brandDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Thương hiệu
+    </a>
+
+    <div class="dropdown-menu mega-menu p-4" aria-labelledby="brandDropdown">
+        <div class="container-fluid">
+            <div class="row">
+                @{
+                    var brands = Model.ToList();
+                    int cols = 4;
+                    int perCol = (int)Math.Ceiling((double)brands.Count / cols);
+
+                    for (int c = 0; c < cols; c++)
+                    {
+                        <div class="col-md-3">
+                            <ul class="list-unstyled">
+                                @foreach (var th in brands.Skip(c * perCol).Take(perCol))
+                                {
+                                    <li class="py-1">
+                                        <a class="dropdown-item p-0" asp-controller="Thuonghieu" asp-action="SanPhamTheoThuongHieu" asp-route-id="@th.Math">
+                                            @th.Tenth
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</li>

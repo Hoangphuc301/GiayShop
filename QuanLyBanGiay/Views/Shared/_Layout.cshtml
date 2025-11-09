@@ -46,7 +46,13 @@
                     <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Giày Nam</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Giày Nữ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Thương hiệu</a></li>
+                    <!-- Mega Menu Thương hiệu -->
+                    @{
+                        var ctx = new QuanLyBanGiay.Models.QL_GiayContext();
+                        var brands = ctx.Thuonghieus.ToList();
+                    }
+                    @await Html.PartialAsync("~/Views/Thuonghieu/ThuongHieuMegaMenu.cshtml", brands)
+
                     <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
