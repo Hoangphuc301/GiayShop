@@ -24,7 +24,7 @@
 <body>
     <!-- Thanh thông báo -->
     <div class="top-bar">
-        FREESHIP toàn quốc cho đơn hàng từ 1.000.000₫
+        FREESHIP toàn quốc cho đơn hàng từ 10.000.000₫
     </div>
 
     <!-- Navbar -->
@@ -52,9 +52,10 @@
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">Chính sách hỗ trợ</a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="#">Chính sách ưu đãi</a></li>
-                            <li><a class="dropdown-item" href="#">Chính sách đổi trả</a></li>
-                            <li><a class="dropdown-item" href="#">Chính sách bảo hành</a></li>
+                            <li><a class="dropdown-item" asp-controller="Chinhsach" asp-action="Uudai">Chính sách ưu đãi</a></li>
+                            <li><a class="dropdown-item" asp-controller="Chinhsach" asp-action="Vanchuyen">Chính sách vận chuyển</a></li>
+                            <li><a class="dropdown-item" asp-controller="Chinhsach" asp-action="Doitra">Chính sách đổi trả</a></li>
+                            <li><a class="dropdown-item" asp-controller="Chinhsach" asp-action="Baohanh">Chính sách bảo hành</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -119,14 +120,19 @@
                 <div class="col-md-4">
                     <h5>Chính sách</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Chính sách đổi trả</a></li>
-                        <li><a href="#">Chính sách bảo hành</a></li>
-                        <li><a href="#">Chính sách vận chuyển</a></li>
-                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a asp-controller="Chinhsach" asp-action="Doitra">Chính sách đổi trả</a></li>
+                        <li><a asp-controller="Chinhsach" asp-action="Baohanh">Chính sách bảo hành</a></li>
+                        <li><a asp-controller="Chinhsach" asp-action="Vanchuyen">Chính sách vận chuyển</a></li>
+                        <li><a asp-controller="Chinhsach" asp-action="Baomat">Chính sách bảo mật</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Liên hệ</h5>
+                    <p>
+                        <i class="fa fa-comment-dots me-2"></i>
+                        <a href="https://forms.gle/FaAcQ1BaRFnYg7HH7" target="_blank" rel="noopener noreferrer">Góp ý và khiếu nại
+                        </a>
+                    </p>
                     <p><i class="fa fa-map-marker-alt me-2"></i>Hồ Chí Minh, Việt Nam</p>
                     <p><i class="fa fa-phone me-2"></i>Hotline: 0909 123 456</p>
                     <p><i class="fa fa-envelope me-2"></i>support@styleofme.vn</p>
