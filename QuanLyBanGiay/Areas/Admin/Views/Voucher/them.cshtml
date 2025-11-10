@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary fw-bold">➕ Thêm Voucher</h2>
+
+    <form asp-area="Admin" asp-controller="Voucher" asp-action="them" method="post" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Tên Voucher</label>
+            <input name="Tenvoucher" class="form-control" maxlength="100" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Mã giảm giá</label>
+            <input name="Magiamgia" class="form-control" maxlength="50" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Giá trị (%)</label>
+            <input type="number" name="Giatri" class="form-control" min="0" max="100" step="0.01" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Ngày bắt đầu</label>
+            <input type="date" name="Ngaybd" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Ngày kết thúc</label>
+            <input type="date" name="Ngaykt" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Trạng thái</label>
+            <select name="Trangthai" class="form-select" required>
+                <option value="CÒN">CÒN</option>
+                <option value="HẾT HẠN">HẾT HẠN</option>
+            </select>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6">
+                <a href="@Url.Content("~/Admin/Voucher")"
+                   class="btn btn-outline-secondary w-100">
+                    ⬅️ Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">
+                    ➕ Thêm mới
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

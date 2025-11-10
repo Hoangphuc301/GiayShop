@@ -1,0 +1,24 @@
+﻿.mega-menu {
+    min-width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 3px solid #f97316;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-top: 0;
+}
+
+    .mega-menu .dropdown-item {
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+        .mega-menu .dropdown-item:hover {
+            color: #f97316;
+        }
+
+.navbar-nav .dropdown-menu.mega-menu {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) !important;
+}

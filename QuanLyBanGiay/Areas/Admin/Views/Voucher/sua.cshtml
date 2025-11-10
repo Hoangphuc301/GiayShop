@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var voucher = ViewBag.Voucher;
+}
+
+@if (voucher != null)
+{
+    <div class="container mt-4" style="max-width:700px;">
+        <h2 class="mb-3 text-primary fw-bold">✏️ Sửa thông tin Voucher</h2>
+
+        <form asp-area="Admin" asp-controller="Voucher" asp-action="sua" method="post" class="card p-4 shadow-sm">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="Mavoucher" value="@voucher.Mavoucher" />
+
+            <!-- Tên voucher -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Tên Voucher</label>
+                <input type="text" name="Tenvoucher" value="@voucher.Tenvoucher" class="form-control" placeholder="Nhập tên voucher..." required />
+            </div>
+
+            <!-- Mã giảm giá -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Mã Giảm Giá</label>
+                <input type="text" name="Magiamgia" value="@voucher.Magiamgia" class="form-control" placeholder="Nhập mã giảm giá..." required />
+            </div>
+
+            <!-- Giá trị -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Giá trị (%)</label>
+                <input type="number" name="Giatri" value="@voucher.Giatri" min="0" max="100" step="0.01" class="form-control" required />
+            </div>
+
+            <!-- Ngày bắt đầu -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Ngày Bắt Đầu</label>
+                <input type="date" name="Ngaybd" value="@(voucher.Ngaybd != null ? ((DateTime)voucher.Ngaybd).ToString("yyyy-MM-dd") : "")" class="form-control" required />
+            </div>
+
+            <!-- Ngày kết thúc -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Ngày Kết Thúc</label>
+                <input type="date" name="Ngaykt" value="@(voucher.Ngaykt != null ? ((DateTime)voucher.Ngaykt).ToString("yyyy-MM-dd") : "")" class="form-control" required />
+            </div>
+
+            <!-- Trạng thái -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Trạng Thái</label>
+                <select name="Trangthai" class="form-select" required>
+                    <option value="CÒN" @(voucher.Trangthai == "CÒN" ? "selected" : "")>CÒN</option>
+                    <option value="HẾT HẠN" @(voucher.Trangthai == "HẾT HẠN" ? "selected" : "")>HẾT HẠN</option>
+                </select>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <a href="@Url.Action("Index", "Voucher", new { area = "Admin" })" class="btn btn-outline-secondary w-100">
+                        ⬅️ Quay lại
+                    </a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100">
+                        💾 Lưu thay đổi
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning mt-4 text-center">Không tìm thấy thông tin voucher để chỉnh sửa.</div>
+    <div class="text-center">
+        <a href="@Url.Action("Index", "Voucher", new { area = "Admin" })" class="btn btn-secondary">⬅️ Quay lại</a>
+    </div>
+}

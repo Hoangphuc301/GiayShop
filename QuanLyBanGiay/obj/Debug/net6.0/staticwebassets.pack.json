@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\Layout.css"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\MenuThuongHieu.css",
+      "PackagePath": "staticwebassets\\css\\MenuThuongHieu.css"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\SanPhamTheoThuongHieu.css",
+      "PackagePath": "staticwebassets\\css\\SanPhamTheoThuongHieu.css"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
@@ -49,12 +57,24 @@
       "PackagePath": "staticwebassets\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\3b07e2a4-700e-4c8e-8645-755214d27f3f_Adidas_Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\3b07e2a4-700e-4c8e-8645-755214d27f3f_Adidas_Logo.svg"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\6dd7a412-d171-402a-921e-6e3122ebf70e_adidas.webp",
+      "PackagePath": "staticwebassets\\images\\Logo\\6dd7a412-d171-402a-921e-6e3122ebf70e_adidas.webp"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\71b9f63c-2f0d-4d2b-ae71-5ab1a7db4be6_nike.png",
       "PackagePath": "staticwebassets\\images\\Logo\\71b9f63c-2f0d-4d2b-ae71-5ab1a7db4be6_nike.png"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\9aa4b236-b541-41fe-ac8c-7667ca3730fd_fila_logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo\\9aa4b236-b541-41fe-ac8c-7667ca3730fd_fila_logo.png"
     },
     {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
@@ -117,6 +137,14 @@
       "PackagePath": "staticwebassets\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\adidas.webp",
+      "PackagePath": "staticwebassets\\images\\Logo\\adidas.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\dd3338fc-0bfe-4a75-bd73-726e6db234f4_Adidas_Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo\\dd3338fc-0bfe-4a75-bd73-726e6db234f4_Adidas_Logo.svg"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
@@ -147,6 +175,18 @@
     {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\vans_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-46099064-425b-4ba2-b0d2-592d1814ee68.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\1-46099064-425b-4ba2-b0d2-592d1814ee68.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-933ef64d-9e71-4e00-80b1-828eb26c8d00.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\1-933ef64d-9e71-4e00-80b1-828eb26c8d00.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-973ec2cb-a3fd-4985-984b-9b8b1f82a5d8.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\1-973ec2cb-a3fd-4985-984b-9b8b1f82a5d8.webp"
     },
     {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\GIày Hoka Kaha GTX ‘Dune Oxford Tan’ 1112030 DOTN.png",
@@ -893,8 +933,44 @@
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Targa Forte.jpg"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-moca-judy-baca-old-skool-vn0a5krfyq8-1-5c940544-c61b-4ea4-a4e7-3fd320a7c6fe.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\giay-vans-x-moca-judy-baca-old-skool-vn0a5krfyq8-1-5c940544-c61b-4ea4-a4e7-3fd320a7c6fe.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-national-geographic-era-brand-vn0a4u39wjz-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\giay-vans-x-national-geographic-era-brand-vn0a4u39wjz-1.webp"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\nike_vista.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\nike_vista.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\van-sk8-hi-classic-navywhite-vn000d5invy-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\van-sk8-hi-classic-navywhite-vn000d5invy-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-authentic-classic-black-vn000ee3blk-2.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-authentic-classic-black-vn000ee3blk-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-crew-slip-on-style-36-checkerboard-red-vn0a4bv31iw-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-crew-slip-on-style-36-checkerboard-red-vn0a4bv31iw-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-old-skool-black-white-vn000d3hy28-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-old-skool-black-white-vn000d3hy28-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-custom-culture-2018-vn0a4bv3017-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-custom-culture-2018-vn0a4bv3017-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-los-vans-vn0a4u38wn1-1.webp",
+      "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-los-vans-vn0a4u38wn1-1.webp"
     },
     {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",
