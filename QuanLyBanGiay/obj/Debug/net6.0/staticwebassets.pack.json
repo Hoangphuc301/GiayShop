@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\css\\MenuThuongHieu.css"
     },
     {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Minicart.css",
+      "PackagePath": "staticwebassets\\css\\Minicart.css"
+    },
+    {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\SanPhamTheoThuongHieu.css",
       "PackagePath": "staticwebassets\\css\\SanPhamTheoThuongHieu.css"
+    },
+    {
+      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Soluong.css",
+      "PackagePath": "staticwebassets\\css\\Soluong.css"
     },
     {
       "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\admin.css",

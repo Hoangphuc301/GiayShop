@@ -1,0 +1,15 @@
+﻿.mini-cart {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    top: 120px; 
+    bottom: 150px; 
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1050;
+    display: none;
+}

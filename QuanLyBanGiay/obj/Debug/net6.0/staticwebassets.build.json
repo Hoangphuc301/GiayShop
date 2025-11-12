@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dnOaOR+QJr5kxccPaDvPN2ehO2/yCbk/234m8tHyIuE=",
+  "Hash": "zXIWokVZPGojUpf90FswaiHZeQBjkVWhUgCpIrSXdpg=",
   "Source": "QuanLyBanGiay",
   "BasePath": "_content/QuanLyBanGiay",
   "Mode": "Default",
@@ -150,6 +150,25 @@
       "OriginalItemSpec": "wwwroot\\css\\MenuThuongHieu.css"
     },
     {
+      "Identity": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Minicart.css",
+      "SourceId": "QuanLyBanGiay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\",
+      "BasePath": "_content/QuanLyBanGiay",
+      "RelativePath": "css/Minicart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Minicart.css"
+    },
+    {
       "Identity": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\SanPhamTheoThuongHieu.css",
       "SourceId": "QuanLyBanGiay",
       "SourceType": "Discovered",
@@ -186,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Soluong.css",
+      "SourceId": "QuanLyBanGiay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\",
+      "BasePath": "_content/QuanLyBanGiay",
+      "RelativePath": "css/Soluong.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Soluong.css"
     },
     {
       "Identity": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\favicon.ico",
