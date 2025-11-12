@@ -117,7 +117,9 @@
                                 <div class="card-body">
                                     <h6>@item.Tensp</h6>
                                     <p class="fw-bold text-danger">@String.Format("{0:N0} ₫", item.Gia)</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+                                    <a asp-controller="Timkiem" asp-action="Chitiet" asp-route-id="@item.Masp" class="btn btn-outline-dark btn-sm mt-2">
+                                        Xem chi tiết
+                                    </a>
                                 </div>
                             </div>
                         </div>
