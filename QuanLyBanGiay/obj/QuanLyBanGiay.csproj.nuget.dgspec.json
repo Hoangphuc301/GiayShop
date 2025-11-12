@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {}
+    "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {}
   },
   "projects": {
-    "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {
+    "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+        "projectUniqueName": "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
         "projectName": "QuanLyBanGiay",
-        "projectPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+        "projectPath": "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\obj\\",
+        "outputPath": "D:\\git\\QuanLyBanGiay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
