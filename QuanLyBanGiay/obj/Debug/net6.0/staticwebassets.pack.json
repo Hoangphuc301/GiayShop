@@ -1,1211 +1,1219 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\QuanLyBanGiay.bundle.scp.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\QuanLyBanGiay.bundle.scp.css",
       "PackagePath": "staticwebassets\\QuanLyBanGiay.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\Layout.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\Layout.css",
       "PackagePath": "staticwebassets\\css\\Layout.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\MenuThuongHieu.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\MenuThuongHieu.css",
       "PackagePath": "staticwebassets\\css\\MenuThuongHieu.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\SanPhamTheoThuongHieu.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\Minicart.css",
+      "PackagePath": "staticwebassets\\css\\Minicart.css"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\SanPhamTheoThuongHieu.css",
       "PackagePath": "staticwebassets\\css\\SanPhamTheoThuongHieu.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\Soluong.css",
+      "PackagePath": "staticwebassets\\css\\Soluong.css"
+    },
+    {
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\chitiet.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\chitiet.css",
       "PackagePath": "staticwebassets\\css\\chitiet.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\homeAdmin.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\homeAdmin.css",
       "PackagePath": "staticwebassets\\css\\homeAdmin.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\site.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\favicon.ico",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\html\\home.html",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\html\\home.html",
       "PackagePath": "staticwebassets\\html\\home.html"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Banner.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Banner.png",
       "PackagePath": "staticwebassets\\images\\Banner.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Chinhsach\\BoCongThuong.png",
       "PackagePath": "staticwebassets\\images\\Chinhsach\\BoCongThuong.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\04ea483c-ae9a-4bb6-9323-385a2f07f87c_e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\31e0f138-843c-4194-ab62-367ffcea9787_vans_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\3b07e2a4-700e-4c8e-8645-755214d27f3f_Adidas_Logo.svg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\3b07e2a4-700e-4c8e-8645-755214d27f3f_Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\3b07e2a4-700e-4c8e-8645-755214d27f3f_Adidas_Logo.svg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\61ca509e-ebe8-458b-abcc-6f0e2d9d24ce_Adidas_Logo.svg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\6dd7a412-d171-402a-921e-6e3122ebf70e_adidas.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\6dd7a412-d171-402a-921e-6e3122ebf70e_adidas.webp",
       "PackagePath": "staticwebassets\\images\\Logo\\6dd7a412-d171-402a-921e-6e3122ebf70e_adidas.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\71b9f63c-2f0d-4d2b-ae71-5ab1a7db4be6_nike.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\71b9f63c-2f0d-4d2b-ae71-5ab1a7db4be6_nike.png",
       "PackagePath": "staticwebassets\\images\\Logo\\71b9f63c-2f0d-4d2b-ae71-5ab1a7db4be6_nike.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\9aa4b236-b541-41fe-ac8c-7667ca3730fd_fila_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\9aa4b236-b541-41fe-ac8c-7667ca3730fd_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\9aa4b236-b541-41fe-ac8c-7667ca3730fd_fila_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\Adidas_Logo.svg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Balenciaga.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Balenciaga.webp",
       "PackagePath": "staticwebassets\\images\\Logo\\Balenciaga.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Fear of God.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Fear of God.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Fear of God.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Gucci.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Gucci.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Gucci.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Hoka.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Hoka.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Hoka.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Louis Vuitton.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Louis Vuitton.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Louis Vuitton.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\MCM.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\MCM.png",
       "PackagePath": "staticwebassets\\images\\Logo\\MCM.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\MLB.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\MLB.png",
       "PackagePath": "staticwebassets\\images\\Logo\\MLB.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\New Balance.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\New Balance.webp",
       "PackagePath": "staticwebassets\\images\\Logo\\New Balance.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Nike Air Force 1.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Nike Air Force 1.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Nike Air Force 1.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Off-White.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Off-White.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Off-White.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Prada.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Prada.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Prada.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Puma.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Puma.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\Puma.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Vans.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\Vans.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Vans.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\a15c02e3-9f34-4f57-abf5-960256b5c0d1_puma_logo.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\adidas.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\adidas.webp",
       "PackagePath": "staticwebassets\\images\\Logo\\adidas.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\dd3338fc-0bfe-4a75-bd73-726e6db234f4_Adidas_Logo.svg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\dd3338fc-0bfe-4a75-bd73-726e6db234f4_Adidas_Logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\dd3338fc-0bfe-4a75-bd73-726e6db234f4_Adidas_Logo.svg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\e4832e1c-6710-445c-9a83-e1bd2e2be762_fila_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e9f9cd40-ba61-40b7-afad-007451c96736_logo_nike.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\e9f9cd40-ba61-40b7-afad-007451c96736_logo_nike.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\e9f9cd40-ba61-40b7-afad-007451c96736_logo_nike.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\fila_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\fila_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\fila_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\gucci_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\gucci_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\gucci_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\logo_nike.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\logo_nike.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\logo_nike.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\nike.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\nike.png",
       "PackagePath": "staticwebassets\\images\\Logo\\nike.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\puma_logo.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\puma_logo.jpg",
       "PackagePath": "staticwebassets\\images\\Logo\\puma_logo.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Logo\\vans_logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\vans_logo.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-46099064-425b-4ba2-b0d2-592d1814ee68.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-46099064-425b-4ba2-b0d2-592d1814ee68.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\1-46099064-425b-4ba2-b0d2-592d1814ee68.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-933ef64d-9e71-4e00-80b1-828eb26c8d00.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-933ef64d-9e71-4e00-80b1-828eb26c8d00.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\1-933ef64d-9e71-4e00-80b1-828eb26c8d00.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-973ec2cb-a3fd-4985-984b-9b8b1f82a5d8.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\1-973ec2cb-a3fd-4985-984b-9b8b1f82a5d8.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\1-973ec2cb-a3fd-4985-984b-9b8b1f82a5d8.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\GIày Hoka Kaha GTX ‘Dune Oxford Tan’ 1112030 DOTN.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\GIày Hoka Kaha GTX ‘Dune Oxford Tan’ 1112030 DOTN.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\GIày Hoka Kaha GTX ‘Dune Oxford Tan’ 1112030 DOTN.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giay-Loafer-cao-cap-GUCCI-Den-3.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giay-Loafer-cao-cap-GUCCI-Den-3.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giay-Loafer-cao-cap-GUCCI-Den-3.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle 85 ‘Olive Strata’ IG5006.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle 85 ‘Olive Strata’ IG5006.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Gazelle 85 ‘Olive Strata’ IG5006.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle ‘Cloud White’ GX9882.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle ‘Cloud White’ GX9882.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Gazelle ‘Cloud White’ GX9882.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle “Ivory Bluebird” IF4599.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Gazelle “Ivory Bluebird” IF4599.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Gazelle “Ivory Bluebird” IF4599.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Predator CLUB Turf ‘Black’ IG7711.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Predator CLUB Turf ‘Black’ IG7711.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Predator CLUB Turf ‘Black’ IG7711.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar Bold ‘Core Black’ G58352.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar Bold ‘Core Black’ G58352.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Superstar Bold ‘Core Black’ G58352.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar OG ‘Vintage White’ C77124.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar OG ‘Vintage White’ C77124.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Superstar OG ‘Vintage White’ C77124.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar ‘Black’ GW4069.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar ‘Black’ GW4069.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Superstar ‘Black’ GW4069.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar ‘White Red Blue’ BB2246.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Superstar ‘White Red Blue’ BB2246.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Superstar ‘White Red Blue’ BB2246.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Wmns Originals Gazelle ‘Purple Tint’ EF6508.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas Wmns Originals Gazelle ‘Purple Tint’ EF6508.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas Wmns Originals Gazelle ‘Purple Tint’ EF6508.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas x Gucci Gazelle ‘Red Velvet’ 707848-9STU0-6360.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Adidas x Gucci Gazelle ‘Red Velvet’ 707848-9STU0-6360.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Adidas x Gucci Gazelle ‘Red Velvet’ 707848-9STU0-6360.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘Orange White’ 677403W3RBM9770.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘Orange White’ 677403W3RBM9770.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘Orange White’ 677403W3RBM9770.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘White’ 677403W3RB19000.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘White’ 677403W3RB19000.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Runner Trainers ‘White’ 677403W3RB19000.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Track Sneaker Triple Black 542023-W1GB1-1000.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Track Sneaker Triple Black 542023-W1GB1-1000.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Track Sneaker Triple Black 542023-W1GB1-1000.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Clear Sole Sneakers White 544351-W2GS-19012.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Clear Sole Sneakers White 544351-W2GS-19012.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Triple S Clear Sole Sneakers White 544351-W2GS-19012.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Purple Yellow 524039-W09OM-9465.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Purple Yellow 524039-W09OM-9465.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Triple S Purple Yellow 524039-W09OM-9465.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Sneaker ‘Clear Sole Black’ 541624-W2FB1-1000.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S Sneaker ‘Clear Sole Black’ 541624-W2FB1-1000.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Triple S Sneaker ‘Clear Sole Black’ 541624-W2FB1-1000.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S ‘Beige’ 536737W2FAD9791.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Triple S ‘Beige’ 536737W2FAD9791.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Triple S ‘Beige’ 536737W2FAD9791.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Wmns Triple S Trainer ‘Pink Black’ 524038-W09O5-9035.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Balenciaga Wmns Triple S Trainer ‘Pink Black’ 524038-W09O5-9035.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Balenciaga Wmns Triple S Trainer ‘Pink Black’ 524038-W09O5-9035.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear Of God Athletics Basketball ‘Carbon’ IF6680.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear Of God Athletics Basketball ‘Carbon’ IF6680.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear Of God Athletics Basketball ‘Carbon’ IF6680.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear Of God for Men Black Cream 6F19-7025-SCA-966.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear Of God for Men Black Cream 6F19-7025-SCA-966.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear Of God for Men Black Cream 6F19-7025-SCA-966.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Bone Cream’ 6H19-7000-SCA.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Bone Cream’ 6H19-7000-SCA.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Bone Cream’ 6H19-7000-SCA.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Green’ 6H19-7000-CAN-300.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Green’ 6H19-7000-CAN-300.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God 101 Lace Up ‘Green’ 6H19-7000-CAN-300.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Hiker ‘Olive Calf’ 6S19-7015-NUC-304.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Hiker ‘Olive Calf’ 6S19-7015-NUC-304.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God Hiker ‘Olive Calf’ 6S19-7015-NUC-304.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate Low ‘Black’ 6P20-7024-SUE-002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate Low ‘Black’ 6P20-7024-SUE-002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God Skate Low ‘Black’ 6P20-7024-SUE-002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate Mid ‘Sand Cream’ 6H19-7001-RSV-110.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate Mid ‘Sand Cream’ 6H19-7001-RSV-110.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God Skate Mid ‘Sand Cream’ 6H19-7001-RSV-110.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate ‘Interstellar Green’ 6H19-7024-SUC-058.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Skate ‘Interstellar Green’ 6H19-7024-SUC-058.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God Skate ‘Interstellar Green’ 6H19-7024-SUC-058.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Strapless Skate Mid ‘Black’ 6H19-7025-RSC-006.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God Strapless Skate Mid ‘Black’ 6H19-7025-RSC-006.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God Strapless Skate Mid ‘Black’ 6H19-7025-RSC-006.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God x Converse Chuck 70 Hi ‘Natural’ 164530C.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fear of God x Converse Chuck 70 Hi ‘Natural’ 164530C.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fear of God x Converse Chuck 70 Hi ‘Natural’ 164530C.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fila sneakers unisex cổ thấp Echappe.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Fila sneakers unisex cổ thấp Echappe.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Fila sneakers unisex cổ thấp Echappe.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Basket ‘White Demetra’ 6987852SHG09089.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Basket ‘White Demetra’ 6987852SHG09089.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Basket ‘White Demetra’ 6987852SHG09089.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Boot With Interlocking G Chain ‘Brown’ 644728-19Y00-7728.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Boot With Interlocking G Chain ‘Brown’ 644728-19Y00-7728.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Boot With Interlocking G Chain ‘Brown’ 644728-19Y00-7728.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Jordaan Leather ‘Brown’ 406994BLM002535.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Jordaan Leather ‘Brown’ 406994BLM002535.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Jordaan Leather ‘Brown’ 406994BLM002535.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Men’s Gucci 100 loafer 680867-UHR10-2560.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Men’s Gucci 100 loafer 680867-UHR10-2560.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Men’s Gucci 100 loafer 680867-UHR10-2560.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Nathan ‘White’ 624701-0FI60-9071.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Nathan ‘White’ 624701-0FI60-9071.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Nathan ‘White’ 624701-0FI60-9071.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Rhyton ‘Cat Print ‘ ‎699293-DRW00-9522.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Rhyton ‘Cat Print ‘ ‎699293-DRW00-9522.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Rhyton ‘Cat Print ‘ ‎699293-DRW00-9522.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Wmns Rhyton Distressed Ivory 550046-A9L00-9522.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Gucci Wmns Rhyton Distressed Ivory 550046-A9L00-9522.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Gucci Wmns Rhyton Distressed Ivory 550046-A9L00-9522.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Arahi 5 ‘Beige Purple’ 1115012-BDBOS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Arahi 5 ‘Beige Purple’ 1115012-BDBOS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Arahi 5 ‘Beige Purple’ 1115012-BDBOS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Arahi 6 Running ‘Orange’ 1123194-sbfs.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Arahi 6 Running ‘Orange’ 1123194-sbfs.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Arahi 6 Running ‘Orange’ 1123194-sbfs.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Black 1110530-BGBT.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Black 1110530-BGBT.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Black 1110530-BGBT.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Running “Black” 1110530-BGBT.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Running “Black” 1110530-BGBT.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Bondi 7 Wide Running “Black” 1110530-BGBT.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Carbon X 3 Running ‘Orange’ 1123192-MSPBL.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Carbon X 3 Running ‘Orange’ 1123192-MSPBL.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Carbon X 3 Running ‘Orange’ 1123192-MSPBL.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Clifton 9 ‘Citrus Ocean’ 1127896-CGSO.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Clifton 9 ‘Citrus Ocean’ 1127896-CGSO.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Clifton 9 ‘Citrus Ocean’ 1127896-CGSO.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Mach 4 Festival Fuchsia Black 1113529-FFBL.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Mach 4 Festival Fuchsia Black 1113529-FFBL.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Mach 4 Festival Fuchsia Black 1113529-FFBL.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Bondi 8 ‘White Vermillion’ 1123202-WVR.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Bondi 8 ‘White Vermillion’ 1123202-WVR.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One Bondi 8 ‘White Vermillion’ 1123202-WVR.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Carbon X 3 Wmns ‘Yellow’ 1123193-EPSB.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Carbon X 3 Wmns ‘Yellow’ 1123193-EPSB.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One Carbon X 3 Wmns ‘Yellow’ 1123193-EPSB.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Carbon x 2 Blue 1113526-DBCTR.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Carbon x 2 Blue 1113526-DBCTR.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One Carbon x 2 Blue 1113526-DBCTR.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Gaviota 4 ‘Blue Fog Plein Air’ 1123199-BFPA.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Gaviota 4 ‘Blue Fog Plein Air’ 1123199-BFPA.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One Gaviota 4 ‘Blue Fog Plein Air’ 1123199-BFPA.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Stinson Atr 6 1122630-NCWT.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One Stinson Atr 6 1122630-NCWT.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One Stinson Atr 6 1122630-NCWT.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One x Engineered Garments Bondi L Sand Leo 1127736-SLPT.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka One One x Engineered Garments Bondi L Sand Leo 1127736-SLPT.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka One One x Engineered Garments Bondi L Sand Leo 1127736-SLPT.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka OneOne Clifton 8 ‘Pastel Blue’ 1130278-CSFS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka OneOne Clifton 8 ‘Pastel Blue’ 1130278-CSFS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka OneOne Clifton 8 ‘Pastel Blue’ 1130278-CSFS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Torrent 3 Running ‘Orange’ 1127914-MOCR.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Hoka Torrent 3 Running ‘Orange’ 1127914-MOCR.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Hoka Torrent 3 Running ‘Orange’ 1127914-MOCR.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton 21FW Monogram Street Style Leather Logo Sneakers 1A8WJ6.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton 21FW Monogram Street Style Leather Logo Sneakers 1A8WJ6.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton 21FW Monogram Street Style Leather Logo Sneakers 1A8WJ6.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Charlie Trainers ‘Gold’ 1AADOO.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Charlie Trainers ‘Gold’ 1AADOO.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Charlie Trainers ‘Gold’ 1AADOO.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Gloria Flat Loafers ‘Natural’ 1A8W0K.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Gloria Flat Loafers ‘Natural’ 1A8W0K.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Gloria Flat Loafers ‘Natural’ 1A8W0K.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Driver Mocassin ‘Black’ 1AAF3E.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Driver Mocassin ‘Black’ 1AAF3E.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton LV Driver Mocassin ‘Black’ 1AAF3E.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Green White 1A9VNH.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Green White 1A9VNH.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Green White 1A9VNH.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Sneaker ‘Black White’ 1AAV8H.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Sneaker ‘Black White’ 1AAV8H.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton LV Trainer Sneaker ‘Black White’ 1AAV8H.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘Black’ 1A8Q7L.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘Black’ 1A8Q7L.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘Black’ 1A8Q7L.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘White Green’ 1AAGXF.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘White Green’ 1AAGXF.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton LV Trainers ‘White Green’ 1AAGXF.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Laureate Platform Boots ‘Beige’ 1AAIWN.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Laureate Platform Boots ‘Beige’ 1AAIWN.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Laureate Platform Boots ‘Beige’ 1AAIWN.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Luxembourg Samothrace Trainers “Pink” 1A9G1R.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Luxembourg Samothrace Trainers “Pink” 1A9G1R.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Luxembourg Samothrace Trainers “Pink” 1A9G1R.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Luxury Trainers ‘Blue’ 1AA6UV.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Luxury Trainers ‘Blue’ 1AA6UV.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Luxury Trainers ‘Blue’ 1AA6UV.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Major Open Back Loafers Ebene 1A8Y28.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Major Open Back Loafers Ebene 1A8Y28.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Major Open Back Loafers Ebene 1A8Y28.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘Red Black’ 1A9H5B.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘Red Black’ 1A9H5B.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘Red Black’ 1A9H5B.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘White’ 1AASDF.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘White’ 1AASDF.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Run 55 Trainers ‘White’ 1AASDF.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainer ‘Denim Blue’ 1A4WP4.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainer ‘Denim Blue’ 1A4WP4.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainer ‘Denim Blue’ 1A4WP4.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainers ‘Black’ 1A9J1A.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainers ‘Black’ 1A9J1A.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Run Away Trainers ‘Black’ 1A9J1A.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Since 1854 Metropolis Flat Rangers 1A8DF2.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Since 1854 Metropolis Flat Rangers 1A8DF2.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Since 1854 Metropolis Flat Rangers 1A8DF2.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Time Out Trainers ‘Grey’ 1A9FNI.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Time Out Trainers ‘Grey’ 1A9FNI.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Time Out Trainers ‘Grey’ 1A9FNI.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Red Yellow 1A8Q95.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Red Yellow 1A8Q95.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Red Yellow 1A8Q95.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Technology Fabric 1A5YQW.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Technology Fabric 1A5YQW.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer Monogram Technology Fabric 1A5YQW.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Multi Colorful 1A9D9N.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Multi Colorful 1A9D9N.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer Multi Colorful 1A9D9N.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Polish 1A8KGQ.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer Polish 1A8KGQ.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer Polish 1A8KGQ.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Neon Brown’ 1A8Z6I.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Neon Brown’ 1A8Z6I.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Neon Brown’ 1A8Z6I.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Red White’ 1A8PJW.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Red White’ 1A8PJW.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainer ‘Red White’ 1A8PJW.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainers “Blue” 1A9JGN.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainers “Blue” 1A9JGN.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainers “Blue” 1A9JGN.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainers “Bordeaux Red” 1A8WE1.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Louis Vuitton Trainers “Bordeaux Red” 1A8WE1.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Louis Vuitton Trainers “Bordeaux Red” 1A8WE1.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 35 IT Lo Sneakers Cognac MESCSMM23CO035.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 35 IT Lo Sneakers Cognac MESCSMM23CO035.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 35 IT Lo Sneakers Cognac MESCSMM23CO035.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 37 IT Lo Sneakers Jacquard Monogram Blue MESBATQ02LU037.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 37 IT Lo Sneakers Jacquard Monogram Blue MESBATQ02LU037.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 37 IT Lo Sneakers Jacquard Monogram Blue MESBATQ02LU037.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 38 IT Sustainable Leather White MESBSMM09WT038.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 38 IT Sustainable Leather White MESBSMM09WT038.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 38 IT Sustainable Leather White MESBSMM09WT038.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 40 IT Terrain Lo Sneakers Black MEXAAMM11BK040.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 40 IT Terrain Lo Sneakers Black MEXAAMM11BK040.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 40 IT Terrain Lo Sneakers Black MEXAAMM11BK040.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Block Terrain Lo Sneakers Beige MEXCSMM05I6041.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Block Terrain Lo Sneakers Beige MEXCSMM05I6041.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 41 IT Block Terrain Lo Sneakers Beige MEXCSMM05I6041.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Jacquard Monogram Blue MEXBATQ01LU041.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Jacquard Monogram Blue MEXBATQ01LU041.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 41 IT Jacquard Monogram Blue MEXBATQ01LU041.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Lo Sneakers Red Lychee MEXCSMM02R0041.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM 41 IT Lo Sneakers Red Lychee MEXCSMM02R0041.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM 41 IT Lo Sneakers Red Lychee MEXCSMM02R0041.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Sky Ward Cognac MESAAMM19CO.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Sky Ward Cognac MESAAMM19CO.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM Sky Ward Cognac MESAAMM19CO.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Terrain Lo Visetos Black MEXAAMM11JH.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Terrain Lo Visetos Black MEXAAMM11JH.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM Terrain Lo Visetos Black MEXAAMM11JH.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Terrain Low White MEXAAMM11WT.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MCM Terrain Low White MEXAAMM11WT.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MCM Terrain Low White MEXAAMM11WT.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Big Ball Chunky New York Yankees ‘Beige’ 3ASHCDA1N-50CRS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Big Ball Chunky New York Yankees ‘Beige’ 3ASHCDA1N-50CRS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Big Ball Chunky New York Yankees ‘Beige’ 3ASHCDA1N-50CRS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky High Mono Jaquard Boston Red Sox 3ASHU311N-43BGD.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky High Mono Jaquard Boston Red Sox 3ASHU311N-43BGD.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Chunky High Mono Jaquard Boston Red Sox 3ASHU311N-43BGD.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Jogger New York Yankees ‘Pink’ 3ASXX111N-50COL.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Jogger New York Yankees ‘Pink’ 3ASXX111N-50COL.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Chunky Jogger New York Yankees ‘Pink’ 3ASXX111N-50COL.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner High Blue 3ASXCB12N-07BLL.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner High Blue 3ASXCB12N-07BLL.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Chunky Liner High Blue 3ASXCB12N-07BLL.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner High New York Yankees White Black 3ASXCB12N-50IVS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner High New York Yankees White Black 3ASXCB12N-50IVS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Chunky Liner High New York Yankees White Black 3ASXCB12N-50IVS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner NY Yankees ‘Black’ 3ASXCLB3N-50BKS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Chunky Liner NY Yankees ‘Black’ 3ASXCLB3N-50BKS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Chunky Liner NY Yankees ‘Black’ 3ASXCLB3N-50BKS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB PlayBall Flower Mule LA Dodgers ‘Black’ 32SHSF111-07L.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB PlayBall Flower Mule LA Dodgers ‘Black’ 32SHSF111-07L.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB PlayBall Flower Mule LA Dodgers ‘Black’ 32SHSF111-07L.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50CRS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50CRS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50CRS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50PKS.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50PKS.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Playball Check New York Yankees 3ACVVC21N-50PKS.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball New York Yankees 32SHP1011-50L.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày MLB Playball New York Yankees 32SHP1011-50L.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày MLB Playball New York Yankees 32SHP1011-50L.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Mcm Terrain Visetos White MESAAMM17.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Mcm Terrain Visetos White MESAAMM17.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Mcm Terrain Visetos White MESAAMM17.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1700 Made in USA M1700WN.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1700 Made in USA M1700WN.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 1700 Made in USA M1700WN.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1906R ‘Black Taos Taupe’ M1906RK.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1906R ‘Black Taos Taupe’ M1906RK.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 1906R ‘Black Taos Taupe’ M1906RK.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1906R ‘Grey Deep Red’ M1906RJC.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 1906R ‘Grey Deep Red’ M1906RJC.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 1906R ‘Grey Deep Red’ M1906RJC.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 2002R Big Kid ‘Incense Sandstone’ GC2002EF.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 2002R Big Kid ‘Incense Sandstone’ GC2002EF.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 2002R Big Kid ‘Incense Sandstone’ GC2002EF.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 327 ‘1 800 Summer Orange’ MS327AS1.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 327 ‘1 800 Summer Orange’ MS327AS1.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 327 ‘1 800 Summer Orange’ MS327AS1.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 550 ‘Raw Sugar’ BBW550AB.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance 550 ‘Raw Sugar’ BBW550AB.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance 550 ‘Raw Sugar’ BBW550AB.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance FuelCell 1001 V3 ‘Black’ MGS1001N.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance FuelCell 1001 V3 ‘Black’ MGS1001N.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance FuelCell 1001 V3 ‘Black’ MGS1001N.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance FuelCell PRISM MFCPZCV.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance FuelCell PRISM MFCPZCV.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance FuelCell PRISM MFCPZCV.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance Fuelcell Prism V2 ‘Black’ WFCPZLB2.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance Fuelcell Prism V2 ‘Black’ WFCPZLB2.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance Fuelcell Prism V2 ‘Black’ WFCPZLB2.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance Joshua Vides x 327 ‘Black Splatter’ MS327JSV.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày New Balance Joshua Vides x 327 ‘Black Splatter’ MS327JSV.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày New Balance Joshua Vides x 327 ‘Black Splatter’ MS327JSV.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Black Metallic Gold Removable Swoosh Pack CT2252-001.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Black Metallic Gold Removable Swoosh Pack CT2252-001.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Black Metallic Gold Removable Swoosh Pack CT2252-001.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Crater ‘White Dark’ DM1060-100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Crater ‘White Dark’ DM1060-100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Crater ‘White Dark’ DM1060-100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 High NBA ‘Lakers’ BQ4591-101.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 High NBA ‘Lakers’ BQ4591-101.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 High NBA ‘Lakers’ BQ4591-101.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 High ‘Under Construction White’ CQ0449-100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 High ‘Under Construction White’ CQ0449-100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 High ‘Under Construction White’ CQ0449-100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low Pro Tech ‘Kermit’ FB8875-300.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low Pro Tech ‘Kermit’ FB8875-300.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Low Pro Tech ‘Kermit’ FB8875-300.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low x Louis Vuitton Virgil Abloh ‘White Red’.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low x Louis Vuitton Virgil Abloh ‘White Red’.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Low x Louis Vuitton Virgil Abloh ‘White Red’.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Cherry’ CJ4094-100.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Cherry’ CJ4094-100.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Cherry’ CJ4094-100.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Have a Nike Day Pink’ AV0742-600.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Have a Nike Day Pink’ AV0742-600.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Low ‘Have a Nike Day Pink’ AV0742-600.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ’07 Sail Multi’ DJ5933-100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Low ’07 Sail Multi’ DJ5933-100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Low ’07 Sail Multi’ DJ5933-100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Mid ‘Paris Pollen’ DO6729-700.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Mid ‘Paris Pollen’ DO6729-700.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Mid ‘Paris Pollen’ DO6729-700.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Shadow ‘Stars’ DD9794-001.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1 Shadow ‘Stars’ DD9794-001.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1 Shadow ‘Stars’ DD9794-001.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1-1 ‘Animal Print’ DM5329-200.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Force 1-1 ‘Animal Print’ DM5329-200.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Force 1-1 ‘Animal Print’ DM5329-200.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 High Switch ‘Purple Pulse’ CW6576-500.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 High Switch ‘Purple Pulse’ CW6576-500.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 High Switch ‘Purple Pulse’ CW6576-500.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 High Zoom CMFT 2 ‘Dia de los Muertos’ FQ8155-010.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 High Zoom CMFT 2 ‘Dia de los Muertos’ FQ8155-010.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 High Zoom CMFT 2 ‘Dia de los Muertos’ FQ8155-010.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Low SE ‘Floral Vines’ DQ8389-100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Low SE ‘Floral Vines’ DQ8389-100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Low SE ‘Floral Vines’ DQ8389-100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Low ‘Tie Dye’ GS DJ6252-038.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Low ‘Tie Dye’ GS DJ6252-038.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Low ‘Tie Dye’ GS DJ6252-038.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 LowPanda.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Black Pink Crimson’ 554725-604.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Black Pink Crimson’ 554725-604.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Black Pink Crimson’ 554725-604.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Half Blue’ 555112-400.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Half Blue’ 555112-400.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Half Blue’ 555112-400.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Top 3’ 554725-124.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Top 3’ 554725-124.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid GS ‘Top 3’ 554725-124.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘DIY’ DC4099-100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘DIY’ DC4099-100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘DIY’ DC4099-100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘Leopard’ BQ6931-021.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘Leopard’ BQ6931-021.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid SE GS ‘Leopard’ BQ6931-021.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid Wmns SE ‘Bright Citrus’ CZ0774-800.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid Wmns SE ‘Bright Citrus’ CZ0774-800.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Mid Wmns SE ‘Bright Citrus’ CZ0774-800.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro High OG ‘Royal Toe’ 555088-041.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro High OG ‘Royal Toe’ 555088-041.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro High OG ‘Royal Toe’ 555088-041.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro Low OG Pinnacle ‘Metallic Silver’ 852549-003.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro Low OG Pinnacle ‘Metallic Silver’ 852549-003.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Retro Low OG Pinnacle ‘Metallic Silver’ 852549-003.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Zoom Comfort ‘Gold Laser’ DQ0659-700.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 Zoom Comfort ‘Gold Laser’ DQ0659-700.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 Zoom Comfort ‘Gold Laser’ DQ0659-700.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Air Jordan 1 x Off-White ‘University Blue’ AQ0818-148.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Lauren Halsey x Air Force 1 High LE ‘ALL FOR 1 LA’ CU3052-001.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Lauren Halsey x Air Force 1 High LE ‘ALL FOR 1 LA’ CU3052-001.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Lauren Halsey x Air Force 1 High LE ‘ALL FOR 1 LA’ CU3052-001.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike SF Air Force 1 High ‘Desert Ochre’ 903270-778.jpeg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike SF Air Force 1 High ‘Desert Ochre’ 903270-778.jpeg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike SF Air Force 1 High ‘Desert Ochre’ 903270-778.jpeg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Force 1 Low ’07 ‘Frosted Plum’ AO2132-501.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Force 1 Low ’07 ‘Frosted Plum’ AO2132-501.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Wmns Air Force 1 Low ’07 ‘Frosted Plum’ AO2132-501.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 High Zoom ‘Halloween’ CT0979-001.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 High Zoom ‘Halloween’ CT0979-001.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 High Zoom ‘Halloween’ CT0979-001.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Nike Wmns Air Jordan 1 Low ‘White Wolf Grey’ DC0774-105.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Fluo Yellow’ OMIA042F19D68037-1062.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Fluo Yellow’ OMIA042F19D68037-1062.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Fluo Yellow’ OMIA042F19D68037-1062.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Yellow’ 2019 OMIA042E19D68048-1060.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Yellow’ 2019 OMIA042E19D68048-1060.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White 2.0 ‘Black Yellow’ 2019 OMIA042E19D68048-1060.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White ODSY-1000 Black Purple OMIA139E20FAB001-1037.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White ODSY-1000 Black Purple OMIA139E20FAB001-1037.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White ODSY-1000 Black Purple OMIA139E20FAB001-1037.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Security Leather ‘Black White’.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Security Leather ‘Black White’.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White Security Leather ‘Black White’.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Snicker Low Vulcanized Canvas OMIA085R21FAB002-0160.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Snicker Low Vulcanized Canvas OMIA085R21FAB002-0160.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White Snicker Low Vulcanized Canvas OMIA085R21FAB002-0160.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Vulc Low Top ‘White Black’ OMIA085E18351001-0100.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Vulc Low Top ‘White Black’ OMIA085E18351001-0100.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White Vulc Low Top ‘White Black’ OMIA085E18351001-0100.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Vulc Sneaker Low ‘Black Blue’ OMIA085R21LEA001-1045.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Off-White Vulc Sneaker Low ‘Black Blue’ OMIA085R21LEA001-1045.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Off-White Vulc Sneaker Low ‘Black Blue’ OMIA085R21LEA001-1045.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada America’s Cup Sneakers Black 4E3400_3C37_F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada America’s Cup Sneakers Black 4E3400_3C37_F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada America’s Cup Sneakers Black 4E3400_3C37_F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Bernice Logo ‘Black’ 1D763M-069-F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Bernice Logo ‘Black’ 1D763M-069-F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Bernice Logo ‘Black’ 1D763M-069-F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Black Leather and Fabric Sneaker 4E3563-3LEI-F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Black Leather and Fabric Sneaker 4E3563-3LEI-F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Black Leather and Fabric Sneaker 4E3563-3LEI-F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Cloudbust Air Technical Fabric Sneakers ‘Blue Black’.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Cloudbust Air Technical Fabric Sneakers ‘Blue Black’.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Cloudbust Air Technical Fabric Sneakers ‘Blue Black’.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Cloudbust Thunder Yellow 2EG293_3LFV_F0010.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Cloudbust Thunder Yellow 2EG293_3LFV_F0010.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Cloudbust Thunder Yellow 2EG293_3LFV_F0010.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Derby Brushed ‘Black’ 2EG411-055-F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Derby Brushed ‘Black’ 2EG411-055-F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Derby Brushed ‘Black’ 2EG411-055-F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Gabardine Wheel Low ‘Black’ 2EG302-GUD-F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Gabardine Wheel Low ‘Black’ 2EG302-GUD-F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Gabardine Wheel Low ‘Black’ 2EG302-GUD-F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Knit Fabric Sneakers ‘Black’ 4E3492_3V98_F0IAU.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Knit Fabric Sneakers ‘Black’ 4E3492_3V98_F0IAU.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Knit Fabric Sneakers ‘Black’ 4E3492_3V98_F0IAU.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Logo Brushed ‘Black’ 1D902M 055 F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Logo Brushed ‘Black’ 1D902M 055 F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Logo Brushed ‘Black’ 1D902M 055 F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Logo District Lace-Up ‘White’ 2EE363-3LJ6-F097W.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Logo District Lace-Up ‘White’ 2EE363-3LJ6-F097W.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Logo District Lace-Up ‘White’ 2EE363-3LJ6-F097W.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Mechano ‘White Silver’ 2EG266-3V91-F0J36.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Mechano ‘White Silver’ 2EG266-3V91-F0J36.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Mechano ‘White Silver’ 2EG266-3V91-F0J36.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Nylon Gabardine White 1E260M_MMS_F0009_F_050.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Nylon Gabardine White 1E260M_MMS_F0009_F_050.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Nylon Gabardine White 1E260M_MMS_F0009_F_050.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada PRAX 01 Re-Nylon Brushed ‘Black White’ 2EE369-3LF5-FG000.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada PRAX 01 Re-Nylon Brushed ‘Black White’ 2EE369-3LF5-FG000.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada PRAX 01 Re-Nylon Brushed ‘Black White’ 2EE369-3LF5-FG000.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Prax 01 ‘Black Blue’ 4E3463-3L1K-F0G52.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Prax 01 ‘Black Blue’ 4E3463-3L1K-F0G52.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Prax 01 ‘Black Blue’ 4E3463-3L1K-F0G52.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Prax-01 Re-Nylon Brushed ‘Black’ 2EE369-3LF5-F0002.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Prax-01 Re-Nylon Brushed ‘Black’ 2EE369-3LF5-F0002.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Prax-01 Re-Nylon Brushed ‘Black’ 2EE369-3LF5-F0002.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Rev Leather Sneakers ‘White Light Blue’ 2EG325-A21-F0AZ1.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Rev Leather Sneakers ‘White Light Blue’ 2EG325-A21-F0AZ1.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Rev Leather Sneakers ‘White Light Blue’ 2EG325-A21-F0AZ1.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Rev Sneakers In Black 2EG325-A21-F0700.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Rev Sneakers In Black 2EG325-A21-F0700.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Rev Sneakers In Black 2EG325-A21-F0700.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Sneakers Men Leather ‘Black Light Blue’ 2TG172-A21-F014B.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Sneakers Men Leather ‘Black Light Blue’ 2TG172-A21-F014B.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Sneakers Men Leather ‘Black Light Blue’ 2TG172-A21-F014B.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Spazzolato Logo ‘White’ 2EE369-3LKI-F0964.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Spazzolato Logo ‘White’ 2EE369-3LKI-F0964.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Spazzolato Logo ‘White’ 2EE369-3LKI-F0964.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Triangle Logo ‘White’ 4E3583-3G4I-F0964.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Prada Triangle Logo ‘White’ 4E3583-3G4I-F0964.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Prada Triangle Logo ‘White’ 4E3583-3G4I-F0964.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘Blue’ 107941-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘Blue’ 107941-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘Blue’ 107941-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘White Black’ 107725-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘White Black’ 107725-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Future 7 Play MG ‘White Black’ 107725-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Nitro Paris ‘Gold Black’ 377107-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Nitro Paris ‘Gold Black’ 377107-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Nitro Paris ‘Gold Black’ 377107-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Scorch Runner ‘White Black’ 194459-04.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Scorch Runner ‘White Black’ 194459-04.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Scorch Runner ‘White Black’ 194459-04.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Twitch Runner Fresh ‘Black White’ 377981-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Twitch Runner Fresh ‘Black White’ 377981-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Twitch Runner Fresh ‘Black White’ 377981-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Twitch Runner Trail ‘Black Lime Squeeze’ 376961-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Twitch Runner Trail ‘Black Lime Squeeze’ 376961-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Twitch Runner Trail ‘Black Lime Squeeze’ 376961-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Ultra Match IT ‘Coral Orange’ 106904-03.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Ultra Match IT ‘Coral Orange’ 106904-03.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Ultra Match IT ‘Coral Orange’ 106904-03.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Ultra Match MG ‘Orange’ 107756-03.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Ultra Match MG ‘Orange’ 107756-03.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Ultra Match MG ‘Orange’ 107756-03.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 WTR ‘Black White’ 376918-01.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 WTR ‘Black White’ 376918-01.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Velocity Nitro 2 WTR ‘Black White’ 376918-01.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Black Pink’ 378527-03.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Black Pink’ 378527-03.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Black Pink’ 378527-03.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Blue’ 195337-19.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Blue’ 195337-19.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Puma Velocity Nitro 2 ‘Blue’ 195337-19.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Wmns Air Jordan 1 High Zoom Comfort ‘Lemon Twist’ CT0979-200.png",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày Wmns Air Jordan 1 High Zoom Comfort ‘Lemon Twist’ CT0979-200.png",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày Wmns Air Jordan 1 High Zoom Comfort ‘Lemon Twist’ CT0979-200.png"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers cổ thấp unisex Wavy Day.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers cổ thấp unisex Wavy Day.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers cổ thấp unisex Wavy Day.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Classic 1998.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Classic 1998.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Classic 1998.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Float E3 2.0 MS.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Float E3 2.0 MS.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Float E3 2.0 MS.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Interun.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Interun.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Interun.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Targa Forte.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Targa Forte.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\Giày fila sneakers unisex cổ thấp Targa Forte.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-moca-judy-baca-old-skool-vn0a5krfyq8-1-5c940544-c61b-4ea4-a4e7-3fd320a7c6fe.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-moca-judy-baca-old-skool-vn0a5krfyq8-1-5c940544-c61b-4ea4-a4e7-3fd320a7c6fe.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\giay-vans-x-moca-judy-baca-old-skool-vn0a5krfyq8-1-5c940544-c61b-4ea4-a4e7-3fd320a7c6fe.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-national-geographic-era-brand-vn0a4u39wjz-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\giay-vans-x-national-geographic-era-brand-vn0a4u39wjz-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\giay-vans-x-national-geographic-era-brand-vn0a4u39wjz-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\nike_vista.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\nike_vista.jpg",
       "PackagePath": "staticwebassets\\images\\Sanpham\\nike_vista.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\van-sk8-hi-classic-navywhite-vn000d5invy-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\van-sk8-hi-classic-navywhite-vn000d5invy-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\van-sk8-hi-classic-navywhite-vn000d5invy-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-authentic-classic-black-vn000ee3blk-2.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-authentic-classic-black-vn000ee3blk-2.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-authentic-classic-black-vn000ee3blk-2.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-crew-slip-on-style-36-checkerboard-red-vn0a4bv31iw-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-crew-slip-on-style-36-checkerboard-red-vn0a4bv31iw-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-crew-slip-on-style-36-checkerboard-red-vn0a4bv31iw-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-old-skool-black-white-vn000d3hy28-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-old-skool-black-white-vn000d3hy28-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-old-skool-black-white-vn000d3hy28-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-custom-culture-2018-vn0a4bv3017-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-custom-culture-2018-vn0a4bv3017-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-custom-culture-2018-vn0a4bv3017-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-los-vans-vn0a4u38wn1-1.webp",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\Sanpham\\vans-slip-on-los-vans-vn0a4u38wn1-1.webp",
       "PackagePath": "staticwebassets\\images\\Sanpham\\vans-slip-on-los-vans-vn0a4u38wn1-1.webp"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\images\\logo.jpg",
       "PackagePath": "staticwebassets\\images\\logo.jpg"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\js\\site.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\GiayShop\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

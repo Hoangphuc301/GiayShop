@@ -7,12 +7,11 @@ namespace QuanLyBanGiay.Controllers
 {
     public class SanPhamController : Controller
     {
+        private QL_GiayContext db = new QL_GiayContext();
         public IActionResult Index()
         {
             return View();
         }
-
-        private readonly QL_GiayContext db = new QL_GiayContext();
 
         public IActionResult Chitiet(int id)
         {
