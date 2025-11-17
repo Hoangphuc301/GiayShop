@@ -9,14 +9,14 @@
 <div class="container mt-4" style="max-width: 700px;">
     <h2 class="text-center mb-4 text-primary fw-bold">✏️ Cập nhật Trạng Thái Đơn Hàng</h2>
 
-    @if (TempData["Error"] != null)
+@*     @if (TempData["Error"] != null)
     {
         <div class="alert alert-danger">@TempData["Error"]</div>
     }
     @if (TempData["Success"] != null)
     {
         <div class="alert alert-success">@TempData["Success"]</div>
-    }
+    } *@
 
     <form asp-area="Admin" asp-controller="Donhang" asp-action="Sua" method="post">
         @Html.AntiForgeryToken()

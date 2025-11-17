@@ -11,6 +11,8 @@
     <p><strong>Ngày đặt:</strong> @dh.Ngaydat?.ToString("dd/MM/yyyy HH:mm")</p>
     <p><strong>Tổng tiền:</strong> @String.Format("{0:N0} đ", dh.Tongtiencuoi)</p>
     <p><strong>Trạng thái:</strong> <span class="badge bg-info">@dh.Trangthai</span></p>
+    <p><strong>Địa chỉ giao:</strong> @dh.Diachigiao</p>
+    <p><strong>SĐT giao:</strong> @dh.Sdtgiao</p>
 
     <table class="table table-bordered mt-3">
         <thead class="table-light">
@@ -38,7 +40,7 @@
         </tbody>
     </table>
 
-    <div class="text-center mt-3">
-        <a asp-action="Index" class="btn btn-secondary">↩️ Quay lại danh sách</a>
+    <div class="text-start mt-3">
+        <a href="@Url.Content("~/Admin")" class="btn btn-outline-secondary">⬅️ Quay lại</a>
     </div>
 </div>

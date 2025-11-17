@@ -9,7 +9,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     {
         private QL_GiayContext db = new QL_GiayContext();
 
-        // 🔹 Danh sách đơn hàng
         public IActionResult Index()
         {
             var donhangs = db.Donhangs
@@ -21,7 +20,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View(donhangs);
         }
 
-        // 🔹 GET: Sửa trạng thái
         [HttpGet]
         public IActionResult Sua(int id)
         {
@@ -34,8 +32,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
 
             return View(dh);
         }
-
-        // POST: Admin/Donhang/Sua
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Sua(Donhang dh)
@@ -56,7 +52,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        // 🔹 Xem chi tiết đơn hàng
         public IActionResult XemChiTiet(int id)
         {
             var chitiets = db.ChitietDonhangs
@@ -75,7 +70,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View(chitiets);
         }
 
-        // 🔹 (Tuỳ chọn) Xóa đơn hàng test
         [HttpGet]
         public IActionResult Xoa(int id)
         {
