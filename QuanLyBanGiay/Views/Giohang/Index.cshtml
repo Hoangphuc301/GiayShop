@@ -58,7 +58,7 @@ else
         </tbody>
     </table>
 
-    var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
+     var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
 
     <div class="float-end mb-4">
         <h5 style="color:#ee4d2d">Tổng cộng: <span id="subtotal">@String.Format("{0:0,0} đ", subtotal)</span></h5>
@@ -66,52 +66,27 @@ else
 
     <br />
     <hr class="my-4" />
-    <h4 style="color:#ee4d2d">Thông tin người nhận</h4>
-    <form asp-action="Checkout" method="post">
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input asp-for="Email" class="form-control" placeholder="Nhập email..." />
-        </div>
+    
+    <div class="d-flex justify-content-end">
+        <a asp-action="Checkout" class="btn btn-orange">Mua hàng</a>
+    </div>
 
-        <div class="mb-3">
-            <label class="form-label">Họ tên</label>
-            <input asp-for="Tenkh" class="form-control" placeholder="Nhập họ tên..." />
-            <span asp-validation-for="Tenkh" class="text-danger"></span>
-        </div>
+    <style>
+        .btn-orange {
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
 
-        <div class="mb-3">
-            <label class="form-label">Số điện thoại người nhận</label>
-            <input asp-for="Sdt" class="form-control" placeholder="Nhập số điện thoại..." />
-            <span asp-validation-for="Sdt" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Địa chỉ người nhận</label>
-            <input asp-for="Diachi" class="form-control" placeholder="Nhập địa chỉ..." />
-            <span asp-validation-for="Diachi" class="text-danger"></span>
-        </div>
-
-        <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-orange">Đặt hàng</button>
-        </div>
-
-        <style>
-            .btn-orange {
-                background-color: #ff5722;
-                color: #fff;
-                border: none;
-                padding: 0.5rem 1.25rem;
-                font-weight: 500;
-                border-radius: 4px;
-                transition: background-color 0.3s;
-            }
-
-                .btn-orange:hover {
-                    background-color: #e64a19;
-                    color: #fff;
-                }
-        </style>
-    </form>
+        .btn-orange:hover {
+            background-color: #e64a19;
+            color: #fff;
+        }
+    </style>
 }
 
 @section Scripts {
@@ -151,5 +126,10 @@ else
         function formatVND(number) {
             return number.toLocaleString('vi-VN') + ' đ';
         }
+
+        document.addEventListener('DOMContentLoaded', updateSubtotal);
     </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

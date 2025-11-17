@@ -23,6 +23,9 @@ namespace QuanLyBanGiay.Models
         public decimal? Tongtiencuoi { get; set; }
         public string? Lydohuy { get; set; }
 
+        //tự thêm
+        //public string? Loinhan { get; set; }
+
         public virtual Khachhang MakhNavigation { get; set; } = null!;
         public virtual Phuongthucthanhtoan MaptttNavigation { get; set; } = null!;
         public virtual Voucher? MavoucherNavigation { get; set; }

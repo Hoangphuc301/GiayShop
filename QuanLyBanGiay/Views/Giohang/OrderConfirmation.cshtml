@@ -1,0 +1,15 @@
+﻿@model QuanLyBanGiay.Models.Donhang
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    <h3>Đặt hàng thành công — Mã đơn: #@Model.Madh</h3>
+    <p><strong>Khách hàng:</strong> @Model.MakhNavigation?.Tenkh</p>
+    <p><strong>SĐT giao:</strong> @Model.Sdtgiao</p>
+    <p><strong>Địa chỉ giao:</strong> @Model.Diachigiao</p>
+    <p><strong>Phương thức:</strong> @Model.MaptttNavigation?.Tenphuongthuc</p>
+    <p><strong>Ghi chú:</strong> @Model.Lydohuy</p>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Quay về trang chủ</a>
+</div>
