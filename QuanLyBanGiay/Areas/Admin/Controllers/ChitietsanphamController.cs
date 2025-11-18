@@ -8,19 +8,34 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     public class ChitietsanphamController : Controller
     {
         private QL_GiayContext db  = new QL_GiayContext();
-        public IActionResult Index()
+        public IActionResult Index(int trang = 1)
         {
-            //hiển thị danh sách 
-            var chitietsp = db.ChitietSanphams
+            int kichThuocTrang = 10;
+
+            var chitietspQuery = db.ChitietSanphams
                 .Include(c => c.MaspNavigation)
                 .Include(c => c.MamauNavigation)
                 .Include(c => c.MasizeNavigation)
+                .AsQueryable(); 
+
+            int tongSoMuc = chitietspQuery.Count();
+            int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
+
+            if (trang < 1) trang = 1;
+            if (trang > tongSoTrang) trang = tongSoTrang;
+
+            var chitietsp = chitietspQuery
+                .OrderByDescending(c => c.Mactsp) 
+                .Skip((trang - 1) * kichThuocTrang)
+                .Take(kichThuocTrang)
                 .ToList();
 
             ViewBag.Chitietsanpham = chitietsp;
+            ViewBag.TrangHienTai = trang;
+            ViewBag.TongSoTrang = tongSoTrang;
             return View();
         }
-        
+
         //thêm
         [HttpGet]
         public ActionResult them()

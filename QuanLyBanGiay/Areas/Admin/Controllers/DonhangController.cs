@@ -20,16 +20,19 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View(donhangs);
         }
 
+        //Sửa
         [HttpGet]
         public IActionResult Sua(int id)
         {
             var dh = db.Donhangs
-                .Include(d => d.MakhNavigation)
-                .FirstOrDefault(d => d.Madh == id);
+                      .Include(d => d.MakhNavigation)
+                      .FirstOrDefault(d => d.Madh == id);
 
             if (dh == null)
+            {
                 return RedirectToAction("Index");
-
+            }
+            ViewBag.Donhang = dh;
             return View(dh);
         }
         [HttpPost]
@@ -39,19 +42,17 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             var donhang = db.Donhangs.Find(dh.Madh);
             if (donhang == null)
             {
-                TempData["Error"] = "Đơn hàng không tồn tại!";
-                return RedirectToAction("Index");
+                ModelState.AddModelError("", "Đơn hàng này không tồn tại hoặc đã bị xóa.");
+                return View(dh);
             }
 
             donhang.Trangthai = dh.Trangthai;
             donhang.Lydohuy = dh.Trangthai == "HỦY" ? dh.Lydohuy : null;
-
             db.SaveChanges();
-
-            TempData["Success"] = "Cập nhật trạng thái đơn hàng thành công!";
             return RedirectToAction("Index");
         }
 
+        //Xem chi tiết
         public IActionResult XemChiTiet(int id)
         {
             var chitiets = db.ChitietDonhangs
@@ -70,27 +71,38 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View(chitiets);
         }
 
+        //Hủy
         [HttpGet]
-        public IActionResult Xoa(int id)
+        public IActionResult Huy(int id)
         {
-            var dh = db.Donhangs.Find(id);
+            var dh = db.Donhangs
+                           .Include(d => d.MakhNavigation)
+                           .FirstOrDefault(d => d.Madh == id);
+
             if (dh == null)
                 return RedirectToAction("Index");
 
+            if (dh.Trangthai == "HỦY" || dh.Trangthai == "ĐÃ NHẬN")
+            {
+                return RedirectToAction("Index");
+            }
             return View(dh);
         }
 
-        [HttpPost, ActionName("Xoa")]
+        [HttpPost, ActionName("Huy")]
         [ValidateAntiForgeryToken]
-        public IActionResult XacNhanXoa(int id)
+        public IActionResult XacNhanHuy(int Madh, string Lydohuy)
         {
-            var dh = db.Donhangs.Find(id);
-            if (dh != null)
+            var dh = db.Donhangs.Find(Madh);
+
+            if (dh == null)
             {
-                db.Donhangs.Remove(dh);
-                db.SaveChanges();
-                TempData["Success"] = "Đã xóa đơn hàng.";
+                return RedirectToAction("Index");
             }
+            dh.Trangthai = "HỦY";
+            dh.Lydohuy = Lydohuy ?? "Khách hàng yêu cầu hủy đơn.";
+
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
     }

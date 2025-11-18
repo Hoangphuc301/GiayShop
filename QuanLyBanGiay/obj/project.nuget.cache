@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3HWIZsOEMpt7nXD/YilTvZwzB9xcchI+qPErS42kN+p+ouEeTDrP8b/81mlkgQ/NeAPFNmoxkEJQbpHyeT2DuQ==",
+  "dgSpecHash": "pNL9JA7S9b9X7NaOBQmbeMll2nCbhiYz/LYh+zHrJPYiDLa5GMG1S1R3aQ4tO2IEjS9yVPXecwWN7sjH6BEaqA==",
   "success": true,
-  "projectFilePath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+  "projectFilePath": "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.cryptography\\2.6.1\\bouncycastle.cryptography.2.6.1.nupkg.sha512",

@@ -9,13 +9,32 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     public class SanphamController : Controller
     {
         private QL_GiayContext db = new QL_GiayContext();
-        public IActionResult Index()
+        //Hiển thị danh sách với phân trang
+        public IActionResult Index(int trang = 1) 
         {
-            var sanphams = db.Sanphams
+            int kichThuocTrang = 10; 
+            var sanpham = db.Sanphams
                 .Include(sp => sp.MadmNavigation)
                 .Include(sp => sp.MathNavigation)
+                .AsQueryable(); 
+
+            int tongSoMuc = sanpham.Count();
+            int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
+
+            if (trang < 1) 
+                trang = 1;
+            if (trang > tongSoTrang) 
+                trang = tongSoTrang;
+
+            var sanphams = sanpham
+                .OrderByDescending(sp => sp.Masp)
+                .Skip((trang - 1) * kichThuocTrang) 
+                .Take(kichThuocTrang)
                 .ToList();
-            ViewBag.Sanpham = db.Sanphams;
+
+            ViewBag.Sanpham = sanphams;
+            ViewBag.TrangHienTai = trang;  
+            ViewBag.TongSoTrang = tongSoTrang; 
             return View();
         }
 
