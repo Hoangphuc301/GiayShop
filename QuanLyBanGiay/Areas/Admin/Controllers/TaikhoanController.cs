@@ -10,7 +10,7 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
 		private QL_GiayContext db = new QL_GiayContext();
 		public IActionResult Index()
 		{
-			ViewBag.Taikhoan = db.Taikhoans;
+			ViewBag.Khachhang = db.Khachhangs;
 			return View();
 		}
 
@@ -21,9 +21,9 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult them(Taikhoan tk)
+        public ActionResult them(Khachhang tk)
         {
-            db.Taikhoans.Add(tk);
+            db.Khachhangs.Add(tk);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

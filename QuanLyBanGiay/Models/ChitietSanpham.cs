@@ -8,7 +8,6 @@ namespace QuanLyBanGiay.Models
         public ChitietSanpham()
         {
             ChitietDonhangs = new HashSet<ChitietDonhang>();
-            ChitietGiohangs = new HashSet<ChitietGiohang>();
         }
 
         public int Mactsp { get; set; }
@@ -21,6 +20,5 @@ namespace QuanLyBanGiay.Models
         public virtual Size MasizeNavigation { get; set; } = null!;
         public virtual Sanpham MaspNavigation { get; set; } = null!;
         public virtual ICollection<ChitietDonhang> ChitietDonhangs { get; set; }
-        public virtual ICollection<ChitietGiohang> ChitietGiohangs { get; set; }
     }
 }

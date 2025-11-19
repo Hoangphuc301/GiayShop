@@ -17,16 +17,16 @@ namespace QuanLyBanGiay.Controllers
             if (email == null)
                 return RedirectToAction("Login", "Account");
             // Tìm tài khoản theo email
-            var taikhoan = db.Taikhoans.FirstOrDefault(t => t.Email == email);
+            var taikhoan = db.Khachhangs.FirstOrDefault(t => t.Email == email);
             if (taikhoan == null)
                 return NotFound();
             // Tìm khách hàng theo mã tài khoản
-            var khach = db.Khachhangs.FirstOrDefault(k => k.Matk == taikhoan.Matk);
+            var khach = db.Khachhangs.FirstOrDefault(k => k.Makh == taikhoan.Makh);
             if (khach == null)
             {
                 khach = new Khachhang
                 {
-                    Matk = taikhoan.Matk,
+                    Makh = taikhoan.Makh,
                     Tenkh = taikhoan.Email.Split('@')[0], //Lấy phần tên trước @ làm tên mặc định
                     Sdt = null,
                     Diachi = null
@@ -63,14 +63,14 @@ namespace QuanLyBanGiay.Controllers
             if (email == null)
                 return RedirectToAction("Login", "Account");
 
-            var taikhoan = db.Taikhoans.FirstOrDefault(t => t.Email == email);
+            var taikhoan = db.Khachhangs.FirstOrDefault(t => t.Email == email);
             if (taikhoan == null)
                 return NotFound();
 
-            var khach = db.Khachhangs.FirstOrDefault(k => k.Matk == taikhoan.Matk);
+            var khach = db.Khachhangs.FirstOrDefault(k => k.Makh == taikhoan.Makh);
             if (khach == null)
             {
-                khach = new Khachhang { Matk = taikhoan.Matk };
+                khach = new Khachhang { Makh = taikhoan.Makh };
                 db.Khachhangs.Add(khach);
             }
 

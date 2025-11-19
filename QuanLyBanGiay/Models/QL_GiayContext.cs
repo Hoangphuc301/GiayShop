@@ -17,7 +17,6 @@ namespace QuanLyBanGiay.Models
         }
 
         public virtual DbSet<ChitietDonhang> ChitietDonhangs { get; set; } = null!;
-        public virtual DbSet<ChitietGiohang> ChitietGiohangs { get; set; } = null!;
         public virtual DbSet<ChitietSanpham> ChitietSanphams { get; set; } = null!;
         public virtual DbSet<Danhmuc> Danhmucs { get; set; } = null!;
         public virtual DbSet<Donhang> Donhangs { get; set; } = null!;
@@ -26,7 +25,6 @@ namespace QuanLyBanGiay.Models
         public virtual DbSet<Phuongthucthanhtoan> Phuongthucthanhtoans { get; set; } = null!;
         public virtual DbSet<Sanpham> Sanphams { get; set; } = null!;
         public virtual DbSet<Size> Sizes { get; set; } = null!;
-        public virtual DbSet<Taikhoan> Taikhoans { get; set; } = null!;
         public virtual DbSet<Thuonghieu> Thuonghieus { get; set; } = null!;
         public virtual DbSet<Voucher> Vouchers { get; set; } = null!;
 
@@ -35,7 +33,7 @@ namespace QuanLyBanGiay.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-6OJC3FAO;Initial Catalog=QL_GIAY;Integrated Security=True;Encrypt=False");
+                optionsBuilder.UseSqlServer("Server=localhost;Database=QL_Giay;Trusted_Connection=True;");
             }
         }
 
@@ -74,35 +72,6 @@ namespace QuanLyBanGiay.Models
                     .HasForeignKey(d => d.Madh)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__CHITIET_DO__MADH__6A30C649");
-            });
-
-            modelBuilder.Entity<ChitietGiohang>(entity =>
-            {
-                entity.HasKey(e => new { e.Makh, e.Mactsp })
-                    .HasName("PK__CHITIET___2F6F45039AC62409");
-
-                entity.ToTable("CHITIET_GIOHANG");
-
-                entity.Property(e => e.Makh).HasColumnName("MAKH");
-
-                entity.Property(e => e.Mactsp).HasColumnName("MACTSP");
-
-                entity.Property(e => e.Dongia)
-                    .HasColumnType("decimal(18, 2)")
-                    .HasColumnName("DONGIA");
-
-                entity.Property(e => e.Sl).HasColumnName("SL");
-
-                entity.HasOne(d => d.MactspNavigation)
-                    .WithMany(p => p.ChitietGiohangs)
-                    .HasForeignKey(d => d.Mactsp)
-                    .HasConstraintName("FK__CHITIET_G__MACTS__5535A963");
-
-                entity.HasOne(d => d.MakhNavigation)
-                    .WithMany(p => p.ChitietGiohangs)
-                    .HasForeignKey(d => d.Makh)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CHITIET_GI__MAKH__5441852A");
             });
 
             modelBuilder.Entity<ChitietSanpham>(entity =>
@@ -213,8 +182,7 @@ namespace QuanLyBanGiay.Models
                 entity.HasOne(d => d.MakhNavigation)
                     .WithMany(p => p.Donhangs)
                     .HasForeignKey(d => d.Makh)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__DONHANG__MAKH__619B8048");
+                    .HasConstraintName("FK_DONHANG_KH");
 
                 entity.HasOne(d => d.MaptttNavigation)
                     .WithMany(p => p.Donhangs)
@@ -231,17 +199,34 @@ namespace QuanLyBanGiay.Models
             modelBuilder.Entity<Khachhang>(entity =>
             {
                 entity.HasKey(e => e.Makh)
-                    .HasName("PK__KHACHHAN__603F592CABDD7B70");
+                    .HasName("PK__KHACHHAN__603F592CE7DCE3EC");
 
                 entity.ToTable("KHACHHANG");
 
+                entity.HasIndex(e => e.Email, "UQ__KHACHHAN__161CF724C8915B15")
+                    .IsUnique();
+
                 entity.Property(e => e.Makh).HasColumnName("MAKH");
+
+                entity.Property(e => e.DaXacNhan).HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.Diachi)
                     .HasMaxLength(255)
                     .HasColumnName("DIACHI");
 
-                entity.Property(e => e.Matk).HasColumnName("MATK");
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .HasColumnName("EMAIL");
+
+                entity.Property(e => e.Loaitk)
+                    .HasMaxLength(10)
+                    .HasColumnName("LOAITK");
+
+                entity.Property(e => e.MaXacNhan).HasMaxLength(10);
+
+                entity.Property(e => e.Matkhau)
+                    .HasMaxLength(100)
+                    .HasColumnName("MATKHAU");
 
                 entity.Property(e => e.Sdt)
                     .HasMaxLength(15)
@@ -252,11 +237,13 @@ namespace QuanLyBanGiay.Models
                     .HasMaxLength(100)
                     .HasColumnName("TENKH");
 
-                entity.HasOne(d => d.MatkNavigation)
-                    .WithMany(p => p.Khachhangs)
-                    .HasForeignKey(d => d.Matk)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__KHACHHANG__MATK__3C69FB99");
+                entity.Property(e => e.ThoiGianTaoOtp)
+                    .HasColumnType("datetime")
+                    .HasColumnName("ThoiGianTaoOTP");
+
+                entity.Property(e => e.Trangthai)
+                    .HasColumnName("TRANGTHAI")
+                    .HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Mau>(entity =>
@@ -343,43 +330,6 @@ namespace QuanLyBanGiay.Models
                 entity.Property(e => e.Tensize)
                     .HasMaxLength(50)
                     .HasColumnName("TENSIZE");
-            });
-
-            modelBuilder.Entity<Taikhoan>(entity =>
-            {
-                entity.HasKey(e => e.Matk)
-                    .HasName("PK__TAIKHOAN__60237216C7E3E363");
-
-                entity.ToTable("TAIKHOAN");
-
-                entity.HasIndex(e => e.Email, "UQ__TAIKHOAN__161CF724B5A895B5")
-                    .IsUnique();
-
-                entity.Property(e => e.Matk).HasColumnName("MATK");
-
-                entity.Property(e => e.DaXacNhan).HasDefaultValueSql("((0))");
-
-                entity.Property(e => e.Email)
-                    .HasMaxLength(100)
-                    .HasColumnName("EMAIL");
-
-                entity.Property(e => e.Loaitk)
-                    .HasMaxLength(10)
-                    .HasColumnName("LOAITK");
-
-                entity.Property(e => e.MaXacNhan).HasMaxLength(10);
-
-                entity.Property(e => e.Matkhau)
-                    .HasMaxLength(100)
-                    .HasColumnName("MATKHAU");
-
-                entity.Property(e => e.ThoiGianTaoOtp)
-                    .HasColumnType("datetime")
-                    .HasColumnName("ThoiGianTaoOTP");
-
-                entity.Property(e => e.Trangthai)
-                    .HasColumnName("TRANGTHAI")
-                    .HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Thuonghieu>(entity =>

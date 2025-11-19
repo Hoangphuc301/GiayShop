@@ -1,14 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git\\QuanLyBanGiay\\",
+  "WorkspaceRootPath": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|d:\\git\\quanlybangiay\\areas\\admin\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\giohang\\minicart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\minicart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\areas\\admin\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:areas\\admin\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\giohang\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\account\\formregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\account\\formregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\areas\\admin\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:areas\\admin\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|d:\\git\\quanlybangiay\\areas\\admin\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\areas\\admin\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:areas\\admin\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +58,130 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Minicart.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Minicart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giohang\\Minicart.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Minicart.cshtml",
+              "RelativeToolTip": "Views\\Giohang\\Minicart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T04:07:19.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\git\\QuanLyBanGiay\\Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giohang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Index.cshtml",
+              "RelativeToolTip": "Views\\Giohang\\Index.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T03:57:49.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giohang\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
+              "RelativeToolTip": "Views\\Giohang\\Checkout.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T03:57:37.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Account\\FormRegister.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\FormRegister.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Account\\FormRegister.cshtml",
+              "RelativeToolTip": "Views\\Account\\FormRegister.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T03:46:18.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Controllers\\ProfileController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAMwEgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:42:00.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GiohangController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GiohangController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
+              "RelativeToolTip": "Controllers\\GiohangController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAswDAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:40:28.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAQwFwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:40:27.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaikhoanController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\TaikhoanController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\TaikhoanController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\TaikhoanController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\TaikhoanController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:39:47.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
-              "ToolTip": "D:\\git\\QuanLyBanGiay\\Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\Sanpham\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T15:14:53.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "SanphamController.cs",
-              "DocumentMoniker": "D:\\git\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\SanphamController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\SanphamController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\SanphamController.cs",
-              "ToolTip": "D:\\git\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\SanphamController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Areas\\Admin\\Controllers\\SanphamController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\SanphamController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAsAAAA",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T15:14:49.742Z",
               "EditorCaption": ""

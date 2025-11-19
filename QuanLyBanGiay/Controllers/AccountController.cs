@@ -30,14 +30,14 @@ namespace QuanLyBanGiay.Controllers
         public IActionResult Login(string Email, string Password, bool RememberMe)
         {
             //Tìm kiếm user theo email
-            var user = db.Taikhoans.FirstOrDefault(u => u.Email == Email && u.Trangthai == true);
+            var user = db.Khachhangs.FirstOrDefault(u => u.Email == Email && u.Trangthai == true);
 
             // Kiểm tra người dùng và mật khẩu
             if (user != null && BCrypt.Net.BCrypt.Verify(Password, user.Matkhau))
             {
                 HttpContext.Session.SetString("UserEmail", user.Email);
                 HttpContext.Session.SetString("UserRole", user.Loaitk);
-                HttpContext.Session.SetInt32("UserId", user.Matk);
+                HttpContext.Session.SetInt32("UserId", user.Makh);
 
                 // Lưu cookie nếu chọn "Remember Me"
                 if (RememberMe)
@@ -90,7 +90,7 @@ namespace QuanLyBanGiay.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult FormRegister(string Email, string Matkhau, string NhapLaiMatkhau, string Otp)
+        public IActionResult FormRegister(string Email,string Tenkh ,string Matkhau, string NhapLaiMatkhau, string Otp)
         {
             bool hasError = false;
 
@@ -107,7 +107,7 @@ namespace QuanLyBanGiay.Controllers
                     ViewBag.EmailError = "Email không hợp lệ";
                     hasError = true;
                 }
-                else if (db.Taikhoans.Any(u => u.Email.Trim().ToLower() == Email.Trim().ToLower()))
+                else if (db.Khachhangs.Any(u => u.Email.Trim().ToLower() == Email.Trim().ToLower()))
                 {
                     ViewBag.EmailError = "Email đã được sử dụng";
                     hasError = true;
@@ -139,6 +139,7 @@ namespace QuanLyBanGiay.Controllers
                 //Tạo OTP
                 string otp = new Random().Next(100000, 999999).ToString();
                 TempData["Reg_Email"] = Email.Trim();
+                TempData["Reg_Tenkh"] = Tenkh?.Trim();
                 TempData["Reg_Password"] = Matkhau;
                 TempData["Reg_Otp"] = otp;
                 TempData["Reg_Time"] = DateTime.Now;
@@ -181,14 +182,16 @@ namespace QuanLyBanGiay.Controllers
             // Kiểm tra OTP
             if (Otp == storedOtp && string.Equals(Email?.Trim(), storedEmail.Trim(), StringComparison.OrdinalIgnoreCase))
             {
-                var newUser = new Taikhoan
+                var newUser = new Khachhang
                 {
                     Email = storedEmail,
                     Matkhau = BCrypt.Net.BCrypt.HashPassword(storedPassword),
+                    Tenkh = TempData["Reg_Tenkh"] as string, // thêm dòng này
                     Loaitk = "USER",
                     Trangthai = true
                 };
-                db.Taikhoans.Add(newUser);
+
+                db.Khachhangs.Add(newUser);
                 db.SaveChanges();
 
                 TempData.Clear();
@@ -233,7 +236,7 @@ namespace QuanLyBanGiay.Controllers
                     ViewBag.Error = "Vui lòng nhập email của bạn.";
                     return View();
                 }
-                var user = db.Taikhoans.FirstOrDefault(u => u.Email == Email && u.Trangthai == true);
+                var user = db.Khachhangs.FirstOrDefault(u => u.Email == Email && u.Trangthai == true);
                 if (user == null)
                 {
                     ViewBag.Error = "Không tìm thấy tài khoản với email này.";
@@ -301,7 +304,7 @@ namespace QuanLyBanGiay.Controllers
             }
 
             // Cập nhật mật khẩu mới
-            var userReset = db.Taikhoans.FirstOrDefault(u => u.Email == storedEmail);
+            var userReset = db.Khachhangs.FirstOrDefault(u => u.Email == storedEmail);
             if (userReset != null)
             {
                 userReset.Matkhau = BCrypt.Net.BCrypt.HashPassword(NewPassword);

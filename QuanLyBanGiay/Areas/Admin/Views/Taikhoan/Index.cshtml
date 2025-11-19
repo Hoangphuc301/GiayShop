@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in ViewBag.Taikhoan)
+            @foreach (var item in ViewBag.Khachhang)
             {
                 <tr>
                     <td>@item.Email</td>
@@ -29,8 +29,8 @@
                     <td>@item.Loaitk</td>
                     <td>@item.Trangthai</td>
                     <td>
-                        <a href="@Url.Action("sua", "Taikhoan", new { area = "Admin", id = item.Matk })" class="btn btn-success">✏️ Sửa</a>
-                        <a href="@Url.Action("xoa", "Taikhoan", new { area = "Admin", id = item.Matk })" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa không?')">🗑️ Xóa</a>
+                        <a href="@Url.Action("sua", "Taikhoan", new { area = "Admin", id = item.Makh })" class="btn btn-success">✏️ Sửa</a>
+                        <a href="@Url.Action("xoa", "Taikhoan", new { area = "Admin", id = item.Makh })" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa không?')">🗑️ Xóa</a>
                     </td>
                 </tr>
             }

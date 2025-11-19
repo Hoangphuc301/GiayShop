@@ -11,7 +11,6 @@ namespace QuanLyBanGiay.Models
         }
 
         public int Madh { get; set; }
-        public int Makh { get; set; }
         public int Mapttt { get; set; }
         public int? Mavoucher { get; set; }
         public DateTime? Ngaydat { get; set; }
@@ -22,11 +21,9 @@ namespace QuanLyBanGiay.Models
         public decimal? Phiship { get; set; }
         public decimal? Tongtiencuoi { get; set; }
         public string? Lydohuy { get; set; }
+        public int? Makh { get; set; }
 
-        //tự thêm
-        //public string? Loinhan { get; set; }
-
-        public virtual Khachhang MakhNavigation { get; set; } = null!;
+        public virtual Khachhang? MakhNavigation { get; set; }
         public virtual Phuongthucthanhtoan MaptttNavigation { get; set; } = null!;
         public virtual Voucher? MavoucherNavigation { get; set; }
         public virtual ICollection<ChitietDonhang> ChitietDonhangs { get; set; }
