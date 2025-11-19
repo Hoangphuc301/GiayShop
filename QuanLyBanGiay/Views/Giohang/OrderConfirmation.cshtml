@@ -1,15 +1,78 @@
 ﻿@model QuanLyBanGiay.Models.Donhang
+
 @{
+    ViewData["Title"] = "Đặt hàng thành công";
     Layout = "_Layout";
 }
 
-<div class="container mt-4">
-    <h3>Đặt hàng thành công — Mã đơn: #@Model.Madh</h3>
-    <p><strong>Khách hàng:</strong> @Model.MakhNavigation?.Tenkh</p>
-    <p><strong>SĐT giao:</strong> @Model.Sdtgiao</p>
-    <p><strong>Địa chỉ giao:</strong> @Model.Diachigiao</p>
-    <p><strong>Phương thức:</strong> @Model.MaptttNavigation?.Tenphuongthuc</p>
-    <p><strong>Ghi chú:</strong> @Model.Lydohuy</p>
+<div class="container my-5">
+    <div class="card shadow border-success">
+        <div class="card-header bg-success text-white text-center py-2">
+            <h4 class="mb-0">
+                Thông báo đặt hàng
+            </h4>
+        </div>
+        <div class="card-body p-4">
+            <h2 class="text-center mb-4 text-success">
+                Đơn hàng đã được đặt thành công
+            </h2>
 
-    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Quay về trang chủ</a>
+            <h5 class="text-primary mt-4 mb-3">Thông tin nhận hàng</h5>
+            <hr class="mt-0">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1"><strong>Khách hàng:</strong></p>
+                    <p class="text-muted">@Model.MakhNavigation?.Tenkh</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1"><strong>Số điện thoại:</strong></p>
+                    <p class="text-muted">@Model.Sdtgiao</p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <p class="mb-1"><strong>Địa chỉ giao:</strong></p>
+                <p class="text-muted">@Model.Diachigiao</p>
+            </div>
+
+            <h5 class="text-primary mt-4 mb-3">Chi tiết thanh toán</h5>
+            <hr class="mt-0">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1"><strong>Phương thức thanh toán:</strong></p>
+                    <p class="text-muted">@Model.MaptttNavigation?.Tenphuongthuc</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1"><strong>Ghi chú đơn hàng:</strong></p>
+                    <p class="text-muted">@(string.IsNullOrEmpty(Model.Lydohuy) ? "Không có ghi chú" : Model.Lydohuy)</p>
+                </div>
+            </div>
+
+            @if (Model.Tongtiencuoi.HasValue)
+            {
+                <div class="text-end fw-bold fs-5 text-danger border-top pt-3 mt-3">
+                    Tổng tiền thanh toán: @Model.Tongtiencuoi.Value.ToString("N0") VNĐ
+                </div>
+            }
+        </div>
+
+        <div class="card-footer text-center">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg w-100">
+                        Quay về trang chủ
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a asp-controller="Profile" asp-action="ChiTietDH" asp-route-id="@Model.Madh" class="btn btn-outline-secondary btn-lg w-100">
+                        Xem chi tiết đơn hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-3 text-muted">
+        <small>Cảm ơn quý khách đã tin tưởng và đặt hàng tại cửa hàng SOFM của chúng tôi!</small>
+    </div>
 </div>

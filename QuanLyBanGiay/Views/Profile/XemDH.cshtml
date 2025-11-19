@@ -1,0 +1,67 @@
+﻿@model List<QuanLyBanGiay.Models.Donhang>
+
+<h2 class="mt-4 text-primary">Lịch sử đơn hàng của bạn</h2>
+
+<div class="card shadow-sm mt-3">
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th class="text-center">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted py-4">
+                            Bạn chưa có đơn hàng nào.
+                        </td>
+                    </tr>
+                }
+                @foreach (var dh in Model)
+                {
+                    <tr>
+                        <td>@dh.Ngaydat?.ToString("dd/MM/yyyy")</td>
+                        <td class="text-nowrap">@dh.Tongtiencuoi?.ToString("N0") VNĐ</td>
+                        <td>
+                            @{
+                                string badgeClass = dh.Trangthai switch
+                                {
+                                    "Chờ xác nhận" => "bg-warning text-dark",
+                                    "Đang giao" => "bg-primary",
+                                    "Đã giao" => "bg-success",
+                                    "Đã hủy" => "bg-danger",
+                                    _ => "bg-secondary"
+                                };
+                            }
+                            <span class="badge @badgeClass">
+                                @dh.Trangthai
+                            </span>
+                        </td>
+                        <td class="text-center text-nowrap">
+                            <a asp-controller="Profile" asp-action="ChiTietDH" asp-route-id="@dh.Madh" class="btn btn-sm btn-info text-white" title="Xem chi tiết đơn hàng">
+                                Xem chi tiết
+                            </a>
+                            @if (dh.Trangthai == "Chờ xác nhận")
+                            {
+                                <a asp-controller="Profile" asp-action="Huy" asp-route-id="@dh.Madh" class="btn btn-sm btn-danger" title="Hủy đơn hàng này" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
+                                    Hủy
+                                </a>
+                            }
+                            @if (dh.Trangthai == "Đã giao" || dh.Trangthai == "Đã hủy")
+                            {
+                                <a asp-controller="Profile" asp-action="DatLai" asp-route-id="@dh.Madh" class="btn btn-sm btn-success" title="Đặt lại đơn hàng này">
+                                    Đặt lại
+                                </a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

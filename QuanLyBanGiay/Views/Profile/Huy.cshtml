@@ -1,0 +1,32 @@
+﻿@model QuanLyBanGiay.Models.Donhang
+
+@{
+    ViewData["Title"] = "Xác nhận Hủy Đơn Hàng";
+}
+
+<div class="container mt-4" style="max-width: 600px;">
+    <h2 class="mb-4 text-danger fw-bold">Xác nhận hủy đơn hàng</h2>
+    <div class="card p-4 shadow-sm border-danger">
+        <p class="lead">Bạn có chắc chắn muốn hủy đơn hàng này không?</p>
+        <p class="text-danger fw-bold">Hành động này sẽ thay đổi trạng thái đơn hàng thành hủy</p>
+
+        <form asp-controller="Profile" asp-action="Huy" method="post">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" name="Madh" value="@Model.Madh" />
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Lý do hủy</label>
+                <textarea name="Lydohuy" class="form-control" rows="3" placeholder="Lý do bạn muốn hủy đơn hàng này...">@Model.Lydohuy</textarea>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-6">
+                    <a asp-action="XemDH" class="btn btn-secondary w-100">Quay lại</a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-danger w-100">Xác nhận hủy</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

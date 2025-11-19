@@ -224,9 +224,20 @@ namespace QuanLyBanGiay.Controllers
         public async Task<IActionResult> OrderConfirmation(int id)
         {
             var order = await db.Donhangs
-                                .Include(dh => dh.MaptttNavigation)
-                                .Include(dh => dh.MakhNavigation)
-                                .FirstOrDefaultAsync(dh => dh.Madh == id);
+                                 .Include(dh => dh.MaptttNavigation)
+                                 .Include(dh => dh.MakhNavigation)
+                                 .Include(dh => dh.ChitietDonhangs)
+                                    .ThenInclude(ct => ct.MactspNavigation)
+                                        .ThenInclude(ctsp => ctsp.MaspNavigation)
+                                 .Include(dh => dh.ChitietDonhangs)
+                                    .ThenInclude(ct => ct.MactspNavigation)
+                                        .ThenInclude(ctsp => ctsp.MamauNavigation)
+                                 .Include(dh => dh.ChitietDonhangs)
+                                    .ThenInclude(ct => ct.MactspNavigation)
+
+                                        .ThenInclude(ctsp => ctsp.MasizeNavigation)
+
+                                 .FirstOrDefaultAsync(dh => dh.Madh == id);
             if (order == null)
                 return NotFound();
             return View(order);
