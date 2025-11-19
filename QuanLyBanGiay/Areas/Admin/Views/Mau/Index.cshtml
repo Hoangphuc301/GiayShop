@@ -60,6 +60,80 @@
     </div>
 </div>
 
+@{
+    int trangHienTai = ViewBag.TrangHienTai;
+    int tongSoTrang = ViewBag.TongSoTrang;
+}
+
+@if (tongSoTrang > 1)
+{
+    <nav aria-label="pagination" class="d-flex justify-content-center mt-4">
+        <ul class="pagination shadow-sm">
+            <li class="page-item @(trangHienTai == 1 ? "disabled" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { trang = trangHienTai - 1 })" aria-label="Truoc">
+                    <span aria-hidden="true">&lt;</span>
+                </a>
+            </li>
+
+            @{
+                int soTrangToiDaHienThi = 3;
+                //Bắt đầu từ trang nhỏ nhất, và không được nhỏ hơn 1
+                int trangBatDau = Math.Max(1, trangHienTai - 1);
+                //Kết thúc ở trang lớn nhất, và không được lớn hơn tổng số trang
+                int trangKetThuc = Math.Min(tongSoTrang, trangBatDau + soTrangToiDaHienThi - 1);
+                //Ví dụ: bd là 5, thì kt là 5 + 3 -1 = 7 kết quả là hiển thị từ 5 6 7
+
+                //Nó sẽ hiển thị trọn số trang tối đa được hiển thị dù trang hiện tại ở gần cuối
+                //Ví dụ: tổng số trang là 11, trang hiện tại là 10 thì nó sẽ hiển thị 9 10 11
+                if (trangHienTai > 1 && trangHienTai > tongSoTrang - soTrangToiDaHienThi + 1)
+                {
+                    trangBatDau = Math.Max(1, tongSoTrang - soTrangToiDaHienThi + 1);
+                    trangKetThuc = tongSoTrang;
+                }
+            }
+
+            @if (trangBatDau > 1)
+            {
+                <li class="page-item"><a class="page-link" href="@Url.Action("Index", new { trang = 1 })">1</a></li>
+                @if (trangBatDau > 2)
+                {
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                }
+            }
+
+            @for (int i = trangBatDau; i <= trangKetThuc; i++)
+            {
+                <li class="page-item @(i == trangHienTai ? "active" : "")">
+                    <a class="page-link @(i == trangHienTai ? "bg-dark border-dark text-white" : "")"
+                       href="@Url.Action("Index", new { trang = i })">
+                        @i
+                    </a>
+                </li>
+            }
+
+            @if (trangKetThuc < tongSoTrang)
+            {
+                //Nếu trang kết thúc là 17 mà tổng số trang là 18 thì nó không hiển thị 16 17 18, mà không hiển thị dấu ...
+                //Còn nếu trang kết thúc là 15 mà tổng số trang là 18 thì nó hiển thị là 14 15 16 ... 18
+                @if (trangKetThuc < tongSoTrang - 1)
+                {
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                }
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { trang = tongSoTrang })">@tongSoTrang</a>
+                </li>
+            }
+
+            <li class="page-item @(trangHienTai == tongSoTrang ? "disabled" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { trang = trangHienTai + 1 })" aria-label="Next">
+                    <span aria-hidden="true">&gt;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+
 @functions {
     string Hienthimau(string tenMau)
     {

@@ -7,9 +7,28 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     public class MauController : Controller
     {
         private QL_GiayContext db = new QL_GiayContext();
-        public IActionResult Index()
+        public IActionResult Index(int trang = 1)
         {
-            ViewBag.Mau = db.Maus;
+            int kichthuoctrang = 7;
+            var mau = db.Maus.AsQueryable();
+
+            int tongSoMuc = mau.Count();
+            int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichthuoctrang);
+
+            if (trang < 1)
+                trang = 1;
+            if(trang > tongSoTrang)
+                trang = tongSoTrang;
+
+            var maus = mau
+                .OrderByDescending(m => m.Mamau)
+                .Skip((trang - 1) * kichthuoctrang)
+                .Take(kichthuoctrang)
+                .ToList();
+
+            ViewBag.Mau = maus;
+            ViewBag.TrangHienTai = trang;
+            ViewBag.TongSoTrang = tongSoTrang;
             return View();
         }
 

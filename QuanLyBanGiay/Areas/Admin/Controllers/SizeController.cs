@@ -7,9 +7,28 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     public class SizeController : Controller
     {
         private QL_GiayContext db = new QL_GiayContext();
-        public IActionResult Index()
+        public IActionResult Index(int trang = 1)
         {
-            ViewBag.Size = db.Sizes;
+            int kichThuocTrang = 5;
+            var size = db.Sizes.AsQueryable();
+
+            int tongSoMuc = size.Count();
+            int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
+
+            if (trang < 1)
+                trang = 1;
+            if (trang > tongSoTrang)
+                trang = tongSoTrang;
+
+            var sizes = size
+                .OrderByDescending(s => s.Masize)
+                .Skip((trang - 1) * kichThuocTrang)
+                .Take(kichThuocTrang)
+                .ToList();
+
+            ViewBag.Size = sizes;
+            ViewBag.TrangHienTai = trang;
+            ViewBag.TongSoTrang = tongSoTrang;
             return View();
         }
 
