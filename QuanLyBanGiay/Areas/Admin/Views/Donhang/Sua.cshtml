@@ -2,31 +2,70 @@
 
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    var dh = ViewBag.Donhang;
+    var dh = Model;
+
+    // Lấy dữ liệu từ ViewBag
+    List<string> thuTuTrangThai = ViewBag.ThuTuTrangThai;
+    int viTriHienTai = (int)ViewBag.ViTriHienTai;
+}
+
+@{
+    string shouldDisable(string optionStatus)
+    {
+        if (thuTuTrangThai == null) 
+            return "";
+            // Truy cập vị trí của trạng thái tùy chọn trong danh sách thứ tự trạng thái
+        var optionIndex = thuTuTrangThai.IndexOf(optionStatus);
+        // Lấy trạng thái hiện tại của đơn hàng
+        var trangThaiHienTai = dh.Trangthai;
+        // Nếu là "HỦY" và "ĐÃ NHẬN" vô hiệu hóa tùy chọn hủy
+        if (optionStatus == "HỦY" && trangThaiHienTai == "ĐÃ NHẬN")
+        {
+            return "disabled";
+        }
+        // Vô hiệu hóa nếu tùy chọn trước vị trí hiện tại và không phải là "HỦY"
+        if (optionStatus != "HỦY" && optionIndex < viTriHienTai)
+        {
+            return "disabled";
+        }
+        return "";
+    }
 }
 
 @if (dh != null)
 {
     <div class="container mt-4" style="max-width: 700px;">
-        <h2 class="mb-3 text-primary fw-bold">📝 Cập nhật trạng thái đơn hàng</h2>
-
+        <h2 class="mb-3 text-primary fw-bold">Cập nhật trạng thái đơn hàng: @dh.Madh</h2>
         <form asp-area="Admin" asp-controller="Donhang" asp-action="Sua" method="post" class="card p-4 shadow-sm">
             @Html.AntiForgeryToken()
-
             <input type="hidden" name="Madh" value="@dh.Madh" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3 fw-bold"></div>
 
             <div class="mb-3">
                 <label class="form-label fw-semibold">Tên khách hàng</label>
-                <input type="text" class="form-control" value="@dh.MakhNavigation.Tenkh" readonly />
+                <input type="text" class="form-control" value="@dh.MakhNavigation?.Tenkh" readonly />
             </div>
 
             <div class="mb-3">
                 <label class="form-label fw-semibold">Trạng thái</label>
                 <select name="Trangthai" class="form-select" id="trangthai">
-                    <option value="CHỜ XÁC NHẬN" @(dh.Trangthai == "CHỜ XÁC NHẬN" ? "selected" : "")>CHỜ XÁC NHẬN</option>
-                    <option value="ĐANG GIAO" @(dh.Trangthai == "ĐANG GIAO" ? "selected" : "")>ĐANG GIAO</option>
-                    <option value="ĐÃ NHẬN" @(dh.Trangthai == "ĐÃ NHẬN" ? "selected" : "")>ĐÃ NHẬN</option>
-                    <option value="HỦY" @(dh.Trangthai == "HỦY" ? "selected" : "")>HỦY</option>
+                    <!--Ví dụ: trạng thái "Đang giao" lớn hơn "chờ xác nhận" ==> Chuỗi rỗng -->
+                    <!--Và vị trí "Chờ xác nhận"" nhỏ hơn ==> "Chờ xác nhận" sẽ là disabled" -->
+                    <option value="CHỜ XÁC NHẬN"
+                    @(dh.Trangthai == "CHỜ XÁC NHẬN" ? "selected" : "")
+                    @shouldDisable("CHỜ XÁC NHẬN")>CHỜ XÁC NHẬN</option>
+
+                    <option value="ĐANG GIAO"
+                    @(dh.Trangthai == "ĐANG GIAO" ? "selected" : "")
+                    @shouldDisable("ĐANG GIAO")>ĐANG GIAO</option>
+
+                    <option value="ĐÃ NHẬN"
+                    @(dh.Trangthai == "ĐÃ NHẬN" ? "selected" : "")
+                    @shouldDisable("ĐÃ NHẬN")>ĐÃ NHẬN</option>
+
+                    <option value="HỦY"
+                    @(dh.Trangthai == "HỦY" ? "selected" : "")
+                    @shouldDisable("HỦY")>HỦY</option>
                 </select>
             </div>
 
@@ -43,6 +82,7 @@
                     <button type="submit" class="btn btn-primary w-100">💾 Lưu thay đổi</button>
                 </div>
             </div>
+
         </form>
     </div>
 }
@@ -51,7 +91,6 @@ else
     <p>Không tìm thấy đơn hàng này. Vui lòng thử lại.</p>
     <a href="@Url.Action("Index","Donhang", new { area="Admin"})" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
 }
-
 
 <script>
     document.getElementById("trangthai").addEventListener("change", function () {
