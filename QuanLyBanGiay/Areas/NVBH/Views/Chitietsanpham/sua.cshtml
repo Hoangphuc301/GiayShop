@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml";
+    var ctsp = ViewBag.ChiTietSP;
+}
+
+@if (ctsp != null)
+{
+    <div class="container mt-4" style="max-width:700px;">
+        <h2 class="mb-3 text-primary fw-bold">Sửa chi tiết sản phẩm</h2>
+
+        <form asp-area="NVBH" asp-controller="ChitietSanpham" asp-action="sua" method="post" class="card p-4 shadow-sm">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="Mactsp" value="@ctsp.Mactsp" />
+
+            <!-- Sản phẩm -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Sản phẩm</label>
+                <select name="Masp" class="form-select" required>
+                    <option value="">-- Chọn sản phẩm --</option>
+                    @foreach (var sp in ViewBag.SanphamList)
+                    {
+                        <option value="@sp.Masp" @(sp.Masp == ctsp.Masp ? "selected" : "")>@sp.Tensp</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Màu sắc -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Màu sắc</label>
+                <select name="Mamau" class="form-select" required>
+                    <option value="">-- Chọn màu --</option>
+                    @foreach (var mau in ViewBag.MauList)
+                    {
+                        <option value="@mau.Mamau" @(mau.Mamau == ctsp.Mamau ? "selected" : "")>@mau.Tenmau</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Size -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Kích cỡ (Size)</label>
+                <select name="Masize" class="form-select" required>
+                    <option value="">-- Chọn size --</option>
+                    @foreach (var sz in ViewBag.SizeList)
+                    {
+                        <option value="@sz.Masize" @(sz.Masize == ctsp.Masize ? "selected" : "")>@sz.Tensize</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Số lượng tồn -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Số lượng tồn</label>
+                <input name="Slton" value="@ctsp.Slton" type="number" min="0" class="form-control" required />
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <a href="@Url.Action("Index","ChitietSanpham", new { area="NVBH"})" class="btn btn-outline-secondary w-100">
+                        ⬅️ Quay lại
+                    </a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100">💾 Lưu thay đổi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">Không tìm thấy thông tin chi tiết sản phẩm để chỉnh sửa.</div>
+    <a href="@Url.Action("Index","ChitietSanpham", new { area="NVBH"})" class="btn btn-secondary">⬅️ Quay lại</a>
+}

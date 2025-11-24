@@ -50,9 +50,21 @@ namespace QuanLyBanGiay.Controllers
 
                 // Chuyển hướng theo loại tài khoản
                 if (user.Loaitk == "ADMIN")
+                {
                     return RedirectToAction("Index", "Home", new { area = "Admin" });
+                }
+                else if (user.Loaitk == "NVGH")
+                {
+                    return RedirectToAction("Index", "Home", new { area = "NVGH" });
+                }
+                else if (user.Loaitk == "NVBH")
+                {
+                    return RedirectToAction("Index", "Home", new { area = "NVBH" });
+                }
                 else
+                {
                     return RedirectToAction("Index", "Home");
+                }
             }
 
             ViewBag.Error = "Email hoặc mật khẩu không đúng!";

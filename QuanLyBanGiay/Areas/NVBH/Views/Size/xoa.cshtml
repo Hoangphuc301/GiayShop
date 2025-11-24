@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml";
+    var s = ViewBag.Size;
+}
+
+<div class="container mt-4" style="max-width:700px;">
+    <h2 class="text-danger fw-bold mb-4">🗑️ Xóa size giày</h2>
+
+    <div class="card p-4 shadow-sm bg-light">
+        <dl class="row">
+            <dt class="col-sm-3">Mã size:</dt>
+            <dd class="col-sm-9">@s.Masize</dd>
+
+            <dt class="col-sm-3">Số size:</dt>
+            <dd class="col-sm-9">@s.Tensize</dd>
+        </dl>
+    </div>
+
+    <form asp-area="NVBH" asp-controller="Size" asp-action="xoa" method="post" class="mt-4">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Masize" value="@s.Masize" />
+
+        <p class="fs-5 text-center text-danger fw-semibold">
+            Bạn có chắc chắn muốn xóa size giày <strong>@s.Tensize</strong> không?
+        </p>
+
+        <div class="row">
+            <div class="col-6">
+                <a href="@Url.Action("Index","Size", new { area="NVBH"})"
+                   class="btn btn-outline-secondary w-100">
+                    ⬅️ Quay lại
+                </a>
+            </div>
+
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger w-100">
+                    Xác nhận xóa
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

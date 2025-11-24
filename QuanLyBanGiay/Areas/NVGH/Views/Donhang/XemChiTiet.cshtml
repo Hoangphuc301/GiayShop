@@ -1,0 +1,46 @@
+﻿@model IEnumerable<QuanLyBanGiay.Models.ChitietDonhang>
+@{
+    Layout = "~/Areas/NVGH/Views/Shared/_NVGHLayout.cshtml";
+    var dh = ViewBag.DonHang as QuanLyBanGiay.Models.Donhang;
+}
+
+<div class="container mt-4">
+    <h3 class="text-primary fw-bold mb-3">Chi tiết đơn hàng @dh.Madh</h3>
+
+    <p><strong>Khách hàng:</strong> @dh.MakhNavigation.Tenkh</p>
+    <p><strong>Ngày đặt:</strong> @dh.Ngaydat?.ToString("dd/MM/yyyy HH:mm")</p>
+    <p><strong>Tổng tiền:</strong> @String.Format("{0:N0} đ", dh.Tongtiencuoi)</p>
+    <p><strong>Trạng thái:</strong> <span class="badge bg-info">@dh.Trangthai</span></p>
+    <p><strong>Địa chỉ giao:</strong> @dh.Diachigiao</p>
+    <p><strong>SĐT giao:</strong> @dh.Sdtgiao</p>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-light">
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Màu</th>
+                <th>Size</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ct in Model)
+            {
+                <tr>
+                    <td>@ct.MactspNavigation.MaspNavigation.Tensp</td>
+                    <td>@ct.MactspNavigation.MamauNavigation.Tenmau</td>
+                    <td>@ct.MactspNavigation.MasizeNavigation.Tensize</td>
+                    <td>@ct.Sl</td>
+                    <td>@String.Format("{0:N0} đ", ct.Dongia)</td>
+                    <td>@String.Format("{0:N0} đ", ct.Sl * ct.Dongia)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-start mt-3">
+        <a href="@Url.Action("Index","Donhang", new { area="NVGH"})" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
+    </div>
+</div>

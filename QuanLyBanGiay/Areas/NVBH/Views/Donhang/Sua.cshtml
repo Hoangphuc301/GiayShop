@@ -1,0 +1,75 @@
+﻿@model QuanLyBanGiay.Models.Donhang
+
+@{
+    Layout = "~/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml";
+    var dh = Model;
+
+    List<string> thuTuTrangThai = ViewBag.ThuTuTrangThai;
+    int viTriHienTai = (int)ViewBag.ViTriHienTai;
+}
+
+@{
+    string shouldDisable(string optionStatus)
+    {
+        if (thuTuTrangThai == null)
+            return "";
+
+        var optionIndex = thuTuTrangThai.IndexOf(optionStatus);
+
+        if (optionIndex < viTriHienTai)
+        {
+            return "disabled";
+        }
+        return "";
+    }
+}
+
+@if (dh != null)
+{
+    <div class="container mt-4" style="max-width: 700px;">
+        <h2 class="mb-3 text-primary fw-bold">Cập nhật trạng thái đơn hàng: @dh.Madh</h2>
+        <form asp-area="NVBH" asp-controller="Donhang" asp-action="Sua" method="post" class="card p-4 shadow-sm">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="Madh" value="@dh.Madh" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3 fw-bold"></div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Tên khách hàng</label>
+                <input type="text" class="form-control" value="@dh.MakhNavigation?.Tenkh" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Trạng thái</label>
+                <select name="Trangthai" class="form-select">
+
+                    <option value="CHỜ XÁC NHẬN"
+                    @(dh.Trangthai == "CHỜ XÁC NHẬN" ? "selected" : "")
+                    @shouldDisable("CHỜ XÁC NHẬN")>CHỜ XÁC NHẬN</option>
+
+                    <option value="ĐANG GIAO"
+                    @(dh.Trangthai == "ĐANG GIAO" ? "selected" : "")
+                    @shouldDisable("ĐANG GIAO")>ĐANG GIAO</option>
+
+                    <option value="ĐÃ NHẬN"
+                    @(dh.Trangthai == "ĐÃ NHẬN" ? "selected" : "")
+                    @shouldDisable("ĐÃ NHẬN")>ĐÃ NHẬN</option>
+                </select>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <a href="@Url.Action("Index","Donhang", new { area="NVBH"})" class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100">💾 Lưu thay đổi</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+}
+else
+{
+    <p>Không tìm thấy đơn hàng này. Vui lòng thử lại.</p>
+    <a href="@Url.Action("Index","Donhang", new { area="NVBH"})" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
+}

@@ -65,7 +65,7 @@ namespace QuanLyBanGiay.Controllers
             return View(model);
         }
 
-        // GET: Checkout
+        // Thanh toán
         public async Task<IActionResult> Checkout()
         {
             // Kiểm tra đăng nhập
@@ -95,16 +95,20 @@ namespace QuanLyBanGiay.Controllers
                 Diachi = khach.Diachi
             };
 
-            // Lấy danh sách voucher còn hạn
             var vouchersData = await db.Vouchers
                 .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
                 .ToListAsync();
 
+            // Tạo danh sách voucher giảm giá theo %
             var vouchers = vouchersData
                 .Select(v => new SelectListItem
                 {
                     Value = v.Mavoucher.ToString(),
-                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri.HasValue ? v.Giatri.Value.ToString("N0") : "0")}đ (HSD: {v.Ngaykt?.ToString("dd/MM/yyyy") ?? ""})"
+                    Group = new SelectListGroup
+                    {
+                        Name = v.Giatri.HasValue ? v.Giatri.Value.ToString() : "0"
+                    },
+                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri.HasValue ? v.Giatri.Value.ToString("N0") + "%" : "0%")}"
                 })
                 .ToList();
 
@@ -124,8 +128,6 @@ namespace QuanLyBanGiay.Controllers
 
             return View(model);
         }
-
-        // POST: Checkout
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Checkout(Checkout checkoutModel)

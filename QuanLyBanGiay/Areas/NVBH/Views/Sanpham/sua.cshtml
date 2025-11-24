@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "~/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml";
+    var sp = ViewBag.Sanpham;
+}
+
+@if (sp != null)
+{
+    <div class="container mt-4" style="max-width:700px;">
+        <h2 class="mb-3 text-primary fw-bold">✏️ Sửa thông tin sản phẩm</h2>
+
+        <form asp-area="NVBH" asp-controller="Sanpham" asp-action="sua" method="post" enctype="multipart/form-data" class="card p-4 shadow-sm">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="Masp" value="@sp.Masp" />
+
+            <!-- Danh mục -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Danh mục sản phẩm</label>
+                <select name="Madm" class="form-select" required>
+                    <option value="">-- Chọn danh mục --</option>
+                    @foreach (var dm in ViewBag.DanhmucList)
+                    {
+                        <option value="@dm.Madm" @(dm.Madm == sp.Madm ? "selected" : "")>@dm.Tendm</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Thương hiệu -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Thương hiệu</label>
+                <select name="Math" class="form-select" required>
+                    <option value="">-- Chọn thương hiệu --</option>
+                    @foreach (var th in ViewBag.ThuonghieuList)
+                    {
+                        <option value="@th.Math" @(th.Math == sp.Math ? "selected" : "")>@th.Tenth</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Tên sản phẩm -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Tên sản phẩm</label>
+                <input name="Tensp" value="@sp.Tensp" class="form-control" maxlength="50" required />
+            </div>
+
+            <!-- Giá -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Giá</label>
+                <input name="Gia" type="number" value="@sp.Gia" class="form-control" required />
+            </div>
+
+            <!-- Mô tả -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Mô tả</label>
+                <textarea name="Mota" class="form-control" rows="3">@sp.Mota</textarea>
+            </div>
+
+            <!-- Hình ảnh -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Hình sản phẩm</label>
+                <div class="text-center">
+                    <img src="@(Url.Content("~/images/Sanpham/" + sp.Hinhdaidien))"
+                         alt="Ảnh sản phẩm"
+                         style="width: 70px; height: 70px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd;" />
+                    <input type="file" name="LogoFile" class="form-control form-control-sm mt-2" accept="image/*" style="width: 200px; margin: 0 auto;" />
+                </div>
+            </div>
+
+
+            <!-- Trạng thái -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Trạng thái</label>
+                <select name="Trangthai" class="form-select" required>
+                    <option value="CÒN" @(sp.Trangthai == "CÒN" ? "selected" : "")>CÒN</option>
+                    <option value="HẾT HÀNG" @(sp.Trangthai == "HẾT HÀNG" ? "selected" : "")>HẾT HÀNG</option>
+                </select>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <a href="@Url.Action("Index","Sanpham", new { area="NVBH"})" class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100">💾 Lưu thay đổi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <p>Không tìm thấy sản phẩm hoặc có lỗi xảy ra. Vui lòng thử lại.</p>
+    <a href="@Url.Action("Index","Sanpham", new { area="NVBH"})" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
+}

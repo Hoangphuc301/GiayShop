@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml";
+    ViewData["Title"] = "Nhân viên bán hàng Dashboard";
+}
+
+@* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" /> *@
+<link rel="stylesheet" href="/css/homeAdmin.css">
+
+<div class="admin-bg">
+
+    <div class="dashboard-title">
+        🛠️ Quản Trị Hệ Thống 🛠️
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Loaisanpham")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">📂</span>
+                    <h4>Loại sản phẩm</h4>
+                    <p>Quản lý loại sản phẩm</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Mau")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">🎨</span>
+                    <h4>Màu sắc</h4>
+                    <p>Quản lý màu giày</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Size")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">📏</span>
+                    <h4>Kích cỡ</h4>
+                    <p>Quản lý size</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Sanpham")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">👟</span>
+                    <h4>Sản phẩm</h4>
+                    <p>Quản lý sản phẩm</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Chitietsanpham")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">📦</span>
+                    <h4>Thông tin sản phẩm</h4>
+                    <p>Chi tiết sản phẩm</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="@Url.Content("~/NVBH/Donhang")" class="text-decoration-none text-dark">
+                <div class="stat-card shadow-sm">
+                    <span class="stat-icon">🛒</span>
+                    <h4>Đơn hàng</h4>
+                    <p>Quản lý đơn hàng</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
