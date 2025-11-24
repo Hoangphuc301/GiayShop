@@ -1,12 +1,17 @@
+# Visual Studio
 .vs/
+*.suo
+*.user
+
+# Build artifacts
 bin/
 obj/
-*.user
-*.suo
+Debug/
+Release/
+*.dll
+*.exe
+*.pdb
+
+# Cache
 *.cache
-.vs/
-bin/
-obj/
-*.user
-*.suo
-*.cache
+*.tmp

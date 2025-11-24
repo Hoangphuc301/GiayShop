@@ -180,10 +180,6 @@
             input.value = value;
         }
 
-        // function chuyenTrang() {
-        //     window.location.href = 'Giohang/Index.cshtml'; // Thay bằng đường dẫn giỏ hàng thật
-        // }
-
         document.getElementById("btnAddToCart").addEventListener("click", function () {
             const selectedMau = document.querySelector('input[name="MAMAU"]:checked');
             const selectedSize = document.querySelector('input[name="MASIZE"]:checked');
@@ -193,7 +189,6 @@
                 return;
             }
 
-            // Tìm chi tiết sản phẩm tương ứng
             const ct = chitietSanphams.find(ct => ct.MaMau == selectedMau.value && ct.MaSize == selectedSize.value);
             if (!ct) {
                 alert("Chi tiết sản phẩm không tồn tại!");
@@ -207,13 +202,14 @@
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: 'mactsp=' + ct.Mactsp + '&sl=' + sl
             })
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("miniCartContainer").innerHTML = html;
-                const mini = document.querySelector('.mini-cart');
-                if (mini) mini.style.display = 'block';
-            })
-            .catch(err => console.error(err));
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("miniCartContainer").innerHTML = html;
+                    const mini = document.querySelector('.mini-cart');
+                    if (mini) mini.style.display = 'block';
+                })
+                .catch(err => console.error(err));
         });
+
     </script>
 }

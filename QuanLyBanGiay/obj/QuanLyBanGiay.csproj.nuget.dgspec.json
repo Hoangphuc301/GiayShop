@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {}
+    "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\Shop\\GiayShop\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {}
   },
   "projects": {
-    "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {
+    "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\Shop\\GiayShop\\QuanLyBanGiay\\QuanLyBanGiay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+        "projectUniqueName": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\Shop\\GiayShop\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
         "projectName": "QuanLyBanGiay",
-        "projectPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\obj\\",
+        "projectPath": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\Shop\\GiayShop\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+        "packagesPath": "C:\\Users\\kkk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kkk\\Documents\\code\\Thực tập chuyên ngành\\Shop\\GiayShop\\QuanLyBanGiay\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kkk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

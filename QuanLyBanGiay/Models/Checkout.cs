@@ -12,6 +12,7 @@ namespace QuanLyBanGiay.Models.ViewModels
         public string Sdt { get; set; } = "";
         public string Diachi { get; set; } = "";
         public int Mapttt { get; set; }
+        public int? Mavoucher { get; set; }
 
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();
         public List<SelectListItem> PaymentMethods { get; set; } = new List<SelectListItem>();

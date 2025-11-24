@@ -41,24 +41,23 @@ namespace QuanLyBanGiay.Controllers
         // Hiển thị giỏ hàng
         public IActionResult Index()
         {
-            // Kiểm tra đăng nhập
+            var cart = GetCart();
+
+            // Lấy thông tin khách nếu đã đăng nhập
             var email = HttpContext.Session.GetString("UserEmail");
-            if (string.IsNullOrEmpty(email))
+            Khachhang khach = null;
+            if (!string.IsNullOrEmpty(email))
             {
-                TempData["Message"] = "Bạn cần đăng nhập trước khi xem giỏ hàng và đặt hàng!";
-                return RedirectToAction("Login", "Account");
+                var taikhoan = db.Khachhangs.FirstOrDefault(t => t.Email == email);
+                khach = taikhoan != null ? db.Khachhangs.FirstOrDefault(k => k.Makh == taikhoan.Makh) : null;
             }
 
-            var taikhoan = db.Khachhangs.FirstOrDefault(t => t.Email == email);
-            var khach = taikhoan != null ? db.Khachhangs.FirstOrDefault(k => k.Makh == taikhoan.Makh) : null;
-
-            var cart = GetCart();
             var model = new Checkout
             {
                 CartItems = cart,
                 Makh = khach?.Makh ?? 0,
                 Tenkh = khach?.Tenkh ?? "",
-                Email = taikhoan?.Email ?? "",
+                Email = khach?.Email ?? "",
                 Sdt = khach?.Sdt ?? "",
                 Diachi = khach?.Diachi ?? ""
             };
@@ -73,19 +72,18 @@ namespace QuanLyBanGiay.Controllers
             var email = HttpContext.Session.GetString("UserEmail");
             if (string.IsNullOrEmpty(email))
             {
-                TempData["Message"] = "Bạn cần đăng nhập trước khi thanh toán!";
-                return RedirectToAction("Login", "Khachhang");
+                TempData["Message"] = "Bạn cần đăng nhập trước khi xem giỏ hàng và đặt hàng!";
+                return RedirectToAction("Login", "Account");
             }
 
-            var taikhoan = await db.Khachhangs.FirstOrDefaultAsync(t => t.Email == email);
-            if (taikhoan == null)
+            var khach = await db.Khachhangs.FirstOrDefaultAsync(k => k.Email == email);
+            if (khach == null)
             {
                 TempData["Message"] = "Không tìm thấy tài khoản của bạn. Vui lòng đăng nhập lại!";
                 return RedirectToAction("Login", "Khachhang");
             }
 
             var cart = GetCart();
-            var khach = await db.Khachhangs.FirstOrDefaultAsync(k => k.Makh == taikhoan.Makh);
 
             var model = new Checkout
             {
@@ -96,6 +94,22 @@ namespace QuanLyBanGiay.Controllers
                 Sdt = khach.Sdt,
                 Diachi = khach.Diachi
             };
+
+            // Lấy danh sách voucher còn hạn
+            var vouchersData = await db.Vouchers
+                .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
+                .ToListAsync();
+
+            var vouchers = vouchersData
+                .Select(v => new SelectListItem
+                {
+                    Value = v.Mavoucher.ToString(),
+                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri.HasValue ? v.Giatri.Value.ToString("N0") : "0")}đ (HSD: {v.Ngaykt?.ToString("dd/MM/yyyy") ?? ""})"
+                })
+                .ToList();
+
+            vouchers.Insert(0, new SelectListItem { Value = "0", Text = "-- Không dùng voucher --" });
+            ViewBag.Vouchers = vouchers;
 
             // Load phương thức thanh toán
             var ptttList = await db.Phuongthucthanhtoans
@@ -167,6 +181,21 @@ namespace QuanLyBanGiay.Controllers
             {
                 // Tính tổng tiền
                 decimal tongTien = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
+                decimal tongTienGiam = 0m;
+                int? mavoucher = null;
+
+                if (checkoutModel.Mavoucher != 0)
+                {
+                    var voucher = await db.Vouchers.FirstOrDefaultAsync(v => v.Mavoucher == checkoutModel.Mavoucher
+                                                                           && v.Trangthai == "CÒN"
+                                                                           && v.Ngaybd <= DateTime.Now
+                                                                           && v.Ngaykt >= DateTime.Now);
+                    if (voucher != null && voucher.Giatri.HasValue)
+                    {
+                        mavoucher = voucher.Mavoucher;
+                        tongTienGiam = tongTien * (voucher.Giatri.Value / 100m);
+                    }
+                }
 
                 // Tạo đơn hàng
                 var donHang = new Donhang
@@ -175,14 +204,20 @@ namespace QuanLyBanGiay.Controllers
                     Mapttt = checkoutModel.Mapttt,
                     Ngaydat = DateTime.Now,
                     Tongtien = tongTien,
-                    Tongtiencuoi = tongTien,
+                    Tongtiencuoi = tongTien - tongTienGiam,
                     Trangthai = "Chờ xác nhận",
                     Diachigiao = checkoutModel.Diachi,
                     Sdtgiao = checkoutModel.Sdt,
                     Phiship = 0m,
-                    Mavoucher = null,
+                    Mavoucher = mavoucher,
                     Lydohuy = checkoutModel.Email
                 };
+                
+                if (checkoutModel.Mapttt == 2)
+                {
+                    donHang.Trangthai = "ĐÃ NHẬN";
+                }
+
 
                 db.Donhangs.Add(donHang);
                 await db.SaveChangesAsync(); // tạo Madh
@@ -219,6 +254,8 @@ namespace QuanLyBanGiay.Controllers
                 return View(checkoutModel);
             }
         }
+
+
 
         // Xác nhận đơn hàng
         public async Task<IActionResult> OrderConfirmation(int id)

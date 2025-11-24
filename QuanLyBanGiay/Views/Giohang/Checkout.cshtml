@@ -28,15 +28,15 @@ else
             @foreach (var item in Model.CartItems)
             {
                 <tr>
-                    <td>@count</td> 
+                    <td>@count</td>
                     <td>@item.Tensp</td>
                     <td>@item.Mau</td>
                     <td>@item.Size</td>
                     <td>@item.Sl</td>
                     <td>@String.Format("{0:N0} đ", item.Dongia)</td>
                     <td>@String.Format("{0:N0} đ", item.Sl * item.Dongia)</td>
-                </tr>            
-                 count++;              
+                </tr>
+                count++;
             }
         </tbody>
     </table>
@@ -51,7 +51,7 @@ else
 
     <h4 style="color:#ee4d2d">Thông tin người nhận</h4>
     <form asp-action="Checkout" method="post">
-
+        @Html.AntiForgeryToken()
         <input type="hidden" asp-for="Makh" />
 
         <div class="row">
@@ -73,7 +73,6 @@ else
                 <input asp-for="Diachi" class="form-control" placeholder="Nhập địa chỉ..." />
                 <span asp-validation-for="Diachi" class="text-danger"></span>
             </div>
-
             <div class="col-md-6 mb-3">
                 <label class="form-label">Lời nhắn (Ghi chú)</label>
                 <input asp-for="Email" class="form-control" placeholder="Lưu ý cho người bán..." />
@@ -81,6 +80,19 @@ else
         </div>
 
         <hr class="my-4" />
+
+        <!-- Voucher -->
+        <div class="mb-4">
+            <label class="form-label">Chọn Voucher</label>
+            <select id="voucherSelect" name="Mavoucher" class="form-select">
+                @foreach (var v in ViewBag.Vouchers as List<SelectListItem>)
+                {
+                    <option value="@v.Value" data-percent="@v.Group?.Name ?? " 0"">@v.Text</option>
+                }
+            </select>
+
+
+        </div>
 
         <div class="mb-4">
             <h5 style="color:#ee4d2d">Chọn phương thức thanh toán</h5>
@@ -90,7 +102,7 @@ else
         </div>
 
         <div class="d-flex justify-content-end mt-4">
-            <a href="http://styleofme.vn:7025/Giohang" class="btn btn-outline-secondary me-2">
+            <a href="@Url.Action("Index", "Giohang")" class="btn btn-outline-secondary me-2">
                 Quay lại
             </a>
             <button type="submit" class="btn btn-orange">Đặt hàng</button>
@@ -117,6 +129,21 @@ else
 
 @section Scripts {
     @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
     }
+    <script>
+        const voucherSelect = document.getElementById("voucherSelect");
+        const finalTotal = document.getElementById("final-total");
+        let originalTotal = @subtotal;
+
+        function updateTotal() {
+            let selectedOption = voucherSelect.options[voucherSelect.selectedIndex];
+            let percent = parseFloat(selectedOption.getAttribute("data-percent")) || 0;
+            let newTotal = originalTotal * (1 - percent / 100);
+            finalTotal.innerHTML = newTotal.toLocaleString("vi-VN") + " đ";
+        }
+
+        voucherSelect.addEventListener("change", updateTotal);
+    </script>
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
 }
