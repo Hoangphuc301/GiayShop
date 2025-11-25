@@ -1,7 +1,21 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using QuanLyBanGiay.Configuration;
 using QuanLyBanGiay.Models;
+using QuanLyBanGiay.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<VnpaySettings>(builder.Configuration.GetSection("VnpaySettings"));
+builder.Services.AddScoped<IVnpayService, VnpayService>();
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

@@ -10459,11 +10459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+      "projectUniqueName": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
       "projectName": "QuanLyBanGiay",
-      "projectPath": "D:\\git\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
+      "projectPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\QuanLyBanGiay.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\QuanLyBanGiay\\obj\\",
+      "outputPath": "E:\\Code_C#\\ThucTapChuyenNganh\\QuanLyBanGiay\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

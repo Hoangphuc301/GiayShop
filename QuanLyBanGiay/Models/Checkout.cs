@@ -1,6 +1,6 @@
 ﻿using QuanLyBanGiay.Models;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.Rendering; //Cần thêm namespace này cho SelectListItem
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace QuanLyBanGiay.Models.ViewModels
 {
@@ -13,6 +13,9 @@ namespace QuanLyBanGiay.Models.ViewModels
         public string Diachi { get; set; } = "";
         public int Mapttt { get; set; }
         public int? Mavoucher { get; set; }
+
+        public decimal TotalAmount { get; set; }
+        public int Madh { get; set; }
 
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();
         public List<SelectListItem> PaymentMethods { get; set; } = new List<SelectListItem>();

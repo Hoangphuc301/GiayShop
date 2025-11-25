@@ -7,6 +7,24 @@
     var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
 }
 
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Lỗi Đặt Hàng</h4>
+        <ul>
+            @foreach (var modelState in ViewData.ModelState.Values)
+            {
+                @foreach (var error in modelState.Errors)
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            }
+        </ul>
+    </div>
+}
+
+@Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+
 @if (!Model.CartItems.Any())
 {
     <p>Giỏ hàng trống. Vui lòng quay lại <a asp-action="Index">Giỏ hàng</a>.</p>
@@ -21,6 +39,7 @@ else
             <form asp-action="Checkout" method="post">
                 @Html.AntiForgeryToken()
                 <input type="hidden" asp-for="Makh" />
+                <input type="hidden" asp-for="TotalAmount" id="TotalAmount" />
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -89,6 +108,7 @@ else
                             color: #fff;
                         }
                 </style>
+
             </form>
         </div>
 
@@ -112,18 +132,20 @@ else
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model.CartItems)
-                            {
+                            @{
                                 int count = 1;
-                                <tr>
-                                    <td>@count</td>
-                                    <td>@item.Tensp (@item.Mau)</td>
-                                    <td>@item.Size</td>
-                                    <td>@item.Sl</td>
-                                    <td>@String.Format(culture, "{0:N0} đ", item.Dongia)</td>
-                                    <td class="text-end">@String.Format(culture, "{0:N0} đ", item.Sl * item.Dongia)</td>
-                                </tr>
-                                count++;
+                                foreach (var item in Model.CartItems)
+                                {
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.Tensp (@item.Mau)</td>
+                                        <td>@item.Size</td>
+                                        <td>@item.Sl</td>
+                                        <td>@String.Format(culture, "{0:N0} đ", item.Dongia)</td>
+                                        <td class="text-end">@String.Format(culture, "{0:N0} đ", item.Sl * item.Dongia)</td>
+                                    </tr>
+                                    count++;
+                                }
                             }
                         </tbody>
                     </table>
@@ -147,6 +169,7 @@ else
                 </div>
             </div>
         </div>
+
     </div>
 }
 
@@ -154,34 +177,34 @@ else
     @{
         var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
     }
-    <script> 
-        // Lấy các phần tử cần thiết 
+    <script>
+
         const voucherSelect = document.getElementById("voucherSelect");
         const finalTotalDisplay = document.getElementById("final-total");
         const discountAmountDisplay = document.getElementById("discount-amount");
+        const hiddenTotalInput = document.getElementById("TotalAmount");
+
         let originalTotal = @subtotal;
 
-        // Hàm định dạng số sang tiền Việt
         function formatCurrency(number) {
             return Math.round(number).toLocaleString("vi-VN") + " đ";
         }
 
-        // Hàm cập nhật tổng tiền sau khi chọn voucher
         function updateTotal() {
             let selectedOption = voucherSelect.options[voucherSelect.selectedIndex];
             let percent = parseFloat(selectedOption.getAttribute("data-percent")) || 0;
 
-            // Tính toán tổng tiền mới
             let discount = originalTotal * (percent / 100);
             let newTotal = originalTotal - discount;
 
-            // Cập nhật hiển thị
             discountAmountDisplay.innerHTML = "- " + formatCurrency(discount);
             finalTotalDisplay.innerHTML = formatCurrency(newTotal);
+
+            hiddenTotalInput.value = Math.round(newTotal);
         }
 
         updateTotal();
-
         voucherSelect.addEventListener("change", updateTotal);
+
     </script>
 }
