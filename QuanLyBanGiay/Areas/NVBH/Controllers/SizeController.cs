@@ -9,7 +9,7 @@ namespace QuanLyBanGiay.Areas.NVBH.Controllers
         private QL_GiayContext db = new QL_GiayContext();
         public IActionResult Index(int trang = 1)
         {
-            int kichThuocTrang = 5;
+            int kichThuocTrang = 7;
             var size = db.Sizes.AsQueryable();
 
             int tongSoMuc = size.Count();

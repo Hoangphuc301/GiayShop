@@ -8,20 +8,59 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
     public class DonhangController : Controller
     {
         private QL_GiayContext db = new QL_GiayContext();
-        public IActionResult Index(int trang = 1)
+        public IActionResult Index(int trang = 1, string loaiLoc = "", DateTime? from = null, DateTime? to = null)
         {
-            int kichThuocTrang = 11;
+            int kichThuocTrang = 10;
 
             var donhang = db.Donhangs
                 .Include(d => d.MakhNavigation)
                 .Include(d => d.MaptttNavigation)
                 .Include(d => d.MavoucherNavigation)
-                .Where(d => d.Trangthai == "ĐANG GIAO" || d.Trangthai == "HỦY" || d.Trangthai == "ĐÃ NHẬN")
-                .OrderByDescending(d => d.Ngaydat)
                 .AsQueryable();
 
+            // Lọc theo tuần
+            if (loaiLoc == "week")
+            {
+                var today = DateTime.Today;
+
+                // Chủ nhật là ngày đầu tuần
+                int delta = today.DayOfWeek - DayOfWeek.Sunday;
+
+                var dauTuan = today.AddDays(-delta);
+                var cuoiTuan = dauTuan.AddDays(6).AddHours(23).AddMinutes(59).AddSeconds(59);
+
+                donhang = donhang.Where(d => d.Ngaydat >= dauTuan && d.Ngaydat <= cuoiTuan);
+            }
+
+
+            // Lọc theo tháng
+            if (loaiLoc == "month")
+            {
+                var dauThang = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                var cuoiThang = dauThang.AddMonths(1).AddDays(-1).AddHours(23).AddMinutes(59);
+                donhang = donhang.Where(d => d.Ngaydat >= dauThang && d.Ngaydat <= cuoiThang);
+            }
+
+            // Lọc theo khoảng thời gian
+            if (loaiLoc == "range" && from.HasValue && to.HasValue)
+            {
+                DateTime tuNgay = from.Value.Date;
+                DateTime denNgay = to.Value.Date.AddHours(23).AddMinutes(59);
+
+                donhang = donhang.Where(d => d.Ngaydat >= tuNgay && d.Ngaydat <= denNgay);
+            }
+
+            // Lưu thông tin lọc cho View
+            ViewBag.LoaiLoc = loaiLoc;
+            ViewBag.From = from?.ToString("yyyy-MM-dd");
+            ViewBag.To = to?.ToString("yyyy-MM-dd");
+
+            // Phân trang
             int tongSoMuc = donhang.Count();
             int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
+
+            if (tongSoTrang == 0)
+                tongSoTrang = 1;
 
             if (trang < 1)
                 trang = 1;
@@ -29,6 +68,7 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
                 trang = tongSoTrang;
 
             var donhangs = donhang
+                .OrderByDescending(d => d.Ngaydat)
                 .Skip((trang - 1) * kichThuocTrang)
                 .Take(kichThuocTrang)
                 .ToList();
@@ -36,6 +76,7 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
             ViewBag.Donhang = donhangs;
             ViewBag.TrangHienTai = trang;
             ViewBag.TongSoTrang = tongSoTrang;
+
             return View();
         }
 

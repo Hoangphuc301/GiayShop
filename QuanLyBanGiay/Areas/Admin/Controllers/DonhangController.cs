@@ -60,7 +60,6 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             int tongSoMuc = donhang.Count();
             int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
 
-            // Tránh lỗi OFFSET âm
             if (tongSoTrang == 0)
                 tongSoTrang = 1;
 

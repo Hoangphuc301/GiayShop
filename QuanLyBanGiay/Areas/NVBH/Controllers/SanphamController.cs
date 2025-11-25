@@ -12,7 +12,7 @@ namespace QuanLyBanGiay.Areas.NVBH.Controllers
         //Hiển thị danh sách với phân trang
         public IActionResult Index(int trang = 1)
         {
-            int kichThuocTrang = 10;
+            int kichThuocTrang = 6;
             var sanpham = db.Sanphams
                 .Include(sp => sp.MadmNavigation)
                 .Include(sp => sp.MathNavigation)
