@@ -46,7 +46,7 @@ namespace QuanLyBanGiay.Services
             vnpay.AddRequestData("vnp_CurrCode", "VND");
             vnpay.AddRequestData("vnp_IpAddr", ipAddress);
             vnpay.AddRequestData("vnp_Locale", "vn");
-            vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan don hang {orderId} - Tong tien: {model.TotalAmount:N0} VND");
+			vnpay.AddRequestData("vnp_OrderInfo", $"ThanhToanDonHang_{orderId}");
             vnpay.AddRequestData("vnp_OrderType", "other");
             vnpay.AddRequestData("vnp_ReturnUrl", _settings.ReturnUrl);
             vnpay.AddRequestData("vnp_TxnRef", orderId);

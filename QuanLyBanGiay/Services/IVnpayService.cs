@@ -1,5 +1,6 @@
-﻿using QuanLyBanGiay.Models; 
+﻿using QuanLyBanGiay.Models;
 using QuanLyBanGiay.Models.ViewModels;
+using Microsoft.AspNetCore.Http;
 
 namespace QuanLyBanGiay.Services
 {

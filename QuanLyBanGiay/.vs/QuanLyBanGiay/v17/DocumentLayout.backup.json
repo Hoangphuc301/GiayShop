@@ -1,34 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\",
+  "WorkspaceRootPath": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\services\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:services\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\giohang\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\models\\chitietgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:models\\chitietgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\views\\giohang\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\helpers\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:helpers\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\models\\vnpayresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:models\\vnpayresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\models\\ql_giaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:models\\ql_giaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\views\\giohang\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\models\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:models\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\wwwroot\\css\\chitiet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:wwwroot\\css\\chitiet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\views\\sanpham\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:views\\sanpham\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\shop\\giayshop\\quanlybangiay\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|c:\\users\\kkk\\documents\\code\\th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\giayshop\\giayshop\\quanlybangiay\\configuration\\vnpaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54920E3B-0804-41B1-99BD-C1D96BEE5CE0}|QuanLyBanGiay.csproj|solutionrelative:configuration\\vnpaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +74,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "chitiet.css",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\chitiet.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\chitiet.css",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\wwwroot\\css\\chitiet.css",
-              "RelativeToolTip": "wwwroot\\css\\chitiet.css",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAAAJ8AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-23T08:31:18.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Chitiet.cshtml",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\SanPham\\Chitiet.cshtml",
-              "RelativeDocumentMoniker": "Views\\SanPham\\Chitiet.cshtml",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\SanPham\\Chitiet.cshtml",
-              "RelativeToolTip": "Views\\SanPham\\Chitiet.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAArwCgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T08:28:54.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Giohang\\Checkout.cshtml",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
-              "RelativeToolTip": "Views\\Giohang\\Checkout.cshtml",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAmwJUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T08:20:39.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Giohang\\Index.cshtml",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Index.cshtml",
-              "RelativeToolTip": "Views\\Giohang\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T08:14:56.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T07:07:21.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GiohangController.cs",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GiohangController.cs",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
-              "RelativeToolTip": "Controllers\\GiohangController.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAANkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T17:02:00.219Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T04:29:05.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\Shop\\GiayShop\\QuanLyBanGiay\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "ChitietGiohang.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\ChitietGiohang.cs",
+              "RelativeDocumentMoniker": "Models\\ChitietGiohang.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\ChitietGiohang.cs",
+              "RelativeToolTip": "Models\\ChitietGiohang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T17:01:59.393Z",
+              "WhenOpened": "2025-11-26T04:46:23.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\OrderSuccess.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giohang\\OrderSuccess.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\OrderSuccess.cshtml",
+              "RelativeToolTip": "Views\\Giohang\\OrderSuccess.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwCEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T01:23:19.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "QL_GiayContext.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\QL_GiayContext.cs",
+              "RelativeDocumentMoniker": "Models\\QL_GiayContext.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\QL_GiayContext.cs",
+              "RelativeToolTip": "Models\\QL_GiayContext.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA2wCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T17:59:44.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Checkout.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\Checkout.cs",
+              "RelativeDocumentMoniker": "Models\\Checkout.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\Checkout.cs",
+              "RelativeToolTip": "Models\\Checkout.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:21:38.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VnpayResponseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\VnpayResponseViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\VnpayResponseViewModel.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Models\\VnpayResponseViewModel.cs",
+              "RelativeToolTip": "Models\\VnpayResponseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:19:35.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Helpers\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "Helpers\\VnPayLibrary.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Helpers\\VnPayLibrary.cs",
+              "RelativeToolTip": "Helpers\\VnPayLibrary.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAiwHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:17:09.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VnpayService.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Services\\VnpayService.cs",
+              "RelativeDocumentMoniker": "Services\\VnpayService.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Services\\VnpayService.cs",
+              "RelativeToolTip": "Services\\VnpayService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:14:46.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IVnpayService.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Services\\IVnpayService.cs",
+              "RelativeDocumentMoniker": "Services\\IVnpayService.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Services\\IVnpayService.cs",
+              "RelativeToolTip": "Services\\IVnpayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:14:32.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:05:48.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VnpaySettings.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Configuration\\VnpaySettings.cs",
+              "RelativeDocumentMoniker": "Configuration\\VnpaySettings.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Configuration\\VnpaySettings.cs",
+              "RelativeToolTip": "Configuration\\VnpaySettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T13:05:28.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T13:03:55.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giohang\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Views\\Giohang\\Checkout.cshtml",
+              "RelativeToolTip": "Views\\Giohang\\Checkout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwMoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T12:53:15.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GiohangController.cs",
+              "DocumentMoniker": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GiohangController.cs",
+              "ToolTip": "C:\\Users\\kkk\\Documents\\code\\Th\u1EF1c t\u1EADp chuy\u00EAn ng\u00E0nh\\GiayShop\\GiayShop\\QuanLyBanGiay\\Controllers\\GiohangController.cs",
+              "RelativeToolTip": "Controllers\\GiohangController.cs",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAAAAUBAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T08:41:18.025Z",
               "EditorCaption": ""
             }
           ]

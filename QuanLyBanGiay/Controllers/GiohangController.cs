@@ -21,6 +21,13 @@ namespace QuanLyBanGiay.Controllers
         // Sử dụng Service VNPAY
         private IVnpayService VnpayService => HttpContext.RequestServices.GetRequiredService<IVnpayService>();
 
+        private readonly ILogger<GiohangController> _logger;
+
+        // Nếu controller chưa có constructor, thêm constructor để inject logger (vẫn giữ db như hiện tại).
+        public GiohangController(ILogger<GiohangController> logger)
+        {
+            _logger = logger;
+        }
         // Lấy giỏ hàng từ session
         private List<CartItem> GetCart()
         {
@@ -340,9 +347,11 @@ namespace QuanLyBanGiay.Controllers
                     }
                 }
 
-                return RedirectToAction("OrderSuccess", new { success = false });
-            }
-        }
+				//return RedirectToAction("OrderSuccess", new { success = false });
+				return Content(Request.QueryString.Value);
+
+			}
+		}
 
         public IActionResult OrderSuccess(bool success)
         {

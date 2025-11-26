@@ -1,18 +1,34 @@
 ﻿@{
-    ViewData["Title"] = "Kết quả giao dịch";
-    bool success = ViewBag.Success ?? false;
-    string message = ViewBag.Message ?? "Đã xảy ra lỗi trong quá trình xử lý giao dịch.";
+	ViewData["Title"] = "Kết quả giao dịch";
+	bool success = ViewBag.Success ?? false;
+	string message = ViewBag.Message ?? "Đã xảy ra lỗi trong quá trình xử lý giao dịch.";
 }
 
 <div class="container text-center py-5">
-    @if (!success) //Cái này cần sửa lại này để bịp 
-    {
-        <h2 class="text-success mb-3">GIAO DỊCH THÀNH CÔNG!</h2>
-        <p class="lead">Cảm ơn bạn đã thanh toán. Đơn hàng của bạn đã được ghi nhận.</p>
-        <a asp-controller="Home" asp-action="Index" class="btn btn-success mt-3">Quay lại trang chủ</a>
-    }
 
-    <div class="mt-5">
-        <a asp-controller="Profile" asp-action="ChiTietDH" class="btn btn-outline-secondary">Xem chi tiết đơn hàng</a>
-    </div>
+	@if (success)
+	{
+			<h2 class="text-success mb-3">GIAO DỊCH THÀNH CÔNG!</h2>
+			<p class="lead">Cảm ơn bạn đã thanh toán. Đơn hàng của bạn đã được ghi nhận.</p>
+			<div class="alert alert-success mt-4">
+				<strong>Thông báo:</strong> @message
+			</div>
+			<a asp-controller="Home" asp-action="Index" class="btn btn-success mt-3">Quay lại trang chủ</a>
+	}
+
+	else
+	{
+			<h2 class="text-danger mb-3">GIAO DỊCH THẤT BẠI</h2>
+			<p class="lead">Đã xảy ra sự cố trong quá trình thanh toán hoặc xác nhận giao dịch.</p>
+			<div class="alert alert-danger mt-4">
+
+				<strong>Lý do:</strong> @message
+
+			</div>
+			<a asp-controller="Giohang" asp-action="Checkout" class="btn btn-warning mt-3">Thử thanh toán lại</a>
+	}
+
+	<div class="mt-5">
+		<a asp-controller="Profile" asp-action="XemChiTiet" class="btn btn-outline-secondary">Xem chi tiết đơn hàng</a>
+	</div>
 </div>
