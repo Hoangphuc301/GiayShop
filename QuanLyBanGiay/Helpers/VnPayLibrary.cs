@@ -8,8 +8,11 @@ namespace QuanLyBanGiay.Helpers
 {
     public class VnPayLibrary
     {
+        //Phiên bản API VNPAY
         public static string VERSION = "2.1.0";
+        //Lưu trữ các tham số gửi đi
         private SortedList<string, string> _requestData = new SortedList<string, string>(new VnPayCompare());
+        //Lưu trữ các tham số nhận về
         private SortedList<string, string> _responseData = new SortedList<string, string>(new VnPayCompare());
 
         public void AddRequestData(string key, string value)

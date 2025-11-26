@@ -2,10 +2,12 @@
 @using System.Globalization
 
 <div id="miniCartContainer" class="mini-cart p-3 shadow rounded bg-white" style="width: 320px;">
+
     <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
         <span class="fw-bold fs-5">🛒 Giỏ hàng</span>
-        <a href="javascript:;" onclick="document.getElementById('miniCartContainer').style.display='none'"
-           style="text-decoration:none; font-size:24px; color:#333;">×</a>
+        <button type="button" class="btn-close" aria-label="Close"
+                onclick="document.getElementById('miniCartContainer').style.display='none'"
+                style="font-size: 1rem;"></button>
     </div>
 
     @if (Model == null || !Model.Any())
@@ -20,13 +22,15 @@
             @foreach (var item in Model)
             {
                 var total = item.Sl * item.Dongia;
-                <li class="d-flex mb-3 align-items-center border-bottom pb-2">
+
+                <li class="d-flex mb-3 align-items-start border-bottom pb-2">
+
                     <img src="@(Url.Content("~/images/Sanpham/" + item.Hinhanh))"
                          alt="@item.Tensp"
                          class="img-fluid rounded border me-2"
-                         style="height:55px;width:55px; object-fit:contain;" />
+                         style="height:55px;width:55px; object-fit:contain; flex-shrink: 0;" />
 
-                    <div class="flex-grow-1">
+                    <div class="flex-grow-1 me-2" style="overflow: hidden;">
                         <div class="fw-semibold text-truncate" style="font-size:14px;">@item.Tensp</div>
                         <div class="text-muted" style="font-size:12px;">
                             Màu: @item.Mau | Size: @item.Size
@@ -35,6 +39,15 @@
                             @item.Sl x @String.Format("{0:0,0} đ", item.Dongia)
                         </div>
                     </div>
+
+                    <form asp-controller="Giohang" asp-action="Remove" method="post"
+                          data-ajax="true" data-ajax-method="POST" data-ajax-success="miniCartRemovedItem"
+                          style="align-self: flex-start;">
+                        <input type="hidden" name="mactsp" value="@item.Mactsp" />
+                        <button type="submit" class="btn btn-sm text-danger p-0" title="Xóa sản phẩm" style="font-size: 16px; line-height: 1;">
+                            ×
+                        </button>
+                    </form>
                 </li>
             }
         </ul>

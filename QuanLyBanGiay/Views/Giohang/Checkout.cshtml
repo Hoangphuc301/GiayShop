@@ -23,8 +23,6 @@
     </div>
 }
 
-@Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
-
 @if (!Model.CartItems.Any())
 {
     <p>Giỏ hàng trống. Vui lòng quay lại <a asp-action="Index">Giỏ hàng</a>.</p>

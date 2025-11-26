@@ -319,7 +319,7 @@ namespace QuanLyBanGiay.Controllers
 
                 if (donHang != null)
                 {
-                    donHang.Trangthai = "ĐÃ NHẬN"; // Cập nhật trạng thái sau khi VNPAY thành công
+                    donHang.Trangthai = "ĐANG GIAO"; // Cập nhật trạng thái sau khi VNPAY thành công
                     await db.SaveChangesAsync();
 
                     ClearCart();

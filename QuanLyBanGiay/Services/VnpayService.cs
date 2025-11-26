@@ -18,11 +18,12 @@ namespace QuanLyBanGiay.Services
             _settings = settings.Value;
         }
 
+        //Tạo URL thanh toán
         public string CreatePaymentUrl(Checkout model, HttpContext context)
         {
             var vnpay = new VnPayLibrary();
 
-            var orderId = model.Madh.ToString(); 
+            var orderId = model.Madh.ToString(); //Lấy Madh làm mã giao dịch
 
             long totalAmount = (long)Math.Round(model.TotalAmount * 100);
 
@@ -37,7 +38,7 @@ namespace QuanLyBanGiay.Services
                 ipAddress = "127.0.0.1";
             }
 
-
+            //Các tham số bắt buộc
             vnpay.AddRequestData("vnp_Version", _settings.Version);
             vnpay.AddRequestData("vnp_Command", _settings.Command);
             vnpay.AddRequestData("vnp_TmnCode", _settings.TmnCode);
@@ -68,7 +69,9 @@ namespace QuanLyBanGiay.Services
                 }
             }
 
+            //Lấy chữ ký điện tử VNPAY gửi về
             var secureHash = vnpay.GetResponseData("vnp_SecureHash");
+            //Xác thực chữ ký
             bool checkSignature = vnpay.ValidateSignature(secureHash, _settings.HashSecret);
 
             response.TransactionId = vnpay.GetResponseData("vnp_TxnRef");
