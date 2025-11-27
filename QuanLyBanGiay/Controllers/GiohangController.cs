@@ -206,24 +206,28 @@ namespace QuanLyBanGiay.Controllers
 
                 decimal tongTienCuoi = tongTien - tongTienGiam;
 
-                var donHang = new Donhang
-                {
-                    Makh = khach.Makh,
-                    Mapttt = checkoutModel.Mapttt,
-                    Ngaydat = DateTime.Now,
-                    Tongtien = tongTien,
-                    Tongtiencuoi = tongTienCuoi,
-                    Diachigiao = checkoutModel.Diachi,
-                    Sdtgiao = checkoutModel.Sdt,
-                    Phiship = 0m,
-                    Mavoucher = mavoucher,
-                    Lydohuy = checkoutModel.Email,
-                    Trangthai = "CHỜ XÁC NHẬN" // Mặc định là Chờ xác nhận
-                };
+				var ptttVNPAY = await db.Phuongthucthanhtoans.FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
 
-                // Kiểm tra VNPAY
-                var ptttVNPAY = await db.Phuongthucthanhtoans
-                                         .FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
+				var donHang = new Donhang
+				{
+					Makh = khach.Makh,
+					Mapttt = checkoutModel.Mapttt,
+					Ngaydat = DateTime.Now,
+					Tongtien = tongTien,
+					Tongtiencuoi = tongTienCuoi,
+					Diachigiao = checkoutModel.Diachi,
+					Sdtgiao = checkoutModel.Sdt,
+					Phiship = 0m,
+					Mavoucher = mavoucher,
+					Lydohuy = checkoutModel.Email,
+
+					// 🔥 QUY ĐỊNH TRẠNG THÁI TỰ ĐỘNG
+					Trangthai = (ptttVNPAY != null && checkoutModel.Mapttt == ptttVNPAY.Mapttt)
+								? "CHỜ THANH TOÁN"      // Nếu là VNPAY
+								: "CHỜ XÁC NHẬN"         // Nếu là COD
+				};
+
+				// Kiểm tra VNPAY
 
                 if (ptttVNPAY != null && checkoutModel.Mapttt == ptttVNPAY.Mapttt)
                 {
@@ -269,7 +273,7 @@ namespace QuanLyBanGiay.Controllers
                     {
                         ModelState.AddModelError("", "Lỗi hệ thống VNPAY: Không thể tạo URL thanh toán. Vui lòng kiểm tra cấu hình VNPAY hoặc tham số.");
 
-                        donHang.Trangthai = "CHỜ XÁC NHẬN";
+                        donHang.Trangthai = "CHỜ THANH TOÁN";
                         await db.SaveChangesAsync();
 
                         return View(checkoutModel); 
@@ -342,7 +346,7 @@ namespace QuanLyBanGiay.Controllers
                     var donHang = await db.Donhangs.FirstOrDefaultAsync(dh => dh.Madh == madh);
                     if (donHang != null)
                     {
-                        donHang.Trangthai = "CHỜ XÁC NHẬN";
+                        donHang.Trangthai = "CHỜ THANH TOÁN";
                         await db.SaveChangesAsync();
                     }
                 }

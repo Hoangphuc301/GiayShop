@@ -56,7 +56,8 @@ namespace QuanLyBanGiay.Services
 			vnpay.AddRequestData("vnp_OrderInfo", $"ThanhToanDonHang_{orderId}");
             vnpay.AddRequestData("vnp_OrderType", "other");
             vnpay.AddRequestData("vnp_ReturnUrl", _settings.ReturnUrl);
-            vnpay.AddRequestData("vnp_TxnRef", txnRef);
+            vnpay.AddRequestData("vnp_TxnRef", model.Madh.ToString());
+
 
 			string paymentUrl = vnpay.CreateRequestUrl(_settings.BaseUrl, _settings.HashSecret);
             return paymentUrl;
