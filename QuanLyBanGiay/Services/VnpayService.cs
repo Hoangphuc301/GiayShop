@@ -17,13 +17,19 @@ namespace QuanLyBanGiay.Services
         {
             _settings = settings.Value;
         }
+		private string GenerateTxnRef()
+		{
+			return DateTime.Now.ToString("yyyyMMddHHmmss") + new Random().Next(100, 999);
+		}
 
-        //Tạo URL thanh toán
-        public string CreatePaymentUrl(Checkout model, HttpContext context)
+		//Tạo URL thanh toán
+		public string CreatePaymentUrl(Checkout model, HttpContext context)
         {
             var vnpay = new VnPayLibrary();
 
             var orderId = model.Madh.ToString(); //Lấy Madh làm mã giao dịch
+
+            string txnRef = GenerateTxnRef();
 
             long totalAmount = (long)Math.Round(model.TotalAmount * 100);
 
@@ -50,12 +56,12 @@ namespace QuanLyBanGiay.Services
 			vnpay.AddRequestData("vnp_OrderInfo", $"ThanhToanDonHang_{orderId}");
             vnpay.AddRequestData("vnp_OrderType", "other");
             vnpay.AddRequestData("vnp_ReturnUrl", _settings.ReturnUrl);
-            vnpay.AddRequestData("vnp_TxnRef", orderId);
+            vnpay.AddRequestData("vnp_TxnRef", txnRef);
 
-            string paymentUrl = vnpay.CreateRequestUrl(_settings.BaseUrl, _settings.HashSecret);
+			string paymentUrl = vnpay.CreateRequestUrl(_settings.BaseUrl, _settings.HashSecret);
             return paymentUrl;
         }
-
+        
         public VnpayResponseViewModel ProcessVnpayReturn(IQueryCollection collections)
         {
             var vnpay = new VnPayLibrary();
