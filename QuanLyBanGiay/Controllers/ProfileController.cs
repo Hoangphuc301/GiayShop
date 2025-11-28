@@ -212,5 +212,74 @@ namespace QuanLyBanGiay.Controllers
             }
             return RedirectToAction("XemDH");
         }
+
+        [HttpGet]
+        [HttpGet]
+        public IActionResult ThanhToan(int id)
+        {
+            // kiểm tra đăng nhập
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (email == null)
+                return RedirectToAction("Login", "Account");
+
+            var dh = db.Donhangs
+                .Include(d => d.ChitietDonhangs)
+                .FirstOrDefault(d => d.Madh == id);
+
+            if (dh == null)
+            {
+                TempData["Error"] = "Không tìm thấy đơn hàng.";
+                return RedirectToAction("XemDH");
+            }
+
+            var khach = db.Khachhangs.FirstOrDefault(k => k.Email == email);
+            if (dh.Makh != khach?.Makh)
+            {
+                TempData["Error"] = "Bạn không có quyền thanh toán đơn này.";
+                return RedirectToAction("XemDH");
+            }
+
+            if (dh.Trangthai != "CHỜ THANH TOÁN")
+            {
+                TempData["Error"] = "Đơn hàng này không ở trạng thái CHỜ THANH TOÁN.";
+                return RedirectToAction("XemDH");
+            }
+
+            // ====== CHUYỂN CHI TIẾT ĐƠN → GIỎ HÀNG SESSION ======
+            var cart = new List<CartItem>();
+
+            foreach (var ct in dh.ChitietDonhangs)
+            {
+                var ctsp = db.ChitietSanphams
+                    .Include(x => x.MaspNavigation)
+                    .Include(x => x.MamauNavigation)
+                    .Include(x => x.MasizeNavigation)
+                    .FirstOrDefault(x => x.Mactsp == ct.Mactsp);
+
+                if (ctsp != null)
+                {
+                    cart.Add(new CartItem
+                    {
+                        Mactsp = ctsp.Mactsp,
+                        Sl = (int)ct.Sl,
+                        Tensp = ctsp.MaspNavigation.Tensp,
+                        Hinhanh = ctsp.MaspNavigation.Hinhdaidien,
+                        Dongia = (decimal)ct.Dongia,
+                        Mau = ctsp.MamauNavigation.Tenmau,
+                        Size = ctsp.MasizeNavigation.Tensize
+                    });
+                }
+            }
+
+            // lưu giỏ hàng
+            HttpContext.Session.SetString("CartSession",
+                Newtonsoft.Json.JsonConvert.SerializeObject(cart));
+
+            // lưu Madh cho checkout xử lý
+            HttpContext.Session.SetInt32("ThanhToanDonCu_Madh", dh.Madh);
+
+            return RedirectToAction("Checkout", "Giohang");
+        }
+
     }
 }

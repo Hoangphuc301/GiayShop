@@ -46,16 +46,22 @@
                             <a asp-controller="Profile" asp-action="ChiTietDH" asp-route-id="@dh.Madh" class="btn btn-sm btn-info text-white" title="Xem chi tiết đơn hàng">
                                 Xem chi tiết
                             </a>
-                            @if (dh.Trangthai == "Chờ xác nhận")
+                            @if (dh.Trangthai == "CHỜ XÁC NHẬN")
                             {
                                 <a asp-controller="Profile" asp-action="Huy" asp-route-id="@dh.Madh" class="btn btn-sm btn-danger" title="Hủy đơn hàng này" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
                                     Hủy
                                 </a>
                             }
-                            @if (dh.Trangthai == "Đã giao" || dh.Trangthai == "Đã hủy")
+                            @if (dh.Trangthai == "ĐÃ GIAO" || dh.Trangthai == "ĐÃ HỦY")
                             {
                                 <a asp-controller="Profile" asp-action="DatLai" asp-route-id="@dh.Madh" class="btn btn-sm btn-success" title="Đặt lại đơn hàng này">
                                     Đặt lại
+                                </a>
+                            }
+                            @if(dh.Trangthai == "CHỜ THANH TOÁN")
+                            {
+                                <a asp-controller="Profile" asp-action="Thanhtoan" asp-route-id="@dh.Madh" class="btn btn-sm btn-success" title="Thanh toán đơn hàng này">
+                                    Thanh Toán
                                 </a>
                             }
                         </td>

@@ -75,7 +75,6 @@ namespace QuanLyBanGiay.Controllers
             return View(model);
         }
 
-        //Thanh toán
         public async Task<IActionResult> Checkout()
         {
             var email = HttpContext.Session.GetString("UserEmail");
@@ -104,207 +103,178 @@ namespace QuanLyBanGiay.Controllers
                 Diachi = khach.Diachi
             };
 
-            // Lấy vouchers
-            var vouchersData = await db.Vouchers
-                .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
-                .ToListAsync();
+            // LẤY MADH CŨ (khi thanh toán lại)
+            var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
+            if (madhCu.HasValue)
+            {
+                model.Madh = madhCu.Value;
+            }
 
-            var vouchers = vouchersData
+            // VOUCHER
+            var vouchers = await db.Vouchers
+                .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
                 .Select(v => new SelectListItem
                 {
                     Value = v.Mavoucher.ToString(),
-                    Group = new SelectListGroup
-                    {
-                        Name = v.Giatri.HasValue ? v.Giatri.Value.ToString() : "0"
-                    },
-                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri.HasValue ? v.Giatri.Value.ToString("N0") + "%" : "0%")}"
+                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri ?? 0)}%"
                 })
-                .ToList();
+                .ToListAsync();
 
             vouchers.Insert(0, new SelectListItem { Value = "0", Text = "-- Không dùng voucher --" });
             ViewBag.Vouchers = vouchers;
 
-            // Lấy phương thức thanh toán
+            // PHƯƠNG THỨC THANH TOÁN
             var ptttList = await db.Phuongthucthanhtoans
-                                   .Select(p => new SelectListItem
-                                   {
-                                       Value = p.Mapttt.ToString(),
-                                       Text = p.Tenphuongthuc
-                                   })
-                                   .ToListAsync();
+                .Select(p => new SelectListItem
+                {
+                    Value = p.Mapttt.ToString(),
+                    Text = p.Tenphuongthuc
+                })
+                .ToListAsync();
+
             ptttList.Insert(0, new SelectListItem { Value = "0", Text = "-- Chọn phương thức thanh toán --" });
             model.PaymentMethods = ptttList;
 
             return View(model);
         }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Checkout(Checkout checkoutModel)
         {
-            // Validation cơ bản
+            // VALIDATION ▼
             var emailSession = HttpContext.Session.GetString("UserEmail");
             if (string.IsNullOrEmpty(emailSession))
-            {
-                TempData["Message"] = "Bạn cần đăng nhập trước khi thanh toán!";
                 return RedirectToAction("Login", "Khachhang");
-            }
 
             var khach = await db.Khachhangs.FirstOrDefaultAsync(k => k.Email == emailSession);
             if (khach == null)
-            {
-                TempData["Message"] = "Không tìm thấy tài khoản của bạn. Vui lòng đăng nhập lại!";
                 return RedirectToAction("Login", "Khachhang");
-            }
 
             checkoutModel.CartItems = GetCart();
-            var ptttList = await db.Phuongthucthanhtoans
-                                   .Select(p => new SelectListItem { Value = p.Mapttt.ToString(), Text = p.Tenphuongthuc })
-                                   .ToListAsync();
-            ptttList.Insert(0, new SelectListItem { Value = "0", Text = "-- Chọn phương thức thanh toán --" });
-            checkoutModel.PaymentMethods = ptttList;
-
-            var vouchersData = await db.Vouchers.Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now).ToListAsync();
-            var vouchers = vouchersData.Select(v => new SelectListItem { Value = v.Mavoucher.ToString(), Group = new SelectListGroup { Name = v.Giatri.HasValue ? v.Giatri.Value.ToString() : "0" }, Text = $"{v.Tenvoucher} - Giảm {(v.Giatri.HasValue ? v.Giatri.Value.ToString("N0") + "%" : "0%")}" }).ToList();
-            vouchers.Insert(0, new SelectListItem { Value = "0", Text = "-- Không dùng voucher --" });
-            ViewBag.Vouchers = vouchers;
 
             if (!checkoutModel.CartItems.Any())
-            {
-                ModelState.AddModelError("", "Giỏ hàng của bạn đang trống.");
-            }
+                ModelState.AddModelError("", "Giỏ hàng trống.");
+
             if (checkoutModel.Mapttt == 0)
-                ModelState.AddModelError("Mapttt", "Vui lòng chọn phương thức thanh toán.");
-            if (string.IsNullOrWhiteSpace(checkoutModel.Tenkh))
-                ModelState.AddModelError("Tenkh", "Vui lòng nhập họ tên.");
-            if (string.IsNullOrWhiteSpace(checkoutModel.Sdt))
-                ModelState.AddModelError("Sdt", "Vui lòng nhập số điện thoại.");
-            if (string.IsNullOrWhiteSpace(checkoutModel.Diachi))
-                ModelState.AddModelError("Diachi", "Vui lòng nhập địa chỉ giao hàng.");
+                ModelState.AddModelError("Mapttt", "Hãy chọn phương thức thanh toán.");
 
             if (!ModelState.IsValid)
                 return View(checkoutModel);
 
-            try
-            {
-                // Tính toán tổng
-                decimal tongTien = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
-                decimal tongTienGiam = 0m;
-                int? mavoucher = null;
+            // TÍNH TIỀN ▼
+            decimal tongTien = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
+            decimal tongTienGiam = 0m;
 
-                if (checkoutModel.Mavoucher != 0)
+            if (checkoutModel.Mavoucher != 0)
+            {
+                var voucher = await db.Vouchers.FirstOrDefaultAsync(v => v.Mavoucher == checkoutModel.Mavoucher);
+                if (voucher != null && voucher.Giatri.HasValue)
+                    tongTienGiam = tongTien * (voucher.Giatri.Value / 100m);
+            }
+
+            decimal tongTienCuoi = tongTien - tongTienGiam;
+
+
+            /
+            var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
+            bool isRePay = madhCu.HasValue;
+
+            Donhang donHang;
+
+            if (isRePay)
+            {
+                donHang = await db.Donhangs
+                    .Include(d => d.ChitietDonhangs)
+                    .FirstOrDefaultAsync(d => d.Madh == madhCu.Value);
+
+                if (donHang == null)
                 {
-                    var voucher = await db.Vouchers.FirstOrDefaultAsync(v => v.Mavoucher == checkoutModel.Mavoucher
-                                                                           && v.Trangthai == "CÒN"
-                                                                           && v.Ngaybd <= DateTime.Now
-                                                                           && v.Ngaykt >= DateTime.Now);
-                    if (voucher != null && voucher.Giatri.HasValue)
-                    {
-                        mavoucher = voucher.Mavoucher;
-                        tongTienGiam = tongTien * (voucher.Giatri.Value / 100m);
-                    }
+                    ModelState.AddModelError("", "Không tìm thấy đơn hàng cũ để thanh toán.");
+                    return View(checkoutModel);
                 }
 
-                decimal tongTienCuoi = tongTien - tongTienGiam;
+                // Cập nhật thông tin mới
+                donHang.Ngaydat = DateTime.Now;
+                donHang.Sdtgiao = checkoutModel.Sdt;
+                donHang.Diachigiao = checkoutModel.Diachi;
+                donHang.Tongtien = tongTien;
+                donHang.Tongtiencuoi = tongTienCuoi;
+                donHang.Mapttt = checkoutModel.Mapttt;
 
-				var ptttVNPAY = await db.Phuongthucthanhtoans.FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
-
-				var donHang = new Donhang
-				{
-					Makh = khach.Makh,
-					Mapttt = checkoutModel.Mapttt,
-					Ngaydat = DateTime.Now,
-					Tongtien = tongTien,
-					Tongtiencuoi = tongTienCuoi,
-					Diachigiao = checkoutModel.Diachi,
-					Sdtgiao = checkoutModel.Sdt,
-					Phiship = 0m,
-					Mavoucher = mavoucher,
-					Lydohuy = checkoutModel.Email,
-
-					// 🔥 QUY ĐỊNH TRẠNG THÁI TỰ ĐỘNG
-					Trangthai = (ptttVNPAY != null && checkoutModel.Mapttt == ptttVNPAY.Mapttt)
-								? "CHỜ THANH TOÁN"      // Nếu là VNPAY
-								: "CHỜ XÁC NHẬN"         // Nếu là COD
-				};
-
-				// Kiểm tra VNPAY
-
-                if (ptttVNPAY != null && checkoutModel.Mapttt == ptttVNPAY.Mapttt)
-                {
-
-                    db.Donhangs.Add(donHang);
-                    await db.SaveChangesAsync(); 
-
-                    if (donHang.Madh <= 0)
-                    {
-                        ModelState.AddModelError("", "Lỗi hệ thống: Không thể tạo Mã đơn hàng hợp lệ.");
-                        return View(checkoutModel); // TRẢ VỀ VIEW
-                    }
-
-                    var totalAmountToPay = donHang.Tongtiencuoi ?? 0m;
-                    if (totalAmountToPay < 1000)
-                    {
-                        ModelState.AddModelError("", "Tổng tiền thanh toán không hợp lệ (Phải lớn hơn 1,000 VND).");
-                        return View(checkoutModel); // TRẢ VỀ VIEW
-                    }
-
-                    donHang.Trangthai = "CHỜ XÁC NHẬN"; // Giả định trạng thái này HỢP LỆ 
-                    await db.SaveChangesAsync(); // Cập nhật lại trạng thái
-
-                    foreach (var item in checkoutModel.CartItems)
-                    {
-                        db.ChitietDonhangs.Add(new ChitietDonhang { Madh = donHang.Madh, Mactsp = item.Mactsp, Sl = item.Sl, Dongia = item.Dongia, Thanhtien = item.Sl * item.Dongia });
-                    }
-                    await db.SaveChangesAsync();
-
-                    var modelVnpay = new Checkout
-                    {
-                        Madh = donHang.Madh,
-                        TotalAmount = totalAmountToPay
-                    };
-
-                    string paymentUrl = VnpayService.CreatePaymentUrl(modelVnpay, HttpContext);
-
-                    if (!string.IsNullOrEmpty(paymentUrl))
-                    {
-                        return Redirect(paymentUrl);
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Lỗi hệ thống VNPAY: Không thể tạo URL thanh toán. Vui lòng kiểm tra cấu hình VNPAY hoặc tham số.");
-
-                        donHang.Trangthai = "CHỜ THANH TOÁN";
-                        await db.SaveChangesAsync();
-
-                        return View(checkoutModel); 
-                    }
-                }
-                else
-                {
-                    db.Donhangs.Add(donHang);
-                    await db.SaveChangesAsync();
-
-                    foreach (var item in checkoutModel.CartItems)
-                    {
-                        db.ChitietDonhangs.Add(new ChitietDonhang { Madh = donHang.Madh, Mactsp = item.Mactsp, Sl = item.Sl, Dongia = item.Dongia, Thanhtien = item.Sl * item.Dongia });
-                    }
-                    await db.SaveChangesAsync();
-
-                    ClearCart();
-                    return RedirectToAction("OrderConfirmation", new { id = donHang.Madh });
-                }
+                // Xóa chi tiết cũ
+                db.ChitietDonhangs.RemoveRange(donHang.ChitietDonhangs);
+                await db.SaveChangesAsync();
             }
-            catch (DbUpdateException dbEx)
+            else
             {
-                ModelState.AddModelError("", "Lỗi CSDL: " + (dbEx.InnerException?.Message ?? dbEx.Message));
-                return View(checkoutModel);
+                // ----------------------------------
+                // 🔥 2) CHECKOUT BÌNH THƯỜNG → TẠO ĐƠN MỚI
+                // ----------------------------------
+
+                donHang = new Donhang
+                {
+                    Makh = khach.Makh,
+                    Ngaydat = DateTime.Now,
+                    Sdtgiao = checkoutModel.Sdt,
+                    Diachigiao = checkoutModel.Diachi,
+                    Phiship = 0,
+                    Tongtien = tongTien,
+                    Tongtiencuoi = tongTienCuoi,
+                    Mapttt = checkoutModel.Mapttt
+                };
+
+                db.Donhangs.Add(donHang);
+                await db.SaveChangesAsync();
             }
-            catch (Exception ex)
+
+            // Thêm chi tiết đơn hàng (cả re-pay + mới)
+            foreach (var item in checkoutModel.CartItems)
             {
-                ModelState.AddModelError("", "Lỗi hệ thống: " + (ex.InnerException?.Message ?? ex.Message));
-                return View(checkoutModel);
+                db.ChitietDonhangs.Add(new ChitietDonhang
+                {
+                    Madh = donHang.Madh,
+                    Mactsp = item.Mactsp,
+                    Sl = item.Sl,
+                    Dongia = item.Dongia,
+                    Thanhtien = item.Sl * item.Dongia
+                });
             }
+
+            await db.SaveChangesAsync();
+
+
+            
+            var ptttVNPAY = await db.Phuongthucthanhtoans
+                .FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
+
+            if (checkoutModel.Mapttt == ptttVNPAY.Mapttt)
+            {
+                // Đặt trạng thái chờ thanh toán
+                donHang.Trangthai = "CHỜ THANH TOÁN";
+                await db.SaveChangesAsync();
+
+                // Tạo URL VNPAY
+                var modelVnpay = new Checkout
+                {
+                    Madh = donHang.Madh,
+                    TotalAmount = donHang.Tongtiencuoi ?? 0
+                };
+
+                string paymentUrl = VnpayService.CreatePaymentUrl(modelVnpay, HttpContext);
+                return Redirect(paymentUrl);
+            }
+
+            donHang.Trangthai = "CHỜ XÁC NHẬN";
+            await db.SaveChangesAsync();
+
+            ClearCart();
+            HttpContext.Session.Remove("ThanhToanDonCu_Madh");
+
+            return RedirectToAction("OrderConfirmation", new { id = donHang.Madh });
         }
+
 
         // VnpayReturn
         public async Task<IActionResult> VnpayReturn()
