@@ -177,7 +177,7 @@ namespace QuanLyBanGiay.Controllers
             decimal tongTienCuoi = tongTien - tongTienGiam;
 
 
-            /
+            
             var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
             bool isRePay = madhCu.HasValue;
 

@@ -33,7 +33,7 @@ namespace QuanLyBanGiay.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=QL_Giay;Integrated Security=True;Encrypt=False");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-6OJC3FAO;Database=QL_Giay;Trusted_Connection=True;");
             }
         }
 
@@ -176,11 +176,16 @@ namespace QuanLyBanGiay.Models
                     .HasColumnName("TONGTIENCUOI");
 
                 entity.Property(e => e.Trangthai)
-                    .HasMaxLength(20)
+                    .HasMaxLength(50)
                     .HasColumnName("TRANGTHAI");
 
+                entity.HasOne(d => d.MaNvgNavigation)
+                    .WithMany(p => p.DonhangMaNvgNavigations)
+                    .HasForeignKey(d => d.MaNvg)
+                    .HasConstraintName("FK_Donhang_NVG");
+
                 entity.HasOne(d => d.MakhNavigation)
-                    .WithMany(p => p.Donhangs)
+                    .WithMany(p => p.DonhangMakhNavigations)
                     .HasForeignKey(d => d.Makh)
                     .HasConstraintName("FK_DONHANG_KH");
 

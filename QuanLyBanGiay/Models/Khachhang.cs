@@ -7,7 +7,8 @@ namespace QuanLyBanGiay.Models
     {
         public Khachhang()
         {
-            Donhangs = new HashSet<Donhang>();
+            DonhangMaNvgNavigations = new HashSet<Donhang>();
+            DonhangMakhNavigations = new HashSet<Donhang>();
         }
 
         public int Makh { get; set; }
@@ -22,6 +23,7 @@ namespace QuanLyBanGiay.Models
         public DateTime? ThoiGianTaoOtp { get; set; }
         public bool? DaXacNhan { get; set; }
 
-        public virtual ICollection<Donhang> Donhangs { get; set; }
+        public virtual ICollection<Donhang> DonhangMaNvgNavigations { get; set; }
+        public virtual ICollection<Donhang> DonhangMakhNavigations { get; set; }
     }
 }

@@ -112,6 +112,8 @@
                            class="btn btn-primary btn-sm">Xem chi tiết</a>
                     </td>
                     <td>
+                        <a href="@Url.Action("Phancong", "Donhang", new { area="Admin", id=item.Madh })"
+                           class="btn btn-danger btn-sm">Phân công</a>
                         <a href="@Url.Action("Huy", "Donhang", new { area="Admin", id=item.Madh })"
                            class="btn btn-danger btn-sm">Hủy</a>
                     </td>

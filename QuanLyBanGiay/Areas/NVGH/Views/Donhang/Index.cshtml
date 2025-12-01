@@ -4,112 +4,90 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-<div class="container mt-4">
-    <h2 class="text-center mb-4 text-primary fw-bold">Danh sách đơn hàng</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /> 
 
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Lỗi:</strong> @TempData["ErrorMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    }
+<div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary fw-bold">ĐƠN HÀNG CỦA TÔI</h2>
 
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Thành công:</strong> @TempData["SuccessMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert alert-success alert-dismissible fade show">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
     }
-
     @if (TempData["InfoMessage"] != null)
     {
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-            <strong>Thông tin:</strong> @TempData["InfoMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert alert-warning alert-dismissible fade show">
+            <strong>Thu hộ COD:</strong> @TempData["InfoMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
     }
 
-    <form method="get" action="@Url.Action("Index", "Donhang", new { area = "NVGH" })" class="mb-4">
-        <div class="row g-3">
-
-            <!-- Lọc theo loại thời gian -->
-            <div class="col-md-3">
-                <select name="loaiLoc" class="form-select">
-                    <option value="">-- Lọc theo --</option>
-                    <option value="week" selected="@(ViewBag.LoaiLoc == "week")">Tuần này</option>
-                    <option value="month" selected="@(ViewBag.LoaiLoc == "month")">Tháng này</option>
-                    <option value="range" selected="@(ViewBag.LoaiLoc == "range")">Khoảng thời gian</option>
-                </select>
-            </div>
-
-            <!-- Từ ngày -->
-            <div class="col-md-3">
-                <input type="date" name="from" value="@ViewBag.From" class="form-control" />
-            </div>
-
-            <!-- Đến ngày -->
-            <div class="col-md-3">
-                <input type="date" name="to" value="@ViewBag.To" class="form-control" />
-            </div>
-
-            <!-- Nút lọc -->
-            <div class="col-md-3">
-                <button class="btn btn-primary w-100">Lọc</button>
-            </div>
-
-        </div>
-    </form>
-
-    <table class="table table-bordered table-hover text-center align-middle shadow-sm">
-        <thead class="table-dark">
-            <tr>
-                <th>Mã đơn</th>
-                <th>Tên khách hàng</th>
-                <th>Ngày đặt</th>
-                <th>Phương thức TT</th>
-                <th>Voucher</th>
-                <th>Tổng tiền</th>
-                <th>Trạng thái</th>
-                <th style="width:18%;">Quản lý</th>
-                <th>Tác vụ</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in ViewBag.Donhang)
-            {
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center align-middle shadow-sm">
+            <thead class="table-dark">
                 <tr>
-                    <td>@item.Madh</td>
-                    <td>@item.MakhNavigation.Tenkh</td>
-                    <td>@item.Ngaydat?.ToString("dd/MM/yyyy HH:mm")</td>
-                    <td>@item.MaptttNavigation.Tenphuongthuc</td>
-                    <td>
-                        @(item.MavoucherNavigation != null
-                            ? item.MavoucherNavigation.Tenvoucher
-                            : "-")
-                    </td>
-                    <td>@item.Tongtiencuoi?.ToString("N0") ₫</td>
-                    <td>
-                        <span class="badge bg-@(item.Trangthai switch {
-                            "ĐÃ NHẬN" => "success",
-                            "ĐANG GIAO" => "info",
-                            "HỦY" => "danger",
-                            _ => "secondary"
-                        }) px-2 py-1">@item.Trangthai</span>
-                    </td>
-                    <td>
-                        <a href="@Url.Action("Sua", "Donhang", new { area="NVGH", id=item.Madh })"
-                           class="btn btn-success btn-sm">Cập nhật</a>
-                    </td>
-                    <td>
-                        <a href="@Url.Action("XemChiTiet", "Donhang", new { area="NVGH", id=item.Madh })"
-                           class="btn btn-primary btn-sm">Xem chi tiết</a>
-                    </td>
+                    <th>Mã đơn</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
+                    <th>Phương thức</th>
+                    <th>Trạng thái</th>
+                    <th style="width: 25%;">Hành động</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @if (ViewBag.Donhang != null && ((IEnumerable<dynamic>)ViewBag.Donhang).Any())
+                {
+                    foreach (var item in ViewBag.Donhang)
+                    {
+                        <tr>
+                            <td><strong>@item.Madh</strong></td>
+                            <td>@item.MakhNavigation?.Tenkh</td>
+                            <td>@item.Ngaydat?.ToString("dd/MM HH:mm")</td>
+                            <td class="text-danger fw-bold">@item.Tongtiencuoi?.ToString("N0") ₫</td>
+                            <td>@item.MaptttNavigation?.Tenphuongthuc</td>
+                            <td>@item.Trangthai</td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="@Url.Action("XemChiTiet", new { id = item.Madh })"
+                                       class="btn btn-sm btn-outline-primary">
+                                        Xem chi tiết
+                                    </a>
+
+                                    <form method="post" action="@Url.Action("XacNhanGiaoThanhCong")" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="Madh" value="@item.Madh" />
+                                        <button type="submit"
+                                                class="btn btn-sm btn-success" 
+                                                onclick="return confirm('Xác nhận đã giao thành công đơn @item.Madh?\n@(item.MaptttNavigation?.Tenphuongthuc.Contains("COD", StringComparison.OrdinalIgnoreCase) == true ? "Thu hộ: " + item.Tongtiencuoi?.ToString("N0") + " ₫" : "")')">
+                                            Xác nhận giao hàng
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" class="text-muted py-5">
+                            <h5>Chưa có đơn hàng nào đang giao</h5>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
     @{
         int trangHienTai = ViewBag.TrangHienTai;
@@ -125,24 +103,17 @@
                         <span aria-hidden="true">&lt;</span>
                     </a>
                 </li>
-
                 @{
                     int soTrangToiDaHienThi = 3;
-                    //Bắt đầu từ trang nhỏ nhất, và không được nhỏ hơn 1
                     int trangBatDau = Math.Max(1, trangHienTai - 1);
-                    //Kết thúc ở trang lớn nhất, và không được lớn hơn tổng số trang
                     int trangKetThuc = Math.Min(tongSoTrang, trangBatDau + soTrangToiDaHienThi - 1);
-                    //Ví dụ: bd là 5, thì kt là 5 + 3 -1 = 7 kết quả là hiển thị từ 5 6 7
 
-                    //Nó sẽ hiển thị trọn số trang tối đa được hiển thị dù trang hiện tại ở gần cuối
-                    //Ví dụ: tổng số trang là 11, trang hiện tại là 10 thì nó sẽ hiển thị 9 10 11
                     if (trangHienTai > 1 && trangHienTai > tongSoTrang - soTrangToiDaHienThi + 1)
                     {
                         trangBatDau = Math.Max(1, tongSoTrang - soTrangToiDaHienThi + 1);
                         trangKetThuc = tongSoTrang;
                     }
                 }
-
                 @if (trangBatDau > 1)
                 {
                     <li class="page-item"><a class="page-link" href="@Url.Action("Index", new { trang = 1 })">1</a></li>
@@ -151,7 +122,6 @@
                         <li class="page-item disabled"><span class="page-link">...</span></li>
                     }
                 }
-
                 @for (int i = trangBatDau; i <= trangKetThuc; i++)
                 {
                     <li class="page-item @(i == trangHienTai ? "active" : "")">
@@ -161,11 +131,8 @@
                         </a>
                     </li>
                 }
-
                 @if (trangKetThuc < tongSoTrang)
                 {
-                    //Nếu trang kết thúc là 17 mà tổng số trang là 18 thì nó không hiển thị 16 17 18, mà không hiển thị dấu ...
-                    //Còn nếu trang kết thúc là 15 mà tổng số trang là 18 thì nó hiển thị là 14 15 16 ... 18
                     @if (trangKetThuc < tongSoTrang - 1)
                     {
                         <li class="page-item disabled"><span class="page-link">...</span></li>
@@ -174,13 +141,11 @@
                         <a class="page-link" href="@Url.Action("Index", new { trang = tongSoTrang })">@tongSoTrang</a>
                     </li>
                 }
-
                 <li class="page-item @(trangHienTai == tongSoTrang ? "disabled" : "")">
                     <a class="page-link" href="@Url.Action("Index", new { trang = trangHienTai + 1 })" aria-label="Next">
                         <span aria-hidden="true">&gt;</span>
                     </a>
                 </li>
-
             </ul>
         </nav>
     }

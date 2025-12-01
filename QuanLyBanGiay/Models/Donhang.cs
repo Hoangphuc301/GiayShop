@@ -15,14 +15,16 @@ namespace QuanLyBanGiay.Models
         public int? Mavoucher { get; set; }
         public DateTime? Ngaydat { get; set; }
         public decimal? Tongtien { get; set; }
-        public string Trangthai { get; set; } = null!;
+        public string? Trangthai { get; set; }
         public string? Diachigiao { get; set; }
         public string? Sdtgiao { get; set; }
         public decimal? Phiship { get; set; }
         public decimal? Tongtiencuoi { get; set; }
         public string? Lydohuy { get; set; }
         public int? Makh { get; set; }
+        public int? MaNvg { get; set; }
 
+        public virtual Khachhang? MaNvgNavigation { get; set; }
         public virtual Khachhang? MakhNavigation { get; set; }
         public virtual Phuongthucthanhtoan MaptttNavigation { get; set; } = null!;
         public virtual Voucher? MavoucherNavigation { get; set; }

@@ -1,0 +1,71 @@
+﻿@model QuanLyBanGiay.Models.Phancong
+@{
+    ViewData["Title"] = "Phân công đơn hàng";
+    Layout = null;
+}
+<h2 class="mt-4 mb-4 text-primary fw-bold">Phân công nhân viên giao hàng</h2>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        <strong>Lỗi:</strong> @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+<div class="card shadow">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Đơn hàng @Model.Madh</h3>
+    </div>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-6"><strong>Khách hàng:</strong> @Model.TenKhachHang</div>
+            <div class="col-md-6">
+                <strong>Trạng thái đơn hàng:</strong>
+                <span class="badge bg-info fs-6">@Model.TrangThaiHienTai</span>
+            </div>
+        </div>
+        <div class="mb-4">
+            <strong>Nhân viên đảm nhận hiện tại:</strong>
+            @if (!string.IsNullOrEmpty(Model.TenNhanVienHienTai))
+            {
+                <span class="badge bg-success fs-6">
+                    @Model.TenNhanVienHienTai
+                </span>
+            }
+            else
+            {
+                <span class="badge bg-warning text-dark fs-6">Chưa phân công</span>
+            }
+        </div>
+        <hr />
+        <form asp-action="Phancong" asp-route-id="@Model.Madh" method="post" class="mt-4">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Madh" />
+            <div class="mb-4">
+                <label asp-for="MaNvg" class="form-label fw-bold">Chọn nhân viên giao hàng</label>
+                @Html.DropDownListFor(m => m.MaNvg,
+                         ViewData["NvgList"] as SelectList,
+                         "-- Chọn nhân viên giao hàng --",
+                         new { @class = "form-select form-select-lg" })
+                <span asp-validation-for="MaNvg" class="text-danger"></span>
+            </div>
+            <div class="d-flex justify-content-end gap-3">
+                <a href="@Url.Content("~/Admin/Donhang")" class="btn btn-outline-secondary w-100">
+                    Quay lại
+                </a>
+                <button type="submit" class="btn btn-success btn-lg px-5">Xác nhận phân công</button>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
