@@ -17,8 +17,17 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
 
         private int? GetMaNvgHienTai()
         {
-            return 33; //Test
+            // Lấy loại tài khoản trong session
+            var role = HttpContext.Session.GetString("UserRole");
+
+            // Kiểm tra có phải NVGH không
+            if (role == null || role != "NVGH")
+                return null;
+
+            // Lấy ID của người dùng hiện tại → dùng làm MaNvg
+            return HttpContext.Session.GetInt32("UserId");
         }
+
 
         public IActionResult Index(int trang = 1, string loaiLoc = "", DateTime? from = null, DateTime? to = null)
         {
