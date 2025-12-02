@@ -24,6 +24,8 @@ namespace QuanLyBanGiay.Models
         public int? Makh { get; set; }
         public int? MaNvg { get; set; }
 
+        public bool DaNopTienCOD { get; set; } = false;
+
         public virtual Khachhang? MaNvgNavigation { get; set; }
         public virtual Khachhang? MakhNavigation { get; set; }
         public virtual Phuongthucthanhtoan MaptttNavigation { get; set; } = null!;

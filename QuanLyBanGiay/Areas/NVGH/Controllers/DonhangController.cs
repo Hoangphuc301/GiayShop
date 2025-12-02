@@ -24,10 +24,9 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
             if (role == null || role != "NVGH")
                 return null;
 
-            // Lấy ID của người dùng hiện tại → dùng làm MaNvg
+            // Trả về MaNvg từ session
             return HttpContext.Session.GetInt32("UserId");
         }
-
 
         public IActionResult Index(int trang = 1, string loaiLoc = "", DateTime? from = null, DateTime? to = null)
         {
@@ -39,13 +38,12 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
             }
 
             int kichThuocTrang = 10;
-
             var query = _context.Donhangs
                 .Include(d => d.MakhNavigation)
                 .Include(d => d.MaptttNavigation)
                 .Include(d => d.MavoucherNavigation)
                 .Where(d => d.MaNvg == maNvg)
-                .Where(d => d.Trangthai == "ĐANG GIAO" || d.Trangthai == "HỦY")
+                .Where(d => d.Trangthai == "ĐANG GIAO" || d.Trangthai == "HỦY" || d.Trangthai == "ĐÃ NHẬN")
                 .AsQueryable();
 
             // Lọc thời gian
@@ -101,25 +99,100 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
                 return RedirectToAction("Index");
             }
 
+            // Tìm đơn hàng với trạng thái "ĐANG GIAO" và thuộc về NVGH hiện tại
             var dh = _context.Donhangs
                 .Include(d => d.MaptttNavigation)
                 .FirstOrDefault(d => d.Madh == Madh && d.MaNvg == maNvg && d.Trangthai == "ĐANG GIAO");
 
             if (dh == null)
             {
-                TempData["ErrorMessage"] = "Không tìm thấy đơn hàng hoặc bạn không có quyền!";
+                TempData["ErrorMessage"] = "Không tìm thấy đơn hàng hoặc bạn không có quyền xác nhận";
                 return RedirectToAction("Index");
             }
 
-            dh.Trangthai = "ĐÃ NHẬN";
+            // Cập nhật trạng thái đơn hàng thành "ĐÃ NHẬN"
+            dh.Trangthai = "ĐÃ NHẬN"; 
             _context.SaveChanges();
 
             if (dh.MaptttNavigation?.Tenphuongthuc?.Contains("COD", StringComparison.OrdinalIgnoreCase) == true)
             {
-                TempData["InfoMessage"] = $"Đã thu tiền mặt {dh.Tongtiencuoi:N0} ₫. Nhớ nộp lại cho cửa hàng nhé!";
+                TempData["InfoMessage"] = $"Đã thu tiền mặt {dh.Tongtiencuoi:N0} ₫. Vui lòng nộp lại tiền thu hộ cho cửa hàng";
             }
 
             TempData["SuccessMessage"] = $"Đơn hàng #{dh.Madh} đã giao thành công!";
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult XacNhanNopTienCOD(int Madh)
+        {
+            var maNvg = GetMaNvgHienTai();
+            if (!maNvg.HasValue)
+            {
+                TempData["ErrorMessage"] = "Phiên đăng nhập hết hạn";
+                return RedirectToAction("Index");
+            }
+            // Tìm đơn hàng COD đã được giao nhưng chưa nộp tiền
+            var dh = _context.Donhangs
+                .Include(d => d.MaptttNavigation)
+                .FirstOrDefault(d => d.Madh == Madh
+                                  && d.MaNvg == maNvg
+                                  && d.Trangthai == "ĐÃ NHẬN"
+                                  && d.DaNopTienCOD == false
+                                  && EF.Functions.Like(d.MaptttNavigation.Tenphuongthuc, "%COD%")); 
+
+            if (dh == null)
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy đơn hàng COD cần nộp tiền, hoặc đã nộp rồi";
+                return RedirectToAction("Index");
+            }
+            // Cập nhật trạng thái nộp tiền COD
+            dh.DaNopTienCOD = true;
+            _context.SaveChanges();
+
+            TempData["SuccessMessage"] = $"Đơn hàng #{dh.Madh} (COD) đã xác nhận nộp tiền thành công";
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Sua(int id)
+        {
+            var dh = _context.Donhangs
+                        .Include(d => d.MakhNavigation)
+                        .FirstOrDefault(d => d.Madh == id);
+            if (dh == null) return RedirectToAction("Index");
+
+            var thuTuTrangThai = new List<string> { "CHỜ XÁC NHẬN", "ĐANG GIAO", "ĐÃ NHẬN", "HỦY" };
+            var viTriHienTai = thuTuTrangThai.IndexOf(dh.Trangthai);
+            ViewBag.ThuTuTrangThai = thuTuTrangThai;
+            ViewBag.ViTriHienTai = viTriHienTai;
+            return View(dh);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Sua(Donhang dh)
+        {
+            var donhang = _context.Donhangs.Find(dh.Madh);
+            var statusOrder = new List<string> { "CHỜ XÁC NHẬN", "ĐANG GIAO", "ĐÃ NHẬN", "HỦY" };
+
+            if (donhang == null)
+            {
+                ModelState.AddModelError("", "Đơn hàng không tồn tại");
+                return View(dh);
+            }
+
+            var currentIndex = statusOrder.IndexOf(donhang.Trangthai);
+            if (currentIndex == statusOrder.IndexOf("ĐÃ NHẬN") || currentIndex == statusOrder.IndexOf("HỦY"))
+            {
+                TempData["ErrorMessage"] = $"Đơn hàng đã kết thúc, không thể sửa";
+                return RedirectToAction("Index");
+            }
+
+            donhang.Trangthai = dh.Trangthai;
+            donhang.Lydohuy = dh.Trangthai == "HỦY" ? dh.Lydohuy : null;
+            _context.SaveChanges();
+            TempData["SuccessMessage"] = "Cập nhật trạng thái thành công";
             return RedirectToAction("Index");
         }
 
