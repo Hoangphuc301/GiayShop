@@ -89,24 +89,25 @@ namespace QuanLyBanGiay.Controllers
         [HttpGet]
         public IActionResult XemDH()
         {
-            // Lấy email đang đăng nhập
             var email = HttpContext.Session.GetString("UserEmail");
             if (email == null)
                 return RedirectToAction("Login", "Account");
 
-            // Lấy khách hàng theo email
             var khach = db.Khachhangs.FirstOrDefault(k => k.Email == email);
             if (khach == null)
                 return NotFound();
 
-            // Lấy danh sách đơn hàng của khách đó
             var donhang = db.Donhangs
                             .Where(d => d.Makh == khach.Makh)
+                            .Include(d => d.ChitietDonhangs)
+                                .ThenInclude(ct => ct.MactspNavigation)
+                                    .ThenInclude(ctsp => ctsp.MaspNavigation)
                             .OrderByDescending(d => d.Ngaydat)
                             .ToList();
 
             return View(donhang);
         }
+
 
         //Xem chi tiết đơn hàng
         [HttpGet]

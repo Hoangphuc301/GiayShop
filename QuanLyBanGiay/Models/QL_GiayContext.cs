@@ -27,13 +27,14 @@ namespace QuanLyBanGiay.Models
         public virtual DbSet<Size> Sizes { get; set; } = null!;
         public virtual DbSet<Thuonghieu> Thuonghieus { get; set; } = null!;
         public virtual DbSet<Voucher> Vouchers { get; set; } = null!;
+        public virtual DbSet<Danhgia> Danhgias { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-6OJC3FAO;Initial Catalog=QL_Giay;Integrated Security=True;Encrypt=False");
+                optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=QL_Giay;Integrated Security=True;Encrypt=False");
             }
         }
 

@@ -64,6 +64,18 @@
                                     Thanh Toán
                                 </a>
                             }
+                            @if (dh.Trangthai == "ĐÃ NHẬN")
+                            {
+                                @foreach (var ct in dh.ChitietDonhangs)
+                                {
+                                    <a asp-controller="SanPham"
+                                       asp-action="Chitiet"
+                                       asp-route-id="@ct.MactspNavigation.Masp"
+                                       class="btn btn-sm btn-primary mt-1">
+                                        Đánh Giá
+                                    </a>
+                                }
+                            }
                         </td>
                     </tr>
                 }

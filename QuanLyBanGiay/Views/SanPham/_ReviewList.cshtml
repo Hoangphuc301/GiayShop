@@ -1,0 +1,23 @@
+﻿@model List<QuanLyBanGiay.Models.Danhgia>
+
+<div class="reviews">
+    <h5>Đánh giá (@Model.Count) - Trung bình: @ViewBag.AverageRating.ToString("0.0") sao</h5>
+    @foreach (var item in Model)
+    {
+        <div class="review-item border-bottom mb-2 pb-2">
+            <strong>@item.Khachhang.Tenkh</strong> - @item.NgayDanhGia.ToString("dd/MM/yyyy") <br />
+            @for (int i = 1; i <= 5; i++)
+            {
+                if (i <= item.Sao)
+                {
+                    <span style="color:gold;">★</span>
+                }
+                else
+                {
+                    <span style="color:lightgray;">★</span>
+                }
+            }
+            <p>@item.NoiDung</p>
+        </div>
+    }
+</div>

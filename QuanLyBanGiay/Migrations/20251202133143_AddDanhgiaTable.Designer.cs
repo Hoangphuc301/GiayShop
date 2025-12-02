@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyBanGiay.Models;
 
@@ -11,9 +12,10 @@ using QuanLyBanGiay.Models;
 namespace QuanLyBanGiay.Migrations
 {
     [DbContext(typeof(QL_GiayContext))]
-    partial class QL_GiayContextModelSnapshot : ModelSnapshot
+    [Migration("20251202133143_AddDanhgiaTable")]
+    partial class AddDanhgiaTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,28 +99,35 @@ namespace QuanLyBanGiay.Migrations
                 {
                     b.Property<int>("MaDanhGia")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("MaDanhGia");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaDanhGia"), 1L, 1);
 
                     b.Property<bool>("CoTheDanhGia")
-                        .HasColumnType("bit");
+                        .HasColumnType("bit")
+                        .HasColumnName("CoTheDanhGia");
 
                     b.Property<int>("MaKh")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("MaKh");
 
                     b.Property<int>("MaSp")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("MaSp");
 
                     b.Property<DateTime>("NgayDanhGia")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime")
+                        .HasColumnName("NgayDanhGia");
 
                     b.Property<string>("NoiDung")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("NoiDung");
 
                     b.Property<int>("Sao")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Sao");
 
                     b.HasKey("MaDanhGia");
 
@@ -126,7 +135,7 @@ namespace QuanLyBanGiay.Migrations
 
                     b.HasIndex("MaSp");
 
-                    b.ToTable("Danhgias");
+                    b.ToTable("DANHGIA", (string)null);
                 });
 
             modelBuilder.Entity("QuanLyBanGiay.Models.Danhmuc", b =>
@@ -546,21 +555,23 @@ namespace QuanLyBanGiay.Migrations
 
             modelBuilder.Entity("QuanLyBanGiay.Models.Danhgia", b =>
                 {
-                    b.HasOne("QuanLyBanGiay.Models.Khachhang", "Khachhang")
+                    b.HasOne("QuanLyBanGiay.Models.Khachhang", "MaKhNavigation")
                         .WithMany()
                         .HasForeignKey("MaKh")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_DANHGIA_KH");
 
-                    b.HasOne("QuanLyBanGiay.Models.Sanpham", "Sanpham")
+                    b.HasOne("QuanLyBanGiay.Models.Sanpham", "MaSpNavigation")
                         .WithMany()
                         .HasForeignKey("MaSp")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_DANHGIA_SP");
 
-                    b.Navigation("Khachhang");
+                    b.Navigation("MaKhNavigation");
 
-                    b.Navigation("Sanpham");
+                    b.Navigation("MaSpNavigation");
                 });
 
             modelBuilder.Entity("QuanLyBanGiay.Models.Donhang", b =>

@@ -164,3 +164,8 @@ img.img-fluid {
     box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
     transform: scale(1.1);
 }
+
+span.star {
+    font-size: 18px;
+    color: gold;
+}
