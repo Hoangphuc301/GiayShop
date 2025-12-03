@@ -23,7 +23,7 @@ namespace QuanLyBanGiay.Controllers
 
         private readonly ILogger<GiohangController> _logger;
 
-        // Nếu controller chưa có constructor, thêm constructor để inject logger (vẫn giữ db như hiện tại).
+        // Nếu controller chưa có constructor, thêm constructor để inject logger
         public GiohangController(ILogger<GiohangController> logger)
         {
             _logger = logger;
@@ -75,6 +75,32 @@ namespace QuanLyBanGiay.Controllers
             return View(model);
         }
 
+        private async Task PrepareCheckoutData(QuanLyBanGiay.Models.ViewModels.Checkout model)
+        {
+            var vouchers = await db.Vouchers
+                .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
+                .Select(v => new SelectListItem
+                {
+                    Value = v.Mavoucher.ToString(),
+                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri ?? 0)}%",
+                    Group = new SelectListGroup { Name = (v.Giatri ?? 0).ToString() }
+                })
+                .ToListAsync();
+
+            vouchers.Insert(0, new SelectListItem { Value = "0", Text = "-- Không dùng voucher --", Group = new SelectListGroup { Name = "0" } });
+            ViewBag.Vouchers = vouchers;
+
+            // Phương thức thanh toán
+            model.PaymentMethods = await db.Phuongthucthanhtoans
+                .Select(p => new SelectListItem
+                {
+                    Value = p.Mapttt.ToString(),
+                    Text = p.Tenphuongthuc
+                })
+                .ToListAsync();
+
+            model.PaymentMethods.Insert(0, new SelectListItem { Value = "0", Text = "-- Chọn phương thức thanh toán --" });
+        }
         public async Task<IActionResult> Checkout()
         {
             var email = HttpContext.Session.GetString("UserEmail");
@@ -93,7 +119,7 @@ namespace QuanLyBanGiay.Controllers
 
             var cart = GetCart();
 
-            var model = new Checkout
+            var model = new QuanLyBanGiay.Models.ViewModels.Checkout 
             {
                 CartItems = cart,
                 Makh = khach.Makh,
@@ -103,47 +129,19 @@ namespace QuanLyBanGiay.Controllers
                 Diachi = khach.Diachi
             };
 
-            // LẤY MADH CŨ (khi thanh toán lại)
             var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
             if (madhCu.HasValue)
             {
                 model.Madh = madhCu.Value;
             }
-
-            // VOUCHER
-            var vouchers = await db.Vouchers
-                .Where(v => v.Trangthai == "CÒN" && v.Ngaybd <= DateTime.Now && v.Ngaykt >= DateTime.Now)
-                .Select(v => new SelectListItem
-                {
-                    Value = v.Mavoucher.ToString(),
-                    Text = $"{v.Tenvoucher} - Giảm {(v.Giatri ?? 0)}%"
-                })
-                .ToListAsync();
-
-            vouchers.Insert(0, new SelectListItem { Value = "0", Text = "-- Không dùng voucher --" });
-            ViewBag.Vouchers = vouchers;
-
-            // PHƯƠNG THỨC THANH TOÁN
-            var ptttList = await db.Phuongthucthanhtoans
-                .Select(p => new SelectListItem
-                {
-                    Value = p.Mapttt.ToString(),
-                    Text = p.Tenphuongthuc
-                })
-                .ToListAsync();
-
-            ptttList.Insert(0, new SelectListItem { Value = "0", Text = "-- Chọn phương thức thanh toán --" });
-            model.PaymentMethods = ptttList;
+            await PrepareCheckoutData(model);
 
             return View(model);
         }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Checkout(Checkout checkoutModel)
+        public async Task<IActionResult> Checkout(QuanLyBanGiay.Models.ViewModels.Checkout checkoutModel) 
         {
-            // VALIDATION ▼
             var emailSession = HttpContext.Session.GetString("UserEmail");
             if (string.IsNullOrEmpty(emailSession))
                 return RedirectToAction("Login", "Khachhang");
@@ -161,9 +159,12 @@ namespace QuanLyBanGiay.Controllers
                 ModelState.AddModelError("Mapttt", "Hãy chọn phương thức thanh toán.");
 
             if (!ModelState.IsValid)
+            {
+                await PrepareCheckoutData(checkoutModel);
                 return View(checkoutModel);
+            }
 
-            // TÍNH TIỀN ▼
+            // TÍNH TIỀN 
             decimal tongTien = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
             decimal tongTienGiam = 0m;
 
@@ -177,10 +178,8 @@ namespace QuanLyBanGiay.Controllers
             decimal tongTienCuoi = tongTien - tongTienGiam;
 
 
-            
             var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
             bool isRePay = madhCu.HasValue;
-
             Donhang donHang;
 
             if (isRePay)
@@ -191,6 +190,7 @@ namespace QuanLyBanGiay.Controllers
 
                 if (donHang == null)
                 {
+                    await PrepareCheckoutData(checkoutModel);
                     ModelState.AddModelError("", "Không tìm thấy đơn hàng cũ để thanh toán.");
                     return View(checkoutModel);
                 }
@@ -209,10 +209,6 @@ namespace QuanLyBanGiay.Controllers
             }
             else
             {
-                // ----------------------------------
-                // 🔥 2) CHECKOUT BÌNH THƯỜNG → TẠO ĐƠN MỚI
-                // ----------------------------------
-
                 donHang = new Donhang
                 {
                     Makh = khach.Makh,
@@ -229,7 +225,7 @@ namespace QuanLyBanGiay.Controllers
                 await db.SaveChangesAsync();
             }
 
-            // Thêm chi tiết đơn hàng (cả re-pay + mới)
+            // Thêm chi tiết đơn hàng
             foreach (var item in checkoutModel.CartItems)
             {
                 db.ChitietDonhangs.Add(new ChitietDonhang
@@ -245,21 +241,18 @@ namespace QuanLyBanGiay.Controllers
             await db.SaveChangesAsync();
 
 
-            
             var ptttVNPAY = await db.Phuongthucthanhtoans
                 .FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
 
-            if (checkoutModel.Mapttt == ptttVNPAY.Mapttt)
+            if (checkoutModel.Mapttt == ptttVNPAY?.Mapttt) 
             {
-                // Đặt trạng thái chờ thanh toán
                 donHang.Trangthai = "CHỜ THANH TOÁN";
                 await db.SaveChangesAsync();
 
-                // Tạo URL VNPAY
                 var modelVnpay = new Checkout
                 {
                     Madh = donHang.Madh,
-                    TotalAmount = donHang.Tongtiencuoi ?? 0
+                    TotalAmount = (long)(Math.Round(donHang.Tongtiencuoi ?? 0))
                 };
 
                 string paymentUrl = VnpayService.CreatePaymentUrl(modelVnpay, HttpContext);
@@ -274,7 +267,6 @@ namespace QuanLyBanGiay.Controllers
 
             return RedirectToAction("OrderConfirmation", new { id = donHang.Madh });
         }
-
 
         // VnpayReturn
         public async Task<IActionResult> VnpayReturn()
@@ -320,8 +312,6 @@ namespace QuanLyBanGiay.Controllers
                         await db.SaveChangesAsync();
                     }
                 }
-
-				//return RedirectToAction("OrderSuccess", new { success = false });
 				return Content(Request.QueryString.Value);
 
 			}
