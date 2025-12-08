@@ -1,36 +1,41 @@
 ﻿@model QuanLyBanGiay.Models.Donhang
 
 @{
-    decimal tongThanhTien = 0;
+    decimal tongThanhTienHang = Model.Tongtien ?? 0; 
     string trangThai = Model.Trangthai ?? "Chưa rõ";
-    decimal phiVanChuyen = 30000;
+
+    decimal phiVanChuyen = Model.Phiship ?? 0;
+    decimal tongThanhToanCuoiCung = Model.Tongtiencuoi ?? 0;
 }
 
 <h2>Chi tiết đơn hàng của bạn</h2>
 
+<hr />
+
 @if (trangThai == "ĐANG GIAO")
 {
     <div class="alert alert-warning" role="alert">
-        🚚 Đơn hàng đang giao đến bạn!
+        🚚 Đơn hàng ĐANG GIAO đến địa chỉ: @Model.Diachigiao
     </div>
+
 
     <h3>📍 Theo dõi vị trí người giao hàng</h3>
     <div id="trackingMap" style="height: 450px; max-width: 600px; margin: 0 auto 20px auto;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4216.000418972823!2d106.67510897535874!3d10.737439289408957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad3fb62a95%3A0xa9576c84a879d1fe!2zMTgwIENhbyBM4buXLCBQaMaw4budbmcgNCwgUXXhuq1uIDgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCA3MDAwMCwgVmlldG5hbQ!5e1!3m2!1sen!2s!4v1764046149229!5m2!1sen!2s" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4216.000418972823!2d106.67510897535874!3d10.737439289408957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad3fb62a95%3A0xa9576c84a879d1fe!2zMTgwIENhbyBM4buXLCBQaMaw4budbmcgNCwgUXXhuq1uIDgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCA3MDAwMCwgVmlldG5hbQ!5e1!3m2!1sen!2s!4v1764046149229!5m2!1sen!2s"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
 }
 else if (trangThai == "ĐÃ NHẬN")
 {
     <div class="alert alert-success" role="alert">
-        Đơn hàng đã hoàn thành! <br />
-         Cảm ơn bạn đã mua sắm
+        Đơn hàng đã HOÀN THÀNH! <br />
+        Cảm ơn bạn đã mua sắm
     </div>
 }
 else
@@ -40,7 +45,7 @@ else
     </div>
 }
 
-<br /><br />
+<br />
 
 <h3>Chi tiết sản phẩm</h3>
 <table class="table table-bordered">
@@ -61,11 +66,6 @@ else
             var chiTietSP = ct.MactspNavigation;
             var sanPham = chiTietSP?.MaspNavigation;
 
-            if (ct.Thanhtien.HasValue)
-            {
-                tongThanhTien += ct.Thanhtien.Value;
-            }
-
             <tr>
                 <td>
                     @{
@@ -84,16 +84,25 @@ else
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="6" class="text-right"><strong>Tổng tiền hàng:</strong></td>
-            <td class="text-success"><strong>@tongThanhTien.ToString("N0") đ</strong></td>
+            <td colspan="6" class="text-right"><strong>Tổng tiền hàng (Tạm tính):</strong></td>
+            <td class="text-success"><strong>@tongThanhTienHang.ToString("N0") đ</strong></td>
         </tr>
-        @{
-            decimal tongThanhToanCuoiCung = tongThanhTien + phiVanChuyen;
-        }
         <tr>
             <td colspan="6" class="text-right"><strong>Phí vận chuyển:</strong></td>
             <td class="text-danger"><strong>@phiVanChuyen.ToString("N0") đ</strong></td>
         </tr>
+        @{
+            // Tính toán giảm giá (voucher) để hiển thị nếu có
+            decimal tongTruocVoucher = tongThanhTienHang + phiVanChuyen;
+            decimal giamGia = tongTruocVoucher - tongThanhToanCuoiCung;
+        }
+        @if (giamGia > 0)
+        {
+            <tr>
+                <td colspan="6" class="text-right"><strong>Giảm giá Voucher:</strong></td>
+                <td class="text-info"><strong>- @giamGia.ToString("N0") đ</strong></td>
+            </tr>
+        }
         <tr>
             <td colspan="6" class="text-right"><h4><strong>TỔNG THANH TOÁN:</strong></h4></td>
             <td class="text-primary"><h5><strong>@tongThanhToanCuoiCung.ToString("N0") đ</strong></h5></td>

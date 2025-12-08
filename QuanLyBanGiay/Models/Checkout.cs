@@ -15,6 +15,7 @@ namespace QuanLyBanGiay.Models.ViewModels
         public int? Mavoucher { get; set; }
 
         public decimal TotalAmount { get; set; }
+        public decimal PhiShip { get; set; }
         public int Madh { get; set; }
 
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();

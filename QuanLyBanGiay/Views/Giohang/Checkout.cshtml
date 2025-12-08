@@ -7,202 +7,357 @@
     var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
 }
 
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">Lỗi Đặt Hàng</h4>
-        <ul>
-            @foreach (var modelState in ViewData.ModelState.Values)
-            {
-                @foreach (var error in modelState.Errors)
-                {
-                    <li>@error.ErrorMessage</li>
-                }
-            }
-        </ul>
-    </div>
-}
+<form asp-action="Checkout" method="post" id="checkoutForm">
+    @Html.AntiForgeryToken()
 
-@if (!Model.CartItems.Any())
-{
-    <p>Giỏ hàng trống. Vui lòng quay lại <a asp-action="Index">Giỏ hàng</a>.</p>
-}
-else
-{
-    <div class="row">
+    <input type="hidden" asp-for="Makh" />
 
-        <div class="col-lg-7">
+    <input type="hidden" asp-for="TotalAmount" id="TotalAmount" />
+    <input type="hidden" name="PhiShip" id="PhiShip" /> 
 
-            <h4 style="color:#ee4d2d">Thông tin người nhận</h4>
-            <form asp-action="Checkout" method="post">
-                @Html.AntiForgeryToken()
-                <input type="hidden" asp-for="Makh" />
-                <input type="hidden" asp-for="TotalAmount" id="TotalAmount" />
+    <h5 class="text-danger mb-3">THÔNG TIN VẬN CHUYỂN</h5>
 
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Họ tên</label>
-                        <input asp-for="Tenkh" class="form-control" placeholder="Nhập họ tên..." />
-                        <span asp-validation-for="Tenkh" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Số điện thoại người nhận</label>
-                        <input asp-for="Sdt" class="form-control" placeholder="Nhập số điện thoại..." />
-                        <span asp-validation-for="Sdt" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Địa chỉ người nhận</label>
-                        <input asp-for="Diachi" class="form-control" placeholder="Nhập địa chỉ..." />
-                        <span asp-validation-for="Diachi" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Lời nhắn (Ghi chú)</label>
-                        <input asp-for="Email" class="form-control" placeholder="Lưu ý cho người bán..." />
-                    </div>
-                </div>
-
-                <hr class="my-4" />
-
-                <div class="mb-4">
-                    <label class="form-label">Chọn Voucher</label>
-                    <select id="voucherSelect" name="Mavoucher" class="form-select">
-                        @foreach (var v in ViewBag.Vouchers as List<SelectListItem>)
-                        {
-                            <option value="@v.Value" data-percent="@(v.Group?.Name ?? "0")">@v.Text</option>
-                        }
-                    </select>
-                </div>
-
-                <div class="mb-4">
-                    <h5 style="color:#ee4d2d">Chọn phương thức thanh toán</h5>
-                    <select asp-for="Mapttt" asp-items="Model.PaymentMethods" class="form-select form-select-lg">
-                    </select>
-                    <span asp-validation-for="Mapttt" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex justify-content-end mt-4">
-                    <a href="@Url.Action("Index", "Giohang")" class="btn btn-outline-secondary me-2">
-                        Quay lại giỏ hàng
-                    </a>
-                    <button type="submit" class="btn btn-orange">Đặt hàng</button>
-                </div>
-
-                <style>
-                    .btn-orange {
-                        background-color: #ff5722;
-                        color: #fff;
-                        border: none;
-                        padding: 0.5rem 1.25rem;
-                        font-weight: 500;
-                        border-radius: 4px;
-                        transition: background-color 0.3s;
-                    }
-
-                        .btn-orange:hover {
-                            background-color: #e64a19;
-                            color: #fff;
-                        }
-                </style>
-
-            </form>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input asp-for="Tenkh" class="form-control" placeholder="Họ tên">
         </div>
-
-        <div class="col-lg-5">
-            <div class="card shadow-sm">
-                <div class="card-header" style="background-color:#ee4d2d; color:white;">
-                    <i class="fas fa-receipt"></i> Chi tiết đơn hàng
-                </div>
-                <div class="card-body">
-
-                    <h5 class="mb-3" style="color:#ee4d2d">Sản phẩm đã chọn</h5>
-                    <table class="table table-bordered table-sm mb-4">
-                        <thead>
-                            <tr class="table-secondary">
-                                <th>STT</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Size</th>
-                                <th>SL</th>
-                                <th>Đơn giá</th>
-                                <th class="text-end">Tổng tiền</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @{
-                                int count = 1;
-                                foreach (var item in Model.CartItems)
-                                {
-                                    <tr>
-                                        <td>@count</td>
-                                        <td>@item.Tensp (@item.Mau)</td>
-                                        <td>@item.Size</td>
-                                        <td>@item.Sl</td>
-                                        <td>@String.Format(culture, "{0:N0} đ", item.Dongia)</td>
-                                        <td class="text-end">@String.Format(culture, "{0:N0} đ", item.Sl * item.Dongia)</td>
-                                    </tr>
-                                    count++;
-                                }
-                            }
-                        </tbody>
-                    </table>
-
-                    <hr class="my-3" />
-
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Tạm tính (Tổng đơn hàng)</span>
-                        <span class="fw-bold">@String.Format(culture, "{0:N0} đ", subtotal)</span>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-2 text-danger border-bottom pb-2">
-                        <span>Voucher giảm giá</span>
-                        <span id="discount-amount" class="fw-bold">- 0 đ</span>
-                    </div>
-
-                    <div class="d-flex justify-content-between pt-2">
-                        <h4 class="mb-0" style="color:#ee4d2d">TỔNG THANH TOÁN:</h4>
-                        <h4 class="mb-0" style="color:#ee4d2d"><span id="final-total">@String.Format(culture, "{0:N0} đ", subtotal)</span></h4>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6">
+            <input asp-for="Sdt" class="form-control" placeholder="SĐT">
+            <span asp-validation-for="Sdt" class="text-danger"></span>
         </div>
-
     </div>
-}
+
+    <div class="mb-3">
+        <textarea asp-for="Diachi" class="form-control" rows="3" placeholder="Địa chỉ nhận hàng"></textarea>
+        <span asp-validation-for="Diachi" class="text-danger"></span>
+    </div>
+
+    <div class="mb-2" id="changeAddressBtn" style="display:none;">
+        <a href="javascript:void(0)" class="text-primary" style="text-decoration:none;">Thay đổi thông tin nhận hàng</a>
+    </div>
+
+    <div class="row mb-3" id="locationSelectBox">
+        <div class="col-md-4">
+            <select id="province" class="form-select">
+                <option value="">-- Chọn tỉnh --</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select id="district" class="form-select">
+                <option value="">-- Chọn Quận/huyện --</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select id="ward" class="form-select">
+                <option value="">-- Chọn Xã/Phường --</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-3" style="display:none;">
+        Phí ship: <b id="shipFeeText">0 đ</b>
+    </div>
+
+    <hr />
+
+    <select id="voucherSelect" name="Mavoucher" class="form-select mb-3">
+        @foreach (var v in ViewBag.Vouchers as List<SelectListItem>)
+        {
+            <option value="@v.Value" data-percent="@(v.Group?.Name ?? "0")">@v.Text</option>
+        }
+    </select>
+
+    <hr />
+
+    <div class="mb-4">
+        <h5 style="color:#ee4d2d">Chọn phương thức thanh toán</h5>
+        <select asp-for="Mapttt" asp-items="Model.PaymentMethods" class="form-select form-select-lg">
+        </select>
+        <span asp-validation-for="Mapttt" class="text-danger"></span>
+    </div>
+
+    <div>Tạm tính: <b>@subtotal.ToString("N0") đ</b></div>
+    <div>Voucher: <b id="discount-amount">- 0 đ</b></div>
+    <div>Phí ship: + <b id="shipFeeText2">0 đ</b></div>
+
+    <h4 class="mt-3">
+        Tổng thanh toán:
+        <span id="final-total">@subtotal.ToString("N0") đ</span>
+    </h4>
+
+    <button type="submit" class="btn btn-orange mt-3 w-100">
+        Đặt hàng
+    </button>
+</form>
+
+<style>
+    .btn-orange {
+        background-color: #ff5722;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1.25rem;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-orange:hover {
+            background-color: #e64a19;
+            color: #fff;
+        }
+</style>
 
 @section Scripts {
-    @{
-        var subtotal = Model.CartItems.Sum(i => i.Sl * i.Dongia);
-    }
     <script>
+        function removeVietnameseTones(str) {
+            if (!str) return "";
+            return str.normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/đ/g, "d").replace(/Đ/g, "D")
+                .toLowerCase();
+        }
 
-        const voucherSelect = document.getElementById("voucherSelect");
-        const finalTotalDisplay = document.getElementById("final-total");
-        const discountAmountDisplay = document.getElementById("discount-amount");
-        const hiddenTotalInput = document.getElementById("TotalAmount");
+        function formatCurrency(n) {
+            return Math.round(n).toLocaleString("vi-VN") + " đ";
+        }
 
+        const MIN_AMOUNT_FOR_FREE_SHIP = 10000000; 
+        const HCM_TEN_CHUAN = "Thành phố Hồ Chí Minh";
+
+        const SHIPPING = {
+            hcm_noithanh: 25000,
+            hcm_ngoaithanh: 30000,
+            mien_nam: 45000,
+            mien_tay: 50000,
+            mien_trung: 55000,
+            mien_bac: 70000
+        };
+
+        const HCM_NGOAI_THANH = ["Huyện Hóc Môn", "Huyện Củ Chi", "Huyện Bình Chánh", "Huyện Nhà Bè", "Huyện Cần Giờ"];
+
+        const MIEN_NAM = ["Tỉnh Đồng Nai", "Tỉnh Bình Dương", "Tỉnh Bà Rịa - Vũng Tàu", "Tỉnh Bình Phước", "Tỉnh Tây Ninh"];
+
+        const MIEN_TAY = 
+        [   "Thành phố Cần Thơ", "Tỉnh Long An", "Tỉnh Tiền Giang", "Tỉnh Bến Tre", "Tỉnh Vĩnh Long",
+            "Tỉnh Trà Vinh", "Tỉnh Đồng Tháp", "Tỉnh An Giang", "Tỉnh Kiên Giang", "Tỉnh Hậu Giang",
+            "Tỉnh Sóc Trăng", "Tỉnh Bạc Liêu", "Tỉnh Cà Mau"
+        ];
+
+        const MIEN_TRUNG = 
+        [   "Tỉnh Thanh Hóa", "Tỉnh Nghệ An", "Tỉnh Hà Tĩnh", "Tỉnh Quảng Bình", "Tỉnh Quảng Trị", "Tỉnh Thừa Thiên Huế",
+            "Thành phố Đà Nẵng", "Tỉnh Quảng Nam", "Tỉnh Quảng Ngãi", "Tỉnh Bình Định", "Tỉnh Phú Yên", "Tỉnh Khánh Hòa",
+            "Tỉnh Ninh Thuận", "Tỉnh Bình Thuận", "Tỉnh Kon Tum", "Tỉnh Gia Lai", "Tỉnh Đắk Lắk", "Tỉnh Đắk Nông", "Tỉnh Lâm Đồng"
+        ];
+
+        const MIEN_BAC = 
+        [   "Thành phố Hà Nội", "Thành phố Hải Phòng", "Tỉnh Quảng Ninh", "Tỉnh Bắc Ninh", "Tỉnh Bắc Giang", "Tỉnh Hưng Yên",
+            "Tỉnh Hải Dương", "Tỉnh Nam Định", "Tỉnh Thái Bình", "Tỉnh Hà Nam", "Tỉnh Ninh Bình", "Tỉnh Phú Thọ", "Tỉnh Yên Bái", 
+            "Tỉnh Lào Cai", "Tỉnh Tuyên Quang", "Tỉnh Thái Nguyên", "Tỉnh Cao Bằng", "Tỉnh Bắc Kạn", "Tỉnh Lạng Sơn", "Tỉnh Sơn La", 
+            "Tỉnh Hòa Bình", "Tỉnh Điện Biên", "Tỉnh Lai Châu", "Tỉnh Vĩnh Phúc"
+        ];
+
+        let shipFee = 0;
         let originalTotal = @subtotal;
 
-        function formatCurrency(number) {
-            return Math.round(number).toLocaleString("vi-VN") + " đ";
+        const province = document.getElementById("province");
+        const district = document.getElementById("district");
+        const ward = document.getElementById("ward");
+
+        const voucherSelect = document.getElementById("voucherSelect");
+        const diaChiInput = document.querySelector("textarea[name='Diachi']");
+        const locationBox = document.getElementById("locationSelectBox");
+        const changeBtn = document.getElementById("changeAddressBtn");
+
+        const shipFeeText = document.getElementById("shipFeeText");
+        const shipFeeText2 = document.getElementById("shipFeeText2");
+        const finalTotalDisplay = document.getElementById("final-total");
+        const discountAmountDisplay = document.getElementById("discount-amount");
+        const hiddenTotalInput = document.getElementById("TotalAmount"); 
+        const hiddenShipInput = document.getElementById("PhiShip");
+
+
+        function tinhPhiTheoTinh(provinceName, districtName = "") {
+
+            if (originalTotal >= MIN_AMOUNT_FOR_FREE_SHIP) {
+                shipFee = 0;
+                updateTotal();
+                return;
+            }
+
+            const p_no_tones = removeVietnameseTones(provinceName);
+            const d_no_tones = removeVietnameseTones(districtName);
+
+            if (p_no_tones.includes("ho chi minh")) {
+                const isNgoaiThanh = HCM_NGOAI_THANH.some(x => d_no_tones.includes(removeVietnameseTones(x)));
+                shipFee = isNgoaiThanh ? SHIPPING.hcm_ngoaithanh : SHIPPING.hcm_noithanh;
+            }
+            else if (MIEN_TAY.some(x => p_no_tones.includes(removeVietnameseTones(x)))) {
+                shipFee = SHIPPING.mien_tay;
+            }
+            else if (MIEN_NAM.some(x => p_no_tones.includes(removeVietnameseTones(x)))) {
+                shipFee = SHIPPING.mien_nam;
+            }
+            else if (MIEN_TRUNG.some(x => p_no_tones.includes(removeVietnameseTones(x)))) {
+                shipFee = SHIPPING.mien_trung;
+            }
+            else {
+                shipFee = SHIPPING.mien_bac;
+            }
+
+            updateTotal();
         }
 
         function updateTotal() {
-            let selectedOption = voucherSelect.options[voucherSelect.selectedIndex];
-            let percent = parseFloat(selectedOption.getAttribute("data-percent")) || 0;
-
+            let percent = parseFloat(voucherSelect.options[voucherSelect.selectedIndex]?.dataset.percent) || 0;
             let discount = originalTotal * (percent / 100);
-            let newTotal = originalTotal - discount;
 
+            let total = originalTotal - discount + shipFee;
+            total = Math.max(0, total);
+
+            shipFeeText.innerHTML = formatCurrency(shipFee);
+            shipFeeText2.innerHTML = formatCurrency(shipFee);
             discountAmountDisplay.innerHTML = "- " + formatCurrency(discount);
-            finalTotalDisplay.innerHTML = formatCurrency(newTotal);
+            finalTotalDisplay.innerHTML = formatCurrency(total);
 
-            hiddenTotalInput.value = Math.round(newTotal);
+            hiddenTotalInput.value = Math.round(total);
+            hiddenShipInput.value = shipFee;
         }
 
-        updateTotal();
+        fetch("https://provinces.open-api.vn/api/v1/?depth=2")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(p => {
+                    let opt = document.createElement("option");
+                    opt.textContent = p.name;
+                    opt.value = p.code;
+                    opt.dataset.name = p.name;
+                    province.appendChild(opt);
+                });
+            });
+
+        province.addEventListener("change", function () {
+            district.innerHTML = `<option value="">-- Chọn Quận/huyện --</option>`;
+            ward.innerHTML = `<option value="">-- Chọn Xã/Phường --</option>`;
+
+            const provinceName = this.options[this.selectedIndex].dataset.name;
+            if (provinceName) {
+                tinhPhiTheoTinh(provinceName, "");
+            }
+
+
+            fetch(`https://provinces.open-api.vn/api/v1/p/${this.value}?depth=2`)
+                .then(r => r.json())
+                .then(data => {
+                    data.districts.forEach(d => {
+                        let opt = document.createElement("option");
+                        opt.textContent = d.name;
+                        opt.value = d.name;
+                        opt.dataset.code = d.code;
+                        district.appendChild(opt);
+                    });
+                });
+        });
+
+        district.addEventListener("change", function () {
+            ward.innerHTML = `<option value="">-- Chọn Xã/Phường --</option>`;
+
+            const provinceName = province.options[province.selectedIndex].dataset.name;
+            tinhPhiTheoTinh(provinceName, this.value);
+
+            fetch(`https://provinces.open-api.vn/api/v1/d/${this.options[this.selectedIndex].dataset.code}?depth=2`)
+                .then(r => r.json())
+                .then(data => {
+                    data.wards.forEach(w => {
+                        let opt = document.createElement("option");
+                        opt.textContent = w.name;
+                        opt.value = w.name;
+                        ward.appendChild(opt);
+                    });
+                });
+        });
+
+        ward.addEventListener("change", function () {
+            const p = province.options[province.selectedIndex].dataset.name;
+            const d = district.value;
+            const w = this.value;
+
+            diaChiInput.value = `${w}, ${d}, ${p}`;
+        });
+
         voucherSelect.addEventListener("change", updateTotal);
 
+        window.addEventListener("load", function () {
+            const addressRaw = diaChiInput.value;
+
+            if (!addressRaw) {
+                tinhPhiTheoTinh("Miền Bắc", "");
+                return;
+            }
+
+            const address = removeVietnameseTones(addressRaw);
+
+            locationBox.style.display = "none";
+            changeBtn.style.display = "block";
+
+            let foundProvince = null;
+
+            if (address.includes("ho chi minh")) {
+                foundProvince = HCM_TEN_CHUAN;
+            }
+
+            if (!foundProvince) {
+                for (let x of MIEN_TAY) {
+                    const x_no_tones = removeVietnameseTones(x);
+                    if (address.includes(x_no_tones)) {
+                        foundProvince = x;
+                        break;
+                    }
+                }
+            }
+
+            if (!foundProvince) {
+                for (let x of MIEN_NAM) {
+                    const x_no_tones = removeVietnameseTones(x);
+                    if (address.includes(x_no_tones)) {
+                        foundProvince = x;
+                        break;
+                    }
+                }
+            }
+
+            if (!foundProvince) {
+                for (let x of MIEN_TRUNG) {
+                    const x_no_tones = removeVietnameseTones(x);
+                    if (address.includes(x_no_tones)) {
+                        foundProvince = x;
+                        break;
+                    }
+                }
+            }
+
+            if (!foundProvince) {
+                for (let x of MIEN_BAC) {
+                    const x_no_tones = removeVietnameseTones(x);
+                    if (address.includes(x_no_tones)) {
+                        foundProvince = x;
+                        break;
+                    }
+                }
+            }
+
+            const provinceToCalculate = foundProvince || "Miền Bắc";
+            tinhPhiTheoTinh(provinceToCalculate, addressRaw);
+        });
+
+
+        changeBtn.addEventListener("click", function () {
+            locationBox.style.display = "flex";
+            this.style.display = "none";
+            tinhPhiTheoTinh("Miền Bắc", "");
+        });
+
+        document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+            updateTotal();
+        });
     </script>
 }

@@ -138,9 +138,10 @@ namespace QuanLyBanGiay.Controllers
 
             return View(model);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Checkout(QuanLyBanGiay.Models.ViewModels.Checkout checkoutModel) 
+        public async Task<IActionResult> Checkout(QuanLyBanGiay.Models.ViewModels.Checkout checkoutModel)
         {
             var emailSession = HttpContext.Session.GetString("UserEmail");
             if (string.IsNullOrEmpty(emailSession))
@@ -164,18 +165,20 @@ namespace QuanLyBanGiay.Controllers
                 return View(checkoutModel);
             }
 
-            // TÍNH TIỀN 
-            decimal tongTien = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
+            // TÍNH TIỀN
+            decimal tongTienHang = checkoutModel.CartItems.Sum(i => i.Sl * i.Dongia);
             decimal tongTienGiam = 0m;
+
+            decimal phiShip = checkoutModel.PhiShip;
 
             if (checkoutModel.Mavoucher != 0)
             {
                 var voucher = await db.Vouchers.FirstOrDefaultAsync(v => v.Mavoucher == checkoutModel.Mavoucher);
                 if (voucher != null && voucher.Giatri.HasValue)
-                    tongTienGiam = tongTien * (voucher.Giatri.Value / 100m);
+                    tongTienGiam = tongTienHang * (voucher.Giatri.Value / 100m);
             }
 
-            decimal tongTienCuoi = tongTien - tongTienGiam;
+            decimal tongTienCuoi = tongTienHang - tongTienGiam + phiShip;
 
 
             var madhCu = HttpContext.Session.GetInt32("ThanhToanDonCu_Madh");
@@ -199,8 +202,9 @@ namespace QuanLyBanGiay.Controllers
                 donHang.Ngaydat = DateTime.Now;
                 donHang.Sdtgiao = checkoutModel.Sdt;
                 donHang.Diachigiao = checkoutModel.Diachi;
-                donHang.Tongtien = tongTien;
-                donHang.Tongtiencuoi = tongTienCuoi;
+                donHang.Tongtien = tongTienHang;
+                donHang.Phiship = phiShip; 
+                donHang.Tongtiencuoi = tongTienCuoi; 
                 donHang.Mapttt = checkoutModel.Mapttt;
 
                 // Xóa chi tiết cũ
@@ -215,8 +219,8 @@ namespace QuanLyBanGiay.Controllers
                     Ngaydat = DateTime.Now,
                     Sdtgiao = checkoutModel.Sdt,
                     Diachigiao = checkoutModel.Diachi,
-                    Phiship = 0,
-                    Tongtien = tongTien,
+                    Phiship = phiShip,
+                    Tongtien = tongTienHang,
                     Tongtiencuoi = tongTienCuoi,
                     Mapttt = checkoutModel.Mapttt
                 };
@@ -244,7 +248,7 @@ namespace QuanLyBanGiay.Controllers
             var ptttVNPAY = await db.Phuongthucthanhtoans
                 .FirstOrDefaultAsync(p => p.Tenphuongthuc.ToUpper().Contains("VNPAY"));
 
-            if (checkoutModel.Mapttt == ptttVNPAY?.Mapttt) 
+            if (checkoutModel.Mapttt == ptttVNPAY?.Mapttt)
             {
                 donHang.Trangthai = "CHỜ THANH TOÁN";
                 await db.SaveChangesAsync();
@@ -252,7 +256,7 @@ namespace QuanLyBanGiay.Controllers
                 var modelVnpay = new Checkout
                 {
                     Madh = donHang.Madh,
-                    TotalAmount = (long)(Math.Round(donHang.Tongtiencuoi ?? 0))
+                    TotalAmount = donHang.Tongtiencuoi ?? 0
                 };
 
                 string paymentUrl = VnpayService.CreatePaymentUrl(modelVnpay, HttpContext);
