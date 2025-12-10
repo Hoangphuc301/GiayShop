@@ -11,12 +11,36 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
     {
         private QL_GiayContext db = new QL_GiayContext();
 
-        public IActionResult Index()
+        public IActionResult Index(int trang = 1)
         {
-            return View(db.Vouchers.OrderByDescending(v => v.Mavoucher).ToList());
+            int kichThuocTrang = 8; 
+
+            var vouchers = db.Vouchers.AsQueryable();
+
+            int tongSoMuc = vouchers.Count();
+            int tongSoTrang = (int)Math.Ceiling((double)tongSoMuc / kichThuocTrang);
+
+            if (trang < 1)
+                trang = 1;
+            if (trang > tongSoTrang && tongSoTrang > 0) 
+                trang = tongSoTrang;
+            else if (tongSoTrang == 0) 
+                trang = 1;
+
+            var danhSachVoucherPhanTrang = vouchers
+                .OrderByDescending(v => v.Mavoucher) 
+                .Skip((trang - 1) * kichThuocTrang) 
+                .Take(kichThuocTrang) 
+                .ToList(); 
+
+            ViewBag.TrangHienTai = trang;
+            ViewBag.TongSoTrang = tongSoTrang;
+            ViewBag.KichThuocTrang = kichThuocTrang;
+
+            return View(danhSachVoucherPhanTrang);
         }
 
-        // --- THÊM VOUCHER ---
+        //thêm
         [HttpGet]
         public ActionResult them()
         {
@@ -112,7 +136,7 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
 
             return View(voucher);
         }
-        // ================== SỬA VOUCHER ==================
+        //Sửa
 
         [HttpGet]
         public ActionResult sua(int id)
@@ -189,7 +213,7 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             return View(voucher);
         }
 
-        // ================== XÓA VOUCHER ==================
+        //Xóa
         [HttpGet]
         public ActionResult xoa(int id)
         {
@@ -211,7 +235,7 @@ namespace QuanLyBanGiay.Areas.Admin.Controllers
             bool daCoDonHang = db.Donhangs.Any(d => d.Mavoucher == id);
             if (daCoDonHang)
             {
-                TempData["Error"] = "❌ Không thể xóa vì voucher này đã được sử dụng trong đơn hàng.";
+                TempData["Error"] = "Không thể xóa vì voucher này đã được sử dụng trong đơn hàng.";
                 return RedirectToAction("Index");
             }
 

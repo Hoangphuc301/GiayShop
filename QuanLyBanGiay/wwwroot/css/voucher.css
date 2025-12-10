@@ -80,3 +80,33 @@
         flex-direction: column;
     }
 }
+
+form button.btn, form a.btn {
+    height: auto !important;
+    max-height: 50px !important;
+    align-self: flex-start;
+    margin-top: 10px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.row > .col-6 {
+    display: block !important;
+    flex: 0 0 auto !important;
+}
+
+.form-check {
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+}
+
+.form-check-input {
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 8px !important; 
+    margin-top: 0 !important; 
+    width: 1.2em;
+    height: 1.2em;
+}

@@ -1,12 +1,13 @@
 ﻿@model QuanLyBanGiay.Models.Voucher
 @{
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = null;
     var listDanhmuc = ViewBag.Danhmucs as List<QuanLyBanGiay.Models.Danhmuc>;
     var listSanpham = ViewBag.Sanphams as dynamic;
 }
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 <style>
-    /* CSS SỬA LỖI GIAO DIỆN */
     .btn-action-container .btn {
         height: 45px !important;
         max-height: 45px !important;
@@ -22,7 +23,6 @@
         flex: none !important;
     }
 
-    /* CSS CHECKBOX */
     .custom-checkbox-wrapper {
         display: flex;
         align-items: center;
@@ -60,7 +60,7 @@
         <div class="col-lg-8">
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-primary text-white py-3">
-                    <h5 class="mb-0 fw-bold text-uppercase">🆕 Tạo Mã Khuyến Mãi Mới</h5>
+                    <h5 class="mb-0 fw-bold text-uppercase">Tạo mã khuyến mãi mới</h5>
                 </div>
                 <div class="card-body p-4">
 
@@ -174,12 +174,12 @@
                         <div class="row mt-5 pt-3 border-top btn-action-container">
                             <div class="col-6">
                                 <a href="@Url.Action("Index")" class="btn btn-outline-secondary">
-                                    ⬅️ Quay lại
+                                    Quay lại
                                 </a>
                             </div>
                             <div class="col-6">
                                 <button type="submit" class="btn btn-success fw-bold text-uppercase shadow-sm">
-                                    💾 Lưu mã giảm giá
+                                    Lưu mã giảm giá
                                 </button>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
         <div class="col-lg-4">
             <div class="card bg-white border-primary shadow-lg mt-4 mt-lg-0 sticky-top" style="top: 20px; z-index: 1;">
                 <div class="card-header bg-primary text-white text-center fw-bold text-uppercase">
-                    📝 Tổng hợp Voucher
+                    Tổng hợp voucher
                 </div>
                 <div class="card-body">
                     <div class="text-center mb-3">

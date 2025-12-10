@@ -1,125 +1,230 @@
 ﻿@model IEnumerable<QuanLyBanGiay.Models.Voucher>
 
 @{
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = null;
+
+    int trangHienTai = ViewBag.TrangHienTai ?? 1;
+    int tongSoTrang = ViewBag.TongSoTrang ?? 0;
 }
 
-<div class="container mt-4">
-    <div class="justify-content-between align-items-center mb-4">
-        <h2 class="text-primary fw-bold mb-0">🎫 Quản Lý Mã Khuyến Mãi</h2>
-        <a href="@Url.Action("them", "Voucher", new { area = "Admin" })" class="btn btn-success shadow-sm">
-            <i class="bi bi-plus-circle"></i> ➕ Thêm Voucher Mới
-        </a>
-    </div>
+<head>
+    <title>Quản Lý Mã Khuyến Mãi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .pagination-container {
+            overflow-x: auto; 
+            padding-bottom: 5px; 
+        }
 
-    <div class="card shadow-sm">
-        <div class="card-body p-0">
-            <table class="table table-hover table-striped align-middle mb-0">
-                <thead class="table-dark text-center">
-                    <tr>
-                        <th>ID</th>
-                        <th class="text-start">Tên & Mã Code</th>
-                        <th>Loại KM</th>
-                        <th>Giá Trị</th>
-                        <th>Thời Gian</th>
-                        <th>Lượt Dùng</th>
-                        <th>Trạng Thái</th>
-                        <th style="width: 150px;">Tác vụ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model != null && Model.Any())
-                    {
-                        foreach (var item in Model)
+        .container.mt-4 > .justify-content-between.align-items-center.mb-4 {
+            display: flex !important;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #212529 !important;
+            border-color: #212529 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="justify-content-between align-items-center mb-4">
+            <h2 class="text-primary fw-bold mb-0">Quản Lý Mã Khuyến Mãi</h2>
+            <a href="@Url.Action("them", "Voucher", new { area = "Admin" })" class="btn btn-success shadow-sm">
+                <i class="bi bi-plus-circle"></i>Thêm voucher mới
+            </a>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-dark text-center">
+                        <tr>
+                            <th class="text-start">Tên và mã khuyến mãi</th>
+                            <th>Loại KM</th>
+                            <th>Giá trị</th>
+                            <th>Thời gian</th>
+                            <th>Lượt dùng</th>
+                            <th>Trạng thái</th>
+                            <th style="width: 150px;">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
                         {
-                                    <tr>
-                                        <td class="text-center fw-bold text-secondary">#@item.Mavoucher</td>
+                            foreach (var item in Model)
+                            {
+                                <tr>
 
-                                        <td>
-                                            <div class="fw-bold text-primary">@item.Tenvoucher</div>
-                                            <div class="badge bg-light text-dark border mt-1">
-                                                CODE: <span class="fw-bold text-danger">@item.Magiamgia</span>
-                                            </div>
-                                        </td>
+                                    <td>
+                                        <div class="fw-bold text-primary">@item.Tenvoucher</div>
+                                        <div class="badge bg-light text-dark border mt-1">
+                                            CODE: <span class="fw-bold text-danger">@item.Magiamgia</span>
+                                        </div>
+                                    </td>
 
-                                        <td class="text-center">
-                                    @if (item.LoaiKhuyenMai == 1)
-                                    {
-                                                    <span class="badge bg-info text-dark">Theo %</span>
-                                    }
-                                    else if (item.LoaiKhuyenMai == 2)
-                                    {
-                                                    <span class="badge bg-warning text-dark">Tiền mặt</span>
-                                    }
-                                    else
-                                    {
-                                                    <span class="badge bg-success">FreeShip</span>
-                                    }
-                                        </td>
+                                    <td class="text-center">
+                                        @if (item.LoaiKhuyenMai == 1)
+                                        {
+                                            <span class="badge bg-info text-dark">Theo %</span>
+                                        }
+                                        else if (item.LoaiKhuyenMai == 2)
+                                        {
+                                            <span class="badge bg-warning text-dark">Tiền mặt</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-success">Freeship</span>
+                                        }
+                                    </td>
 
-                                        <td class="text-center fw-bold">
-                                    @if (item.LoaiKhuyenMai == 1)
-                                    {
-                                                    <span class="text-danger">-@(item.Giatri?.ToString("0.##"))%</span>
-                                    }
-                                    else if (item.LoaiKhuyenMai == 2)
-                                    {
-                                                    <span class="text-success">-@string.Format("{0:N0}đ", item.Giatri)</span>
-                                    }
-                                    else
-                                    {
-                                                    <span>0đ (Ship)</span>
-                                    }
-                                        </td>
+                                    <td class="text-center fw-bold">
+                                        @if (item.LoaiKhuyenMai == 1)
+                                        {
+                                            <span class="text-danger">-@(item.Giatri?.ToString("0.##"))%</span>
+                                        }
+                                        else if (item.LoaiKhuyenMai == 2)
+                                        {
+                                            <span class="text-success">-@string.Format("{0:N0}đ", item.Giatri)</span>
+                                        }
+                                        else
+                                        {
+                                            <span>0đ (Ship)</span>
+                                        }
+                                    </td>
 
-                                        <td class="small text-center">
-                                            <div>@item.Ngaybd?.ToString("dd/MM/yyyy")</div>
-                                            <div class="text-muted">⬇</div>
-                                            <div>@item.Ngaykt?.ToString("dd/MM/yyyy")</div>
-                                        </td>
+                                    <td class="small text-center">
+                                        <div>@item.Ngaybd?.ToString("dd/MM/yyyy")</div>
+                                        <div class="text-muted">⬇</div>
+                                        <div>@item.Ngaykt?.ToString("dd/MM/yyyy")</div>
+                                    </td>
 
-                                        <td class="text-center">
-                                            <span class="badge bg-secondary">
-                                        @item.DaSuDung / @(item.GioiHanSuDung.HasValue ? item.GioiHanSuDung.ToString() : "∞")
-                                            </span>
-                                        </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-secondary">
+                                            @item.DaSuDung / @(item.GioiHanSuDung.HasValue ? item.GioiHanSuDung.ToString() : "∞")
+                                        </span>
+                                    </td>
 
-                                        <td class="text-center">
-                                    @if (item.Trangthai == "CÒN" && item.Ngaykt >= DateTime.Now)
-                                    {
-                                                    <span class="badge bg-success">Đang chạy</span>
-                                    }
-                                    else
-                                    {
-                                                    <span class="badge bg-danger">Hết hạn/Dừng</span>
-                                    }
-                                        </td>
+                                    <td class="text-center">
+                                        @if (item.Trangthai == "CÒN" && item.Ngaykt >= DateTime.Now)
+                                        {
+                                            <span class="badge bg-success">Còn hạn</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Hết hạn</span>
+                                        }
+                                    </td>
 
-                                        <td class="text-center">
-                                            <a href="@Url.Action("sua", "Voucher", new { area="Admin", id=item.Mavoucher })" 
-                                               class="btn btn-sm btn-outline-primary" title="Sửa">
-                                                ✏️
-                                            </a>
-                                            <a href="@Url.Action("xoa", "Voucher", new { area="Admin", id=item.Mavoucher })" 
-                                               class="btn btn-sm btn-outline-danger" title="Xóa"
-                                               onclick="return confirm('Bạn có chắc chắn muốn xóa voucher [@item.Magiamgia] này không?');">
-                                                🗑️
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("sua", "Voucher", new { area="Admin", id=item.Mavoucher })"  
+                                                                   class="btn btn-sm btn-outline-primary" title="Sửa">
+                                            Sửa
+                                        </a>
+                                        <a href="@Url.Action("xoa", "Voucher", new { area="Admin", id=item.Mavoucher })"  
+                                                                   class="btn btn-sm btn-outline-danger" title="Xóa"
+                                                                   onclick="return confirm('Bạn có chắc chắn muốn xóa voucher [@item.Magiamgia] này không?');">
+                                            Xóa
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
                         }
-                    }
-                    else
-                    {
+                        else
+                        {
                             <tr>
-                                <td colspan="8" class="text-center py-4 text-muted">
-                                    <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                                <td colspan="9" class="text-center py-4 text-muted">
+                                    <i class="fa-solid fa-inbox fs-1 d-block mb-2"></i>
                                     Chưa có mã khuyến mãi nào. Hãy tạo mới!
                                 </td>
                             </tr>
-                    }
-                </tbody>
-            </table>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @if (tongSoTrang > 1)
+        {
+            <div class="pagination-container">
+                <nav aria-label="pagination" class="d-flex justify-content-center mt-4">
+                    <ul class="pagination shadow-sm">
+
+                        <li class="page-item @(trangHienTai == 1 ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { trang = trangHienTai - 1 })" aria-label="Truoc">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>
+
+                        @{
+                            // Logic phân trang nâng cao
+                            int soTrangToiDaHienThi = 3;
+                            int trangBatDau = Math.Max(1, trangHienTai - 1);
+                            int trangKetThuc = Math.Min(tongSoTrang, trangBatDau + soTrangToiDaHienThi - 1);
+
+                            // Điều chỉnh để giữ số lượng nút hiển thị ổn định
+                            if (trangHienTai > 1 && trangHienTai > tongSoTrang - soTrangToiDaHienThi + 1)
+                            {
+                                trangBatDau = Math.Max(1, tongSoTrang - soTrangToiDaHienThi + 1);
+                                trangKetThuc = tongSoTrang;
+                            }
+                        }
+
+                        @if (trangBatDau > 1)
+                        {
+                            <li class="page-item"><a class="page-link" href="@Url.Action("Index", new { trang = 1 })">1</a></li>
+                            @if (trangBatDau > 2)
+                            {
+                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                            }
+                        }
+
+                        @for (int i = trangBatDau; i <= trangKetThuc; i++)
+                        {
+                            <li class="page-item @(i == trangHienTai ? "active" : "")">
+                                <a class="page-link"
+                                   href="@Url.Action("Index", new { trang = i })">
+                                    @i
+                                </a>
+                            </li>
+                        }
+
+                        @if (trangKetThuc < tongSoTrang)
+                        {
+                            @if (trangKetThuc < tongSoTrang - 1)
+                            {
+                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                            }
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Index", new { trang = tongSoTrang })">@tongSoTrang</a>
+                            </li>
+                        }
+
+                        <li class="page-item @(trangHienTai == tongSoTrang || tongSoTrang == 0 ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { trang = trangHienTai + 1 })" aria-label="Next">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        }
+
+        <div class="text-start mt-3">
+            <a href="@Url.Content("~/Admin")" class="btn btn-outline-secondary">
+                ⬅️ Quay lại
+            </a>
         </div>
     </div>
-</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

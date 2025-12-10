@@ -1,6 +1,6 @@
 ﻿@model QuanLyBanGiay.Models.Voucher
 @{
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = null;
     var listDanhmuc = ViewBag.Danhmucs as List<QuanLyBanGiay.Models.Danhmuc>;
     var listSanpham = ViewBag.Sanphams as dynamic;
 
@@ -11,6 +11,8 @@
     }
 }
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 <style>
     .btn-save {
         height: 45px;
@@ -52,7 +54,7 @@
         <div class="col-lg-8">
             <div class="card shadow-sm border-warning">
                 <div class="card-header bg-warning text-dark py-3">
-                    <h5 class="mb-0 fw-bold">✏️ Cập Nhật Mã Khuyến Mãi</h5>
+                    <h5 class="mb-0 fw-bold">Cập Nhật Mã Khuyến Mãi</h5>
                 </div>
                 <div class="card-body p-4">
 
@@ -175,7 +177,7 @@
                                 <a href="@Url.Action("Index")" class="btn btn-outline-secondary w-100" style="height:45px; line-height:30px">Quay lại</a>
                             </div>
                             <div class="col-6">
-                                <button type="submit" class="btn btn-warning btn-save shadow">💾 CẬP NHẬT</button>
+                                <button type="submit" class="btn btn-warning btn-save shadow">CẬP NHẬT</button>
                             </div>
                         </div>
 
