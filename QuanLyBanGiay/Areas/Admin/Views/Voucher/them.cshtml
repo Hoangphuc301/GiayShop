@@ -1,56 +1,304 @@
-﻿@{
+﻿@model QuanLyBanGiay.Models.Voucher
+@{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var listDanhmuc = ViewBag.Danhmucs as List<QuanLyBanGiay.Models.Danhmuc>;
+    var listSanpham = ViewBag.Sanphams as dynamic;
 }
-<div class="container mt-4">
-    <h2 class="mb-4 text-primary fw-bold">➕ Thêm Voucher</h2>
 
-    <form asp-area="Admin" asp-controller="Voucher" asp-action="them" method="post" class="card p-4 shadow-sm">
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Tên Voucher</label>
-            <input name="Tenvoucher" class="form-control" maxlength="100" required />
+<style>
+    /* CSS SỬA LỖI GIAO DIỆN */
+    .btn-action-container .btn {
+        height: 45px !important;
+        max-height: 45px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .row > .col-6 {
+        display: block !important;
+        flex: none !important;
+    }
+
+    /* CSS CHECKBOX */
+    .custom-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+
+        .custom-checkbox-wrapper input {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .custom-checkbox-wrapper label {
+            margin-bottom: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+</style>
+
+<div class="container mt-4 mb-5">
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger fw-bold">
+            <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
         </div>
+    }
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Mã giảm giá</label>
-            <input name="Magiamgia" class="form-control" maxlength="50" required />
-        </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0 fw-bold text-uppercase">🆕 Tạo Mã Khuyến Mãi Mới</h5>
+                </div>
+                <div class="card-body p-4">
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Giá trị (%)</label>
-            <input type="number" name="Giatri" class="form-control" min="0" max="100" step="0.01" required />
-        </div>
+                    <form asp-action="them" method="post" id="voucherForm">
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Ngày bắt đầu</label>
-            <input type="date" name="Ngaybd" class="form-control" required />
-        </div>
+                        <input type="hidden" name="Trangthai" value="CÒN" />
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Ngày kết thúc</label>
-            <input type="date" name="Ngaykt" class="form-control" required />
-        </div>
+                        <h6 class="text-primary fw-bold border-bottom pb-2 mb-3">1. Thông tin chung</h6>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="form-label fw-semibold">Tên chương trình</label>
+                                <input type="text" name="Tenvoucher" class="form-control" placeholder="VD: Sale tết 2025" required oninput="updateSummary()" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Mã giảm giá (Code)</label>
+                                <input type="text" name="Magiamgia" class="form-control text-uppercase fw-bold text-primary" placeholder="VD: TET2025" required oninput="updateSummary()" />
+                            </div>
+                        </div>
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Trạng thái</label>
-            <select name="Trangthai" class="form-select" required>
-                <option value="CÒN">CÒN</option>
-                <option value="HẾT HẠN">HẾT HẠN</option>
-            </select>
-        </div>
+                        <h6 class="text-primary fw-bold border-bottom pb-2 mb-3 mt-4">2. Tùy chọn khuyến mãi</h6>
+                        <div class="mb-3">
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="type1" value="1" checked onchange="toggleType()">
+                                <label class="btn btn-outline-primary py-2" for="type1">% Phần trăm</label>
 
-        <div class="row mt-4">
-            <div class="col-6">
-                <a href="@Url.Content("~/Admin/Voucher")"
-                   class="btn btn-outline-secondary w-100">
-                    ⬅️ Quay lại
-                </a>
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="type2" value="2" onchange="toggleType()">
+                                <label class="btn btn-outline-primary py-2" for="type2">Số tiền (VNĐ)</label>
+
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="type3" value="3" onchange="toggleType()">
+                                <label class="btn btn-outline-primary py-2" for="type3">Miễn phí vận chuyển</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 bg-light p-3 rounded border" id="valueInputGroup">
+                            <label class="form-label fw-bold" id="valueLabel">Giá trị giảm (%)</label>
+                            <input type="number" name="Giatri" id="inpValue" class="form-control form-control-lg text-center fw-bold text-success" value="0" min="0" oninput="updateSummary()" required />
+                        </div>
+
+                        <h6 class="text-primary fw-bold border-bottom pb-2 mb-3 mt-4">3. Phạm vi áp dụng</h6>
+                        <div class="mb-3">
+                            <select name="PhamViApDung" class="form-select" id="selScope" onchange="toggleScope()">
+                                <option value="1">Tất cả đơn hàng</option>
+                                <option value="2">Danh mục sản phẩm cụ thể</option>
+                                <option value="3">Sản phẩm cụ thể</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none p-3 bg-light border rounded" id="categorySelection">
+                            <label class="form-label fw-bold">Chọn danh mục (Giữ Ctrl để chọn nhiều)</label>
+                            <select name="SelectedIds" class="form-select" multiple size="4" onchange="updateSummary()">
+                                @if (listDanhmuc != null)
+                                {
+                                    foreach (var item in listDanhmuc)
+                                    {
+                                        <option value="@item.Madm">@item.Tendm</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none p-3 bg-light border rounded" id="productSelection">
+                            <label class="form-label fw-bold">Chọn sản phẩm (Giữ Ctrl để chọn nhiều)</label>
+                            <select name="SelectedIds" class="form-select" multiple size="6" onchange="updateSummary()">
+                                @if (listSanpham != null)
+                                {
+                                    foreach (var item in listSanpham)
+                                    {
+                                        <option value="@item.Masp">@item.Tensp</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <h6 class="text-primary fw-bold border-bottom pb-2 mb-3 mt-4">4. Cài đặt khác</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="custom-checkbox-wrapper mb-2">
+                                    <input type="radio" name="NhomKhachHang" id="cust1" value="1" checked onchange="updateSummary()">
+                                    <label class="fw-semibold" for="cust1">Tất cả khách hàng</label>
+                                </div>
+                                <div class="custom-checkbox-wrapper">
+                                    <input type="radio" name="NhomKhachHang" id="cust2" value="2" onchange="updateSummary()">
+                                    <label class="fw-semibold" for="cust2">
+                                        Khách hàng mới (< 7 ngày)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Tổng số lượng mã</label>
+                                <input type="number" name="GioiHanSuDung" id="inpLimit" class="form-control mb-2" placeholder="Để trống nếu không giới hạn" oninput="updateSummary()" />
+
+                                <div class="custom-checkbox-wrapper h-auto">
+                                    <input type="checkbox" name="GioiHanMoiKhach" id="chkOne" value="true" onchange="updateSummary()" />
+                                    <label for="chkOne">Mỗi khách chỉ dùng 1 lần</label>
+                                    <input type="hidden" name="GioiHanMoiKhach" value="false" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mt-4">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">Ngày bắt đầu</label>
+                                <input type="date" name="Ngaybd" class="form-control" required onchange="updateSummary()" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Ngày kết thúc</label>
+                                <input type="date" name="Ngaykt" class="form-control" required onchange="updateSummary()" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 pt-3 border-top btn-action-container">
+                            <div class="col-6">
+                                <a href="@Url.Action("Index")" class="btn btn-outline-secondary">
+                                    ⬅️ Quay lại
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-success fw-bold text-uppercase shadow-sm">
+                                    💾 Lưu mã giảm giá
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
+        </div>
 
-            <div class="col-6">
-                <button type="submit" class="btn btn-primary w-100">
-                    ➕ Thêm mới
-                </button>
+        <div class="col-lg-4">
+            <div class="card bg-white border-primary shadow-lg mt-4 mt-lg-0 sticky-top" style="top: 20px; z-index: 1;">
+                <div class="card-header bg-primary text-white text-center fw-bold text-uppercase">
+                    📝 Tổng hợp Voucher
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <small class="text-muted">MÃ VOUCHER</small>
+                        <h3 class="text-danger fw-bold border-bottom pb-3" id="sumCode">...</h3>
+                    </div>
+
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item px-0">
+                            <strong>Tên:</strong> <span id="sumName" class="float-end text-end">...</span>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <strong>Giá trị:</strong> <span id="sumVal" class="float-end fw-bold text-success fs-5">0</span>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <strong>Phạm vi:</strong> <br>
+                            <span id="sumScope" class="text-muted fst-italic">Tất cả đơn hàng</span>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <strong>Khách hàng:</strong> <span id="sumCustomer" class="float-end fw-bold text-primary">Tất cả</span>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <strong>Thời gian:</strong> <br>
+                            <span id="sumDate" class="text-primary fw-bold">... đến ...</span>
+                        </li>
+                    </ul>
+                    <div class="alert alert-secondary mt-3 mb-0 p-2 text-center" style="font-size: 0.9rem;">
+                        <span id="sumLimit">Không giới hạn số lượng</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
+    </div>
 </div>
+
+<script>
+    function updateSummary() {
+        document.getElementById('sumName').innerText = document.querySelector('input[name="Tenvoucher"]').value || "...";
+        document.getElementById('sumCode').innerText = (document.querySelector('input[name="Magiamgia"]').value || "...").toUpperCase();
+
+        var val = document.getElementById('inpValue').value;
+        var type = document.querySelector('input[name="LoaiKhuyenMai"]:checked').value;
+        if (type == 1) val += "%"; else if (type == 2) val += " VNĐ"; else val = "FreeShip";
+        document.getElementById('sumVal').innerText = val;
+
+        var start = document.querySelector('input[name="Ngaybd"]').value;
+        var end = document.querySelector('input[name="Ngaykt"]').value;
+        document.getElementById('sumDate').innerText = start + " -> " + end;
+
+        var isNewCust = document.querySelector('input[name="NhomKhachHang"]:checked').value == "2";
+        var custText = isNewCust ? "Chỉ khách mới" : "Tất cả khách";
+        document.getElementById('sumCustomer').innerText = custText;
+
+        var limitQty = document.getElementById('inpLimit').value;
+        var isOnePerUser = document.getElementById('chkOne').checked;
+        var txtLimit = "";
+
+        if (limitQty && limitQty > 0) txtLimit = "Tổng: " + limitQty + " mã";
+        else txtLimit = "Không giới hạn số lượng";
+
+        if (isOnePerUser) txtLimit += " | 1 lần/khách";
+        document.getElementById('sumLimit').innerText = txtLimit;
+    }
+
+    function toggleType() {
+        var t = document.querySelector('input[name="LoaiKhuyenMai"]:checked').value;
+        var grp = document.getElementById('valueInputGroup');
+        var lbl = document.getElementById('valueLabel');
+
+        if (t == 1) {
+            grp.classList.remove('d-none');
+            lbl.innerText = "Giá trị giảm (%)";
+            document.getElementById('inpValue').setAttribute('max', '100');
+        }
+        else if (t == 2) {
+            grp.classList.remove('d-none');
+            lbl.innerText = "Số tiền giảm (VNĐ)";
+            document.getElementById('inpValue').removeAttribute('max');
+        }
+        else {
+            grp.classList.add('d-none');
+            document.getElementById('inpValue').value = 0;
+        }
+        updateSummary();
+    }
+
+    function toggleScope() {
+        var s = document.getElementById('selScope').value;
+        document.getElementById('categorySelection').classList.add('d-none');
+        document.getElementById('productSelection').classList.add('d-none');
+
+        var dmSelect = document.querySelector('select[name="SelectedIds"][multiple][size="4"]');
+        var spSelect = document.querySelector('select[name="SelectedIds"][multiple][size="6"]');
+        dmSelect.disabled = true;
+        spSelect.disabled = true;
+
+        if (s == 2) { document.getElementById('categorySelection').classList.remove('d-none'); dmSelect.disabled = false; }
+        if (s == 3) { document.getElementById('productSelection').classList.remove('d-none'); spSelect.disabled = false; }
+
+        var txt = document.getElementById('selScope').options[document.getElementById('selScope').selectedIndex].text;
+        document.getElementById('sumScope').innerText = txt;
+        updateSummary();
+    }
+
+    // Chạy mặc định khi load trang
+    toggleType();
+    toggleScope();
+    updateSummary();
+</script>

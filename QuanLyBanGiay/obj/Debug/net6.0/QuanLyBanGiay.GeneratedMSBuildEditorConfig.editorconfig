@@ -9,407 +9,407 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QuanLyBanGiay
 build_property.RootNamespace = QuanLyBanGiay
-build_property.ProjectDir = D:\git\QuanLyBanGiay\
+build_property.ProjectDir = C:\Users\kkk\Documents\code\Thực tập chuyên ngành\GiayShop\GiayShop\QuanLyBanGiay\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\git\QuanLyBanGiay
+build_property.MSBuildProjectDirectory = C:\Users\kkk\Documents\code\Thực tập chuyên ngành\GiayShop\GiayShop\QuanLyBanGiay
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpdGlldHNhbnBoYW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpdGlldHNhbnBoYW1cc3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpdGlldHNhbnBoYW1cdGhlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Chitietsanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hpdGlldHNhbnBoYW1ceG9hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Donhang/Huy.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Donhang/Huy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uaGFuZ1xIdXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Donhang/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Donhang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uaGFuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Donhang/Phancong.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Donhang/Phancong.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uaGFuZ1xQaGFuY29uZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Donhang/Sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Donhang/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uaGFuZ1xTdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Donhang/XemChiTiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Donhang/XemChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9uaGFuZ1xYZW1DaGlUaWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9haXNhbnBoYW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9haXNhbnBoYW1cc3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9haXNhbnBoYW1cdGhlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Loaisanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9haXNhbnBoYW1ceG9hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Mau/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Mau/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Mau/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Mau/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1XHN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Mau/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Mau/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1XHRoZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Mau/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Mau/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF1XHhvYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Sanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Sanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Sanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Sanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Sanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Sanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Sanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Sanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FucGhhbVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Size/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Size/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Size/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Size/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Size/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Size/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Size/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Size/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFpa2hvYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Taikhoan/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFpa2hvYW5cdGhlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGh1b25nSGlldVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGh1b25nSGlldVxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGh1b25nSGlldVx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/ThuongHieu/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGh1b25nSGlldVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Voucher/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Voucher/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Voucher/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Voucher/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlclxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Voucher/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Voucher/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlclx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/Admin/Views/Voucher/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/Admin/Views/Voucher/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlclx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xDaGl0aWV0c2FucGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xDaGl0aWV0c2FucGhhbVxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xDaGl0aWV0c2FucGhhbVx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Chitietsanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xDaGl0aWV0c2FucGhhbVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Donhang/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Donhang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xEb25oYW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Donhang/Sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Donhang/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xEb25oYW5nXFN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Donhang/XemChiTiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Donhang/XemChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xEb25oYW5nXFhlbUNoaVRpZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Home/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xMb2Fpc2FucGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xMb2Fpc2FucGhhbVxzdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xMb2Fpc2FucGhhbVx0aGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Loaisanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xMb2Fpc2FucGhhbVx4b2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Mau/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Mau/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xNYXVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Mau/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Mau/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xNYXVcc3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Mau/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Mau/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xNYXVcdGhlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Mau/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Mau/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xNYXVceG9hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTYW5waGFtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTYW5waGFtXHN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTYW5waGFtXHRoZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Sanpham/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTYW5waGFtXHhvYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Shared/_NVBHLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTaGFyZWRcX05WQkhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Size/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Size/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTaXplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Size/sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Size/sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTaXplXHN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Size/them.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Size/them.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTaXplXHRoZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVBH/Views/Size/xoa.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVBH/Views/Size/xoa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZCSFxWaWV3c1xTaXplXHhvYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVGH/Views/Donhang/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVGH/Views/Donhang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZHSFxWaWV3c1xEb25oYW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVGH/Views/Donhang/Sua.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVGH/Views/Donhang/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZHSFxWaWV3c1xEb25oYW5nXFN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVGH/Views/Donhang/XemChiTiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVGH/Views/Donhang/XemChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZHSFxWaWV3c1xEb25oYW5nXFhlbUNoaVRpZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVGH/Views/Home/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVGH/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZHSFxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Areas/NVGH/Views/Shared/_NVGHLayout.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Areas/NVGH/Views/Shared/_NVGHLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTlZHSFxWaWV3c1xTaGFyZWRcX05WR0hMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Account/ForgotPassword.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Account/FormRegister.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Account/FormRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JtUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Account/Login.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Chinhsach/Baohanh.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Chinhsach/Baohanh.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpbmhzYWNoXEJhb2hhbmguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Chinhsach/Baomat.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Chinhsach/Baomat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpbmhzYWNoXEJhb21hdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Chinhsach/Doitra.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Chinhsach/Doitra.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpbmhzYWNoXERvaXRyYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Chinhsach/Uudai.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Chinhsach/Uudai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpbmhzYWNoXFV1ZGFpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Chinhsach/Vanchuyen.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Chinhsach/Vanchuyen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpbmhzYWNoXFZhbmNodXllbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Giohang/Checkout.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Giohang/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ1xDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Giohang/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Giohang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Giohang/Minicart.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Giohang/Minicart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ1xNaW5pY2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Giohang/OrderConfirmation.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Giohang/OrderConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ1xPcmRlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Giohang/OrderSuccess.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Giohang/OrderSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ1xPcmRlclN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Home/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Home/Privacy.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Profile/ChiTietDH.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Profile/ChiTietDH.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxDaGlUaWV0REguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Profile/Huy.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Profile/Huy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxIdXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Profile/Profile.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Profile/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Profile/XemDH.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Profile/XemDH.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxYZW1ESC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/SanPham/Chitiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/SanPham/Chitiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxDaGl0aWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/SanPham/_AddReview.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/SanPham/_AddReview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxfQWRkUmV2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/SanPham/_ReviewList.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/SanPham/_ReviewList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxfUmV2aWV3TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Shared/Error.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Thuonghieu/Chitiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Thuonghieu/Chitiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b25naGlldVxDaGl0aWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Thuonghieu/SanPhamTheoThuongHieu.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Thuonghieu/SanPhamTheoThuongHieu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b25naGlldVxTYW5QaGFtVGhlb1RodW9uZ0hpZXUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Thuonghieu/ThuongHieuMegaMenu.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Thuonghieu/ThuongHieuMegaMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1b25naGlldVxUaHVvbmdIaWV1TWVnYU1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Timkiem/Chitiet.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Timkiem/Chitiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlta2llbVxDaGl0aWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Timkiem/Index.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Timkiem/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlta2llbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/_ViewImports.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/_ViewStart.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/git/QuanLyBanGiay/Views/Shared/_Layout.cshtml]
+[C:/Users/kkk/Documents/code/Thực tập chuyên ngành/GiayShop/GiayShop/QuanLyBanGiay/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gtd913gusf

@@ -1,54 +1,88 @@
 ﻿@model QuanLyBanGiay.Models.Voucher
-
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="container mt-4" style="max-width:700px;">
-    <h2 class="text-danger fw-bold mb-4">Xóa Voucher</h2>
+<style>
+    form button.btn, form a.btn {
+        height: auto !important;
+        max-height: 50px !important;
+    }
 
-    <div class="card p-4 shadow-sm bg-light">
-        <dl class="row mb-0">
-            <dt class="col-sm-4">Mã Voucher:</dt>
-            <dd class="col-sm-8">@Model.Mavoucher</dd>
+    .row > .col-6 {
+        display: block !important;
+        flex: 0 0 auto !important;
+    }
+</style>
 
-            <dt class="col-sm-4">Tên Voucher:</dt>
-            <dd class="col-sm-8">@Model.Tenvoucher</dd>
-
-            <dt class="col-sm-4">Mã giảm giá:</dt>
-            <dd class="col-sm-8">@Model.Magiamgia</dd>
-
-            <dt class="col-sm-4">Giá trị (%):</dt>
-            <dd class="col-sm-8">@Model.Giatri</dd>
-
-            <dt class="col-sm-4">Ngày bắt đầu:</dt>
-            <dd class="col-sm-8">@Model.Ngaybd?.ToString("dd/MM/yyyy")</dd>
-
-            <dt class="col-sm-4">Ngày kết thúc:</dt>
-            <dd class="col-sm-8">@Model.Ngaykt?.ToString("dd/MM/yyyy")</dd>
-
-            <dt class="col-sm-4">Trạng thái:</dt>
-            <dd class="col-sm-8">@Model.Trangthai</dd>
-        </dl>
-    </div>
-
-    <form asp-area="Admin" asp-controller="Voucher" asp-action="xoa" method="post" class="mt-4">
-        @Html.AntiForgeryToken()
-        <input type="hidden" name="Mavoucher" value="@Model.Mavoucher" />
-
-        <p class="fs-5 text-center text-danger fw-semibold">
-            Bạn có chắc chắn muốn xóa Voucher
-            <strong>@Model.Tenvoucher</strong> (Mã: <strong>@Model.Magiamgia</strong>) không?
-        </p>
-
-        <div class="row">
-            <div class="col-6">
-                <a href="@Url.Action("Index","Voucher", new { area="Admin"})"
-                   class="btn btn-outline-secondary w-100">⬅️ Quay lại</a>
-            </div>
-            <div class="col-6">
-                <button type="submit" class="btn btn-danger w-100">🗑️ Xác nhận xóa</button>
-            </div>
+<div class="container mt-5" style="max-width: 600px;">
+    <div class="card shadow border-danger">
+        <div class="card-header bg-danger text-white text-center py-3">
+            <h4 class="mb-0 fw-bold">🗑️ XÓA VOUCHER</h4>
         </div>
-    </form>
+        <div class="card-body p-4">
+            <div class="alert alert-warning text-center">
+                <i class="bi bi-exclamation-triangle-fill fs-4 text-warning"></i><br>
+                Bạn có chắc chắn muốn xóa vĩnh viễn voucher này?<br>
+                <strong>Hành động này không thể hoàn tác!</strong>
+            </div>
+
+            <dl class="row mb-0 border p-3 rounded bg-light">
+                <dt class="col-sm-5 text-muted">Tên Voucher:</dt>
+                <dd class="col-sm-7 fw-bold">@Model.Tenvoucher</dd>
+
+                <dt class="col-sm-5 text-muted">Mã giảm giá:</dt>
+                <dd class="col-sm-7 fw-bold text-danger text-uppercase">@Model.Magiamgia</dd>
+
+                <dt class="col-sm-5 text-muted">Loại khuyến mãi:</dt>
+                <dd class="col-sm-7">
+                    @if (Model.LoaiKhuyenMai == 1)
+                    {
+                        <span>Giảm theo %</span>
+                    }
+                    else if (Model.LoaiKhuyenMai == 2)
+                    {
+                        <span>Giảm tiền mặt</span>
+                    }
+                    else
+                    {
+                        <span>Miễn phí vận chuyển</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-5 text-muted">Giá trị:</dt>
+                <dd class="col-sm-7 fw-bold text-success">
+                    @if (Model.LoaiKhuyenMai == 1)
+                    {
+                        <span>@Model.Giatri%</span>
+                    }
+                    else if (Model.LoaiKhuyenMai == 2)
+                    {
+                        <span>@string.Format("{0:N0}đ", Model.Giatri)</span>
+                    }
+                    else
+                    {
+                        <span>0đ</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-5 text-muted">Trạng thái:</dt>
+                <dd class="col-sm-7">@Model.Trangthai</dd>
+            </dl>
+
+            <form asp-action="xoa" method="post" class="mt-4">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" value="@Model.Mavoucher" />
+
+                <div class="row">
+                    <div class="col-6">
+                        <a href="@Url.Action("Index")" class="btn btn-outline-secondary w-100 py-2">⬅️ Quay lại</a>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-danger w-100 py-2 fw-bold">🗑️ Xác nhận xóa</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

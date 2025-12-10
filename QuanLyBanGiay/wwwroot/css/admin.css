@@ -80,3 +80,39 @@
         flex-direction: column;
     }
 }
+
+<style >
+/* 1. SỬA LỖI NÚT LƯU BỊ KÉO DÀI KHỔNG LỒ */
+/* Ép các nút không được cao quá 50px và không được giãn theo chiều dọc */
+form button.btn, form a.btn {
+    height: auto !important; /* Chiều cao tự động theo nội dung */
+    max-height: 50px !important; /* Không bao giờ cao quá 50px */
+    align-self: flex-start; /* Nếu nằm trong Flexbox, tự đẩy lên trên chứ không giãn */
+    margin-top: 10px; /* Cách xa các phần tử trên một chút */
+    display: inline-flex; /* Đảm bảo icon và chữ căn giữa đẹp */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Đảm bảo khung chứa nút không bị giãn full chiều cao */
+.row > .col-6 {
+    display: block !important; /* Gỡ bỏ flex nếu có */
+    flex: 0 0 auto !important; /* Không tự động giãn */
+}
+
+/* 2. SỬA LỖI CHECKBOX BỊ LỆCH DÒNG VỚI CHỮ */
+/* Căn giữa ô checkbox và dòng chữ "Mỗi khách chỉ dùng 1 lần" */
+.form-check {
+    display: flex !important;
+    align-items: center !important; /* Căn giữa theo chiều dọc */
+    padding-left: 0 !important; /* Reset padding mặc định nếu bị lệch */
+}
+
+.form-check-input {
+    float: none !important; /* Gỡ bỏ float của bootstrap cũ */
+    margin-left: 0 !important; /* Reset lề trái */
+    margin-right: 8px !important; /* Tạo khoảng cách giữa ô vuông và chữ */
+    margin-top: 0 !important; /* Không cho ô vuông bị đẩy xuống */
+    width: 1.2em;
+    height: 1.2em;
+}

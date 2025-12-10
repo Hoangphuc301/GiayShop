@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyBanGiay.Models;
 
@@ -11,9 +12,10 @@ using QuanLyBanGiay.Models;
 namespace QuanLyBanGiay.Migrations
 {
     [DbContext(typeof(QL_GiayContext))]
-    partial class QL_GiayContextModelSnapshot : ModelSnapshot
+    [Migration("20251209150109_updatevoucher")]
+    partial class updatevoucher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -470,7 +472,7 @@ namespace QuanLyBanGiay.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Giatri")
-                        .HasColumnType("decimal(18,2)")
+                        .HasColumnType("decimal(5,2)")
                         .HasColumnName("GIATRI");
 
                     b.Property<bool>("GioiHanMoiKhach")

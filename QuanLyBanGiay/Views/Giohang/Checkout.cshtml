@@ -61,9 +61,22 @@
     <hr />
 
     <select id="voucherSelect" name="Mavoucher" class="form-select mb-3">
-        @foreach (var v in ViewBag.Vouchers as List<SelectListItem>)
+        @if (ViewBag.Vouchers != null)
         {
-            <option value="@v.Value" data-percent="@(v.Group?.Name ?? "0")">@v.Text</option>
+            foreach (var v in ViewBag.Vouchers as List<SelectListItem>)
+            {
+                // Tách chuỗi "Loại-GiáTrị" từ Controller gửi sang
+                var parts = v.Group?.Name?.Split('-');
+                var type = parts != null && parts.Length > 0 ? parts[0] : "0";
+                var val = parts != null && parts.Length > 1 ? parts[1] : "0";
+
+                <option value="@v.Value"
+                        data-type="@type"
+                        data-value="@val"
+                        selected="@v.Selected">
+                    @v.Text
+                </option>
+            }
         }
     </select>
 
@@ -208,19 +221,37 @@
         }
 
         function updateTotal() {
-            let percent = parseFloat(voucherSelect.options[voucherSelect.selectedIndex]?.dataset.percent) || 0;
-            let discount = originalTotal * (percent / 100);
+            const selectedOption = voucherSelect.options[voucherSelect.selectedIndex];
 
-            let total = originalTotal - discount + shipFee;
-            total = Math.max(0, total);
+            const type = parseInt(selectedOption.getAttribute("data-type")) || 0;
+            const value = parseFloat(selectedOption.getAttribute("data-value")) || 0;
 
-            shipFeeText.innerHTML = formatCurrency(shipFee);
-            shipFeeText2.innerHTML = formatCurrency(shipFee);
+            let discount = 0;
+            let currentShip = shipFee; 
+
+            if (type === 1) {
+                discount = originalTotal * (value / 100);
+            }
+            else if (type === 2) {
+                discount = value;
+                if (discount > originalTotal) discount = originalTotal;
+            }
+            else if (type === 3) {
+                currentShip = 0;
+                discount = 0;    
+            }
+
+            let total = originalTotal - discount + currentShip;
+            total = Math.max(0, total); 
+
+            shipFeeText.innerHTML = formatCurrency(currentShip);
+            shipFeeText2.innerHTML = formatCurrency(currentShip);
+
             discountAmountDisplay.innerHTML = "- " + formatCurrency(discount);
             finalTotalDisplay.innerHTML = formatCurrency(total);
 
             hiddenTotalInput.value = Math.round(total);
-            hiddenShipInput.value = shipFee;
+            hiddenShipInput.value = currentShip;
         }
 
         fetch("https://provinces.open-api.vn/api/v1/?depth=2")

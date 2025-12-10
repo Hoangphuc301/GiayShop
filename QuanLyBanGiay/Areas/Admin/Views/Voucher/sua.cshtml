@@ -1,75 +1,280 @@
-﻿@{
+﻿@model QuanLyBanGiay.Models.Voucher
+@{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    var voucher = ViewBag.Voucher;
+    var listDanhmuc = ViewBag.Danhmucs as List<QuanLyBanGiay.Models.Danhmuc>;
+    var listSanpham = ViewBag.Sanphams as dynamic;
+
+    List<string> selectedIds = new List<string>();
+    if (!string.IsNullOrEmpty(Model.GiaTriPhamVi))
+    {
+        selectedIds = Model.GiaTriPhamVi.Split(',').ToList();
+    }
 }
 
-@if (voucher != null)
-{
-    <div class="container mt-4" style="max-width:700px;">
-        <h2 class="mb-3 text-primary fw-bold">✏️ Sửa thông tin Voucher</h2>
+<style>
+    .btn-save {
+        height: 45px;
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 
-        <form asp-area="Admin" asp-controller="Voucher" asp-action="sua" method="post" class="card p-4 shadow-sm">
-            @Html.AntiForgeryToken()
-            <input type="hidden" name="Mavoucher" value="@voucher.Mavoucher" />
+    .checkbox-wrap {
+        display: flex;
+        align-items: center;
+        background: #fff3cd;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ffeeba;
+    }
 
-            <!-- Tên voucher -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Tên Voucher</label>
-                <input type="text" name="Tenvoucher" value="@voucher.Tenvoucher" class="form-control" placeholder="Nhập tên voucher..." required />
-            </div>
+        .checkbox-wrap input {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
 
-            <!-- Mã giảm giá -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Mã Giảm Giá</label>
-                <input type="text" name="Magiamgia" value="@voucher.Magiamgia" class="form-control" placeholder="Nhập mã giảm giá..." required />
-            </div>
+        .checkbox-wrap label {
+            margin: 0;
+            cursor: pointer;
+        }
+</style>
 
-            <!-- Giá trị -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Giá trị (%)</label>
-                <input type="number" name="Giatri" value="@voucher.Giatri" min="0" max="100" step="0.01" class="form-control" required />
-            </div>
+<div class="container mt-4 mb-5">
 
-            <!-- Ngày bắt đầu -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Ngày Bắt Đầu</label>
-                <input type="date" name="Ngaybd" value="@(voucher.Ngaybd != null ? ((DateTime)voucher.Ngaybd).ToString("yyyy-MM-dd") : "")" class="form-control" required />
-            </div>
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
 
-            <!-- Ngày kết thúc -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Ngày Kết Thúc</label>
-                <input type="date" name="Ngaykt" value="@(voucher.Ngaykt != null ? ((DateTime)voucher.Ngaykt).ToString("yyyy-MM-dd") : "")" class="form-control" required />
-            </div>
-
-            <!-- Trạng thái -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Trạng Thái</label>
-                <select name="Trangthai" class="form-select" required>
-                    <option value="CÒN" @(voucher.Trangthai == "CÒN" ? "selected" : "")>CÒN</option>
-                    <option value="HẾT HẠN" @(voucher.Trangthai == "HẾT HẠN" ? "selected" : "")>HẾT HẠN</option>
-                </select>
-            </div>
-
-            <div class="row mt-3">
-                <div class="col-6">
-                    <a href="@Url.Action("Index", "Voucher", new { area = "Admin" })" class="btn btn-outline-secondary w-100">
-                        ⬅️ Quay lại
-                    </a>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-warning">
+                <div class="card-header bg-warning text-dark py-3">
+                    <h5 class="mb-0 fw-bold">✏️ Cập Nhật Mã Khuyến Mãi</h5>
                 </div>
-                <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100">
-                        💾 Lưu thay đổi
-                    </button>
+                <div class="card-body p-4">
+
+                    <form asp-action="sua" method="post" id="voucherForm">
+
+                        <input type="hidden" name="Mavoucher" value="@Model.Mavoucher" />
+                        <input type="hidden" name="DaSuDung" value="@Model.DaSuDung" />
+
+                        <h6 class="text-dark fw-bold border-bottom pb-2 mb-3">1. Thông tin chung</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="fw-bold">Tên chương trình</label>
+                                <input type="text" name="Tenvoucher" class="form-control" value="@Model.Tenvoucher" required oninput="updateSummary()" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold">Mã giảm giá</label>
+                                <input type="text" name="Magiamgia" class="form-control text-uppercase fw-bold text-primary" value="@Model.Magiamgia" required oninput="updateSummary()" />
+                            </div>
+                        </div>
+
+                        <h6 class="text-dark fw-bold border-bottom pb-2 mb-3 mt-4">2. Loại khuyến mãi</h6>
+                        <div class="mb-3">
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="t1" value="1" @(Model.LoaiKhuyenMai == 1 ? "checked" : "") onchange="toggleType()">
+                                <label class="btn btn-outline-warning text-dark" for="t1">% Phần trăm</label>
+
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="t2" value="2" @(Model.LoaiKhuyenMai == 2 ? "checked" : "") onchange="toggleType()">
+                                <label class="btn btn-outline-warning text-dark" for="t2">Số tiền (VNĐ)</label>
+
+                                <input type="radio" class="btn-check" name="LoaiKhuyenMai" id="t3" value="3" @(Model.LoaiKhuyenMai == 3 ? "checked" : "") onchange="toggleType()">
+                                <label class="btn btn-outline-warning text-dark" for="t3">Miễn phí vận chuyển</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3" id="valueGroup">
+                            <label class="fw-bold" id="lblValue">Giá trị giảm</label>
+                            <input type="number" name="Giatri" id="inpValue" class="form-control text-center fw-bold text-success" value="@(Model.Giatri != null ? Model.Giatri.ToString() : "0")" required oninput="updateSummary()" />
+                        </div>
+
+                        <h6 class="text-dark fw-bold border-bottom pb-2 mb-3 mt-4">3. Phạm vi áp dụng</h6>
+                        <div class="mb-3">
+                            <select name="PhamViApDung" class="form-select" id="selScope" onchange="toggleScope()">
+                                <option value="1" @(Model.PhamViApDung == 1 ? "selected" : "")>Tất cả đơn hàng</option>
+                                <option value="2" @(Model.PhamViApDung == 2 ? "selected" : "")>Theo Danh mục</option>
+                                <option value="3" @(Model.PhamViApDung == 3 ? "selected" : "")>Theo Sản phẩm</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none" id="divDanhmuc">
+                            <label>Chọn Danh mục (Giữ Ctrl chọn nhiều):</label>
+                            <select name="SelectedIds" class="form-select" multiple size="4">
+                                @if (listDanhmuc != null)
+                                {
+                                    foreach (var i in listDanhmuc)
+                                    {
+                                        <!option value="@i.Madm" @(selectedIds.Contains(i.Madm.ToString()) ? "selected" : "")>@i.Tendm</!option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-none" id="divSanpham">
+                            <label>Chọn Sản phẩm (Giữ Ctrl chọn nhiều):</label>
+                            <select name="SelectedIds" class="form-select" multiple size="6">
+                                @if (listSanpham != null)
+                                {
+                                    foreach (var i in listSanpham)
+                                    {
+                                        <!option value="@i.Masp" @(selectedIds.Contains(i.Masp.ToString()) ? "selected" : "")>@i.Tensp</!option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <h6 class="text-dark fw-bold border-bottom pb-2 mb-3 mt-4">4. Cài đặt khác</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="checkbox-wrap mb-2">
+                                    <input type="radio" name="NhomKhachHang" value="1" id="c1" @(Model.NhomKhachHang == 1 ? "checked" : "") onchange="updateSummary()">
+                                    <label for="c1">Tất cả khách</label>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input type="radio" name="NhomKhachHang" value="2" id="c2" @(Model.NhomKhachHang == 2 ? "checked" : "") onchange="updateSummary()">
+                                    <label for="c2">Chỉ khách mới</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold">Số lượng mã</label>
+                                <input type="number" name="GioiHanSuDung" id="inpLimit" class="form-control mb-2" value="@Model.GioiHanSuDung" oninput="updateSummary()" />
+
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" name="GioiHanMoiKhach" value="true" id="chkOne" @(Model.GioiHanMoiKhach ? "checked" : "") onchange="updateSummary()" />
+                                    <label for="chkOne">1 khách / 1 lần</label>
+                                    <input type="hidden" name="GioiHanMoiKhach" value="false" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label class="fw-bold">Bắt đầu</label>
+                                <input type="date" name="Ngaybd" class="form-control" value="@Model.Ngaybd?.ToString("yyyy-MM-dd")" onchange="updateSummary()" />
+                            </div>
+                            <div class="col-6">
+                                <label class="fw-bold">Kết thúc</label>
+                                <input type="date" name="Ngaykt" class="form-control" value="@Model.Ngaykt?.ToString("yyyy-MM-dd")" onchange="updateSummary()" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="fw-bold">Trạng thái:</label>
+                            <select name="Trangthai" class="form-select">
+                                <option value="CÒN" @(Model.Trangthai == "CÒN" ? "selected" : "")>CÒN HIỆU LỰC</option>
+                                <option value="HẾT HẠN" @(Model.Trangthai == "HẾT HẠN" ? "selected" : "")>DỪNG / HẾT HẠN</option>
+                            </select>
+                        </div>
+
+                        <div class="row mt-4 pt-3 border-top">
+                            <div class="col-6">
+                                <a href="@Url.Action("Index")" class="btn btn-outline-secondary w-100" style="height:45px; line-height:30px">Quay lại</a>
+                            </div>
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-warning btn-save shadow">💾 CẬP NHẬT</button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
-        </form>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-warning shadow sticky-top" style="top:20px; z-index:10;">
+                <div class="card-header bg-warning text-dark text-center fw-bold">📝 TỔNG HỢP</div>
+                <div class="card-body">
+                    <h3 class="text-center text-danger fw-bold" id="sumCode">...</h3>
+                    <hr>
+                    <p><strong>Tên:</strong> <span id="sumName">...</span></p>
+                    <p><strong>Giá trị:</strong> <span id="sumVal" class="text-success fw-bold">0</span></p>
+                    <p><strong>Phạm vi:</strong> <span id="sumScope">Tất cả</span></p>
+
+                    <p><strong>Khách hàng:</strong> <span id="sumCustomer" class="fw-bold text-primary">Tất cả</span></p>
+
+                    <p><strong>Thời gian:</strong> <span id="sumDate">...</span></p>
+
+                    <div class="alert alert-secondary mt-3 mb-0 p-2 text-center" style="font-size: 0.9rem;">
+                        <span id="sumLimit">Không giới hạn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-}
-else
-{
-    <div class="alert alert-warning mt-4 text-center">Không tìm thấy thông tin voucher để chỉnh sửa.</div>
-    <div class="text-center">
-        <a href="@Url.Action("Index", "Voucher", new { area = "Admin" })" class="btn btn-secondary">⬅️ Quay lại</a>
-    </div>
-}
+</div>
+
+<script>
+    function updateSummary() {
+        // Tên & Mã
+        document.getElementById('sumName').innerText = document.querySelector('input[name="Tenvoucher"]').value || "...";
+        document.getElementById('sumCode').innerText = (document.querySelector('input[name="Magiamgia"]').value || "...").toUpperCase();
+
+        // Giá trị
+        var val = document.querySelector('input[name="Giatri"]').value;
+        var type = document.querySelector('input[name="LoaiKhuyenMai"]:checked').value;
+        if (type == 1) val += "%"; else if (type == 2) val += " VNĐ"; else val = "FreeShip";
+        document.getElementById('sumVal').innerText = val;
+
+        // Thời gian
+        var start = document.querySelector('input[name="Ngaybd"]').value;
+        var end = document.querySelector('input[name="Ngaykt"]').value;
+        document.getElementById('sumDate').innerText = start + " -> " + end;
+
+        // --- CẬP NHẬT KHÁCH HÀNG (MỚI) ---
+        var isNewCust = document.querySelector('input[name="NhomKhachHang"]:checked').value == "2";
+        var custText = isNewCust ? "Chỉ khách mới" : "Tất cả khách";
+        document.getElementById('sumCustomer').innerText = custText;
+
+        // Cập nhật Giới hạn
+        var limitQty = document.getElementById('inpLimit').value;
+        var isOnePerUser = document.getElementById('chkOne').checked;
+        var txtLimit = "";
+
+        if (limitQty && limitQty > 0) {
+            txtLimit = "Tổng: " + limitQty + " mã";
+        } else {
+            txtLimit = "Không giới hạn số lượng";
+        }
+
+        if (isOnePerUser) {
+            txtLimit += " | 1 lần/khách";
+        }
+
+        document.getElementById('sumLimit').innerText = txtLimit;
+    }
+
+    function toggleType() {
+        var t = document.querySelector('input[name="LoaiKhuyenMai"]:checked').value;
+        var grp = document.getElementById('valueGroup');
+        if (t == 3) { grp.classList.add('d-none'); document.getElementById('inpValue').value = 0; }
+        else { grp.classList.remove('d-none'); }
+        updateSummary();
+    }
+
+    function toggleScope() {
+        var s = document.getElementById('selScope').value;
+        document.getElementById('divDanhmuc').classList.add('d-none');
+        document.getElementById('divSanpham').classList.add('d-none');
+
+        var dmSelect = document.querySelector('select[name="SelectedIds"][multiple][size="4"]');
+        var spSelect = document.querySelector('select[name="SelectedIds"][multiple][size="6"]');
+        dmSelect.disabled = true;
+        spSelect.disabled = true;
+
+        if (s == 2) { document.getElementById('divDanhmuc').classList.remove('d-none'); dmSelect.disabled = false; }
+        if (s == 3) { document.getElementById('divSanpham').classList.remove('d-none'); spSelect.disabled = false; }
+
+        var txt = document.getElementById('selScope').options[document.getElementById('selScope').selectedIndex].text;
+        document.getElementById('sumScope').innerText = txt;
+    }
+
+    window.onload = function () {
+        toggleType();
+        toggleScope();
+        updateSummary();
+    };
+</script>
