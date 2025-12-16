@@ -4,12 +4,12 @@ using QuanLyBanGiay.Models;
 
 namespace QuanLyBanGiay.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class DanhGiaController : Controller
+    [Area("NVBH")]
+    public class DanhgiaController : Controller
     {
         private readonly QL_GiayContext _db;
 
-        public DanhGiaController(QL_GiayContext db)
+        public DanhgiaController(QL_GiayContext db)
         {
             _db = db;
         }
