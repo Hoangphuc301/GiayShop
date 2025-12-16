@@ -94,9 +94,9 @@ namespace QuanLyBanGiay.Controllers
                 return RedirectToAction("Login", "Account");
 
             var khach = db.Khachhangs.FirstOrDefault(k => k.Email == email);
-            if (khach == null)
-                return NotFound();
+            if (khach == null) return NotFound();
 
+            // Lấy danh sách đơn hàng
             var donhang = db.Donhangs
                             .Where(d => d.Makh == khach.Makh)
                             .Include(d => d.ChitietDonhangs)
@@ -104,6 +104,13 @@ namespace QuanLyBanGiay.Controllers
                                     .ThenInclude(ctsp => ctsp.MaspNavigation)
                             .OrderByDescending(d => d.Ngaydat)
                             .ToList();
+
+            var listMaspDaDanhGia = db.Danhgias
+                                      .Where(dg => dg.MaKh == khach.Makh && dg.MaSp != null)
+                                      .Select(dg => dg.MaSp)
+                                      .ToList();
+
+            ViewBag.ListDaDanhGia = listMaspDaDanhGia;
 
             return View(donhang);
         }

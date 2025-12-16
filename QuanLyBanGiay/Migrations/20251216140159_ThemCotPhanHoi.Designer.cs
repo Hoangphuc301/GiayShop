@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyBanGiay.Models;
 
@@ -11,9 +12,10 @@ using QuanLyBanGiay.Models;
 namespace QuanLyBanGiay.Migrations
 {
     [DbContext(typeof(QL_GiayContext))]
-    partial class QL_GiayContextModelSnapshot : ModelSnapshot
+    [Migration("20251216140159_ThemCotPhanHoi")]
+    partial class ThemCotPhanHoi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

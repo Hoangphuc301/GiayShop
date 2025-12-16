@@ -1,5 +1,10 @@
 ﻿@model List<QuanLyBanGiay.Models.Donhang>
 
+@{
+    // Nhận danh sách ID sản phẩm đã đánh giá từ Controller
+    var listDaDanhGia = ViewBag.ListDaDanhGia as List<int> ?? new List<int>();
+}
+
 <h2 class="mt-4 text-primary">Lịch sử đơn hàng của bạn</h2>
 
 <div class="card shadow-sm mt-3">
@@ -33,7 +38,8 @@
                                 {
                                     "Chờ xác nhận" => "bg-warning text-dark",
                                     "Đang giao" => "bg-primary",
-                                    "Đã giao" => "bg-success",
+                                    "Đã giao" => "bg-success", // Nếu DB của bạn là "Đã giao"
+                                    "ĐÃ NHẬN" => "bg-success", // Hoặc "ĐÃ NHẬN"
                                     "Đã hủy" => "bg-danger",
                                     _ => "bg-secondary"
                                 };
@@ -46,34 +52,44 @@
                             <a asp-controller="Profile" asp-action="ChiTietDH" asp-route-id="@dh.Madh" class="btn btn-sm btn-info text-white" title="Xem chi tiết đơn hàng">
                                 Xem chi tiết
                             </a>
+
                             @if (dh.Trangthai == "CHỜ XÁC NHẬN")
                             {
                                 <a asp-controller="Profile" asp-action="Huy" asp-route-id="@dh.Madh" class="btn btn-sm btn-danger" title="Hủy đơn hàng này" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');">
                                     Hủy
                                 </a>
                             }
+
                             @if (dh.Trangthai == "ĐÃ GIAO" || dh.Trangthai == "ĐÃ HỦY")
                             {
                                 <a asp-controller="Profile" asp-action="DatLai" asp-route-id="@dh.Madh" class="btn btn-sm btn-success" title="Đặt lại đơn hàng này">
                                     Đặt lại
                                 </a>
                             }
-                            @if(dh.Trangthai == "CHỜ THANH TOÁN")
+
+                            @if (dh.Trangthai == "CHỜ THANH TOÁN")
                             {
                                 <a asp-controller="Profile" asp-action="Thanhtoan" asp-route-id="@dh.Madh" class="btn btn-sm btn-success" title="Thanh toán đơn hàng này">
                                     Thanh Toán
                                 </a>
                             }
+
+                            @* --- PHẦN XỬ LÝ NÚT ĐÁNH GIÁ --- *@
                             @if (dh.Trangthai == "ĐÃ NHẬN")
                             {
-                                @foreach (var ct in dh.ChitietDonhangs)
+                                foreach (var ct in dh.ChitietDonhangs)
                                 {
-                                    <a asp-controller="SanPham"
-                                       asp-action="Chitiet"
-                                       asp-route-id="@ct.MactspNavigation.Masp"
-                                       class="btn btn-sm btn-primary mt-1">
-                                        Đánh Giá
-                                    </a>
+                                    if (!listDaDanhGia.Contains(ct.MactspNavigation.Masp))
+                                    {
+                                        
+                                        <a asp-controller="SanPham"
+                                           asp-action="Chitiet"
+                                           asp-route-id="@ct.MactspNavigation.Masp"
+                                           class="btn btn-sm btn-primary ms-1"
+                                           title="Đánh giá sản phẩm: @ct.MactspNavigation.MaspNavigation.Tensp">
+                                            Đánh Giá
+                                        </a>
+                                    }
                                 }
                             }
                         </td>

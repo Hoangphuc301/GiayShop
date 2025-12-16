@@ -25,6 +25,9 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
 
         public IActionResult Index(string loai = "dang-giao")
         {
+            DateTime today = DateTime.Today;
+            DateTime tomorrow = today.AddDays(1);
+
             var maNvg = GetMaNvgHienTai();
             if (!maNvg.HasValue)
             {
@@ -51,15 +54,24 @@ namespace QuanLyBanGiay.Areas.NVGH.Controllers
             else if (loai == "da-giao-huy")
             {
                 query = query.Where(d =>
-                    d.Trangthai == "HỦY"
-                    || (d.Trangthai == "ĐÃ NHẬN"
-                         && (
-                             !d.MaptttNavigation.Tenphuongthuc.Contains("COD")
-                             || d.DaNopTienCOD == true
-                         )
+                    (
+                        d.Trangthai == "ĐÃ NHẬN"
+                        && d.Ngaydat >= today
+                        && d.Ngaydat < tomorrow
+                        && (
+                            !d.MaptttNavigation.Tenphuongthuc.Contains("COD")
+                            || d.DaNopTienCOD == true
+                        )
+                    )
+                    ||
+                    (
+                        d.Trangthai == "HỦY"
+                        && d.Ngaydat >= today
+                        && d.Ngaydat < tomorrow
                     )
                 );
             }
+
 
             ViewBag.Loai = loai;
             ViewBag.Donhang = query.OrderByDescending(d => d.Ngaydat).ToList();

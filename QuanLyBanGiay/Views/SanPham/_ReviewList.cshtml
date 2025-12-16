@@ -1,23 +1,272 @@
 ﻿@model List<QuanLyBanGiay.Models.Danhgia>
 
-<div class="reviews">
-    <h5>Đánh giá (@Model.Count) - Trung bình: @ViewBag.AverageRating.ToString("0.0") sao</h5>
-    @foreach (var item in Model)
-    {
-        <div class="review-item border-bottom mb-2 pb-2">
-            <strong>@item.Khachhang.Tenkh</strong> - @item.NgayDanhGia.ToString("dd/MM/yyyy") <br />
-            @for (int i = 1; i <= 5; i++)
-            {
-                if (i <= item.Sao)
-                {
-                    <span style="color:gold;">★</span>
+<style>
+    /* --- CSS GIAO DIỆN BỘ LỌC SHOPEE --- */
+    .rating-overview {
+        background-color: #fffbf8;
+        border: 1px solid #f9ede5;
+        padding: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 2px;
+    }
+
+    .rating-score-wrapper {
+        text-align: center;
+        margin-right: 30px;
+    }
+
+    .score-big {
+        color: #ee4d2d;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .rating-stars {
+        color: #ee4d2d;
+        font-size: 20px;
+    }
+
+    .rating-filters {
+        flex-grow: 1;
+        margin-left: 15px;
+    }
+
+    .btn-filter {
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.09);
+        min-width: 100px;
+        height: 32px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 2px;
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        color: rgba(0,0,0,.8);
+        text-decoration: none;
+        padding: 0 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .btn-filter.active {
+            border-color: #ee4d2d;
+            color: #ee4d2d;
+            font-weight: bold;
+        }
+
+    /* --- CSS CHO NÚT SỬA/XÓA --- */
+    .action-btn {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-left: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-edit {
+        color: #555;
+        background-color: #f1f1f1;
+    }
+
+        .btn-edit:hover {
+            color: #0d6efd;
+            background-color: #e7f1ff;
+        }
+
+    .btn-delete {
+        color: #555;
+        background-color: #f1f1f1;
+    }
+
+        .btn-delete:hover {
+            color: #dc3545;
+            background-color: #ffeced;
+        }
+</style>
+
+<div class="card mt-4 shadow-sm" id="review-section">
+    <div class="card-header bg-white">
+        <h5 class="mb-0 fw-bold">ĐÁNH GIÁ SẢN PHẨM (@ViewBag.CountAll)</h5>
+    </div>
+
+    <div class="card-body">
+
+        <div class="rating-overview">
+            <div class="rating-score-wrapper">
+                <div>
+                    <span class="score-big">@ViewBag.AverageRating</span><span class="text-danger fs-5"> trên 5</span>
+                </div>
+                <div class="rating-stars">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= ViewBag.AverageRating)
+                        {
+                            <span>★</span>
+                        }
+                        else
+                        {
+                            <span style="color:#ddd">★</span>
+                        }
+                    }
+                </div>
+            </div>
+
+            <div class="rating-filters">
+                @{
+                    int? current = ViewBag.CurrentFilter as int?;
+                    var spId = ViewBag.ProductId;
                 }
-                else
+
+                <a href="@Url.Action("Chitiet", new { id = spId })#review-section" class="btn-filter @(current == null ? "active" : "")">
+                    Tất Cả (@ViewBag.CountAll)
+                </a>
+                <a href="@Url.Action("Chitiet", new { id = spId, rating = 5 })#review-section" class="btn-filter @(current == 5 ? "active" : "")">
+                    5 Sao (@ViewBag.Count5)
+                </a>
+                <a href="@Url.Action("Chitiet", new { id = spId, rating = 4 })#review-section" class="btn-filter @(current == 4 ? "active" : "")">
+                    4 Sao (@ViewBag.Count4)
+                </a>
+                <a href="@Url.Action("Chitiet", new { id = spId, rating = 3 })#review-section" class="btn-filter @(current == 3 ? "active" : "")">
+                    3 Sao (@ViewBag.Count3)
+                </a>
+                <a href="@Url.Action("Chitiet", new { id = spId, rating = 2 })#review-section" class="btn-filter @(current == 2 ? "active" : "")">
+                    2 Sao (@ViewBag.Count2)
+                </a>
+                <a href="@Url.Action("Chitiet", new { id = spId, rating = 1 })#review-section" class="btn-filter @(current == 1 ? "active" : "")">
+                    1 Sao (@ViewBag.Count1)
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            @if (Model != null && Model.Any())
+            {
+                var currentMakh = ViewBag.CurrentUserMakh as int?;
+
+                foreach (var dg in Model)
                 {
-                    <span style="color:lightgray;">★</span>
+                    <div class="border-bottom py-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="d-flex align-items-center mb-1">
+                                <div class="me-2 text-secondary">
+                                    <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">@dg.Khachhang.Tenkh</div>
+                                    <div class="text-warning" style="font-size: 12px;">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            <span>@(i <= dg.Sao ? "★" : "☆")</span>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            @if (currentMakh != null && currentMakh == dg.MaKh)
+                            {
+                                <div class="d-flex align-items-center">
+                                    <a class="action-btn btn-edit"
+                                       href="#"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#editReviewModal"
+                                       onclick="fillEditModal('@dg.MaDanhGia', '@dg.Sao', '@dg.NoiDung')">
+                                        <i class="bi bi-pencil-fill"></i> Sửa
+                                    </a>
+
+                                    <form asp-action="DeleteReview" asp-controller="SanPham" method="post" class="d-inline" onsubmit="return confirm('Bạn có chắc muốn xóa đánh giá này?');">
+                                        <input type="hidden" name="MaDg" value="@dg.MaDanhGia" />
+                                        <input type="hidden" name="MaSp" value="@ViewBag.ProductId" />
+                                        <button type="submit" class="action-btn btn-delete">
+                                            <i class="bi bi-trash-fill"></i> Xóa
+                                        </button>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="text-muted small mb-2">
+                            @dg.NgayDanhGia.ToString("dd/MM/yyyy HH:mm")
+                        </div>
+
+                        <p class="mb-0 text-dark">@dg.NoiDung</p>
+
+                        @if (!string.IsNullOrEmpty(dg.PhanHoi))
+                        {
+                            <div class="mt-3 p-3 bg-light rounded" style="margin-left: 20px; background-color: #f8f9fa; border-left: 4px solid #ee4d2d;">
+                                <div class="d-flex align-items-center mb-1">
+                                    <strong class="text-danger me-2">Phản hồi của Shop</strong>
+                                    <small class="text-muted">
+                                        @(dg.NgayPhanHoi.HasValue ? dg.NgayPhanHoi.Value.ToString("dd/MM/yyyy") : "")
+                                    </small>
+                                </div>
+                                <p class="mb-0 text-secondary">@dg.PhanHoi</p>
+                            </div>
+                        }
+                    </div>
                 }
             }
-            <p>@item.NoiDung</p>
+            else
+            {
+                <div class="text-center text-muted py-5">
+                    <p>Chưa có đánh giá nào theo bộ lọc này.</p>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>
+
+<div class="modal fade" id="editReviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="EditReview" asp-controller="SanPham" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa đánh giá của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="MaSp" value="@ViewBag.ProductId" />
+                    <input type="hidden" name="MaDg" id="edit_MaDg" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Đánh giá sao:</label>
+                        <select name="Sao" id="edit_Sao" class="form-select">
+                            <option value="5">5 Sao (Tuyệt vời)</option>
+                            <option value="4">4 Sao (Tốt)</option>
+                            <option value="3">3 Sao (Bình thường)</option>
+                            <option value="2">2 Sao (Tệ)</option>
+                            <option value="1">1 Sao (Rất tệ)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nhận xét:</label>
+                        <textarea name="NoiDung" id="edit_NoiDung" class="form-control" rows="3" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function fillEditModal(id, sao, noidung) {
+        document.getElementById('edit_MaDg').value = id;
+        document.getElementById('edit_Sao').value = sao;
+        document.getElementById('edit_NoiDung').value = noidung;
+    }
+</script>

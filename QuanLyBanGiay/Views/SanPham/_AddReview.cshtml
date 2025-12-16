@@ -1,29 +1,104 @@
 ﻿@{
-    bool coTheDanhGia = (bool)ViewBag.CoTheDanhGia;
+    bool daDangNhap = ViewBag.DaDangNhap ?? false;
+    bool coTheDanhGia = ViewBag.CoTheDanhGia ?? false;
 }
 
-@if (!coTheDanhGia)
+@if (TempData["ErrorReview"] != null)
 {
-    <p class="text-danger">Bạn cần mua sản phẩm trước khi đánh giá</p>
+    <div class="alert alert-danger mt-3">
+        <i class="fa fa-exclamation-circle"></i> @TempData["ErrorReview"]
+    </div>
 }
-else
+
+@if (TempData["SuccessReview"] != null)
 {
-    <form asp-action="AddReview" method="post">
-        <input type="hidden" name="MaSp" value="@Model.Masp" />
-        <div class="mb-2">
-            <label>Số sao:</label>
-            <select name="Sao" class="form-select" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="mb-2">
-            <label>Nội dung:</label>
-            <textarea name="NoiDung" class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
-    </form>
+    <div class="alert alert-success mt-3">
+        <i class="fa fa-check-circle"></i> @TempData["SuccessReview"]
+    </div>
 }
+
+<div class="card mt-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Viết đánh giá của bạn</h5>
+    </div>
+
+    <div class="card-body">
+        @if (!daDangNhap)
+        {
+            <div class="alert alert-info mb-0">
+                Vui lòng <a asp-controller="Khachhang" asp-action="Login" class="fw-bold">đăng nhập</a> để đánh giá sản phẩm.
+            </div>
+        }
+        else if (!coTheDanhGia)
+        {
+            <div class="alert alert-warning mb-0">
+                <i class="fa fa-lock"></i> Bạn cần mua sản phẩm này và đơn hàng đã hoàn thành để viết đánh giá.
+            </div>
+        }
+        else
+        {
+            <form asp-action="AddReview" asp-controller="SanPham" method="post">
+                <input type="hidden" name="MaSp" value="@Model.Masp" />
+
+                <input type="hidden" name="Sao" id="RatingValue" value="5" />
+
+                <div class="mb-3 text-center">
+                    <p class="mb-1">Bạn cảm thấy sản phẩm thế nào?</p>
+                    <div class="fs-1" style="cursor: pointer;">
+                        <span class="star-icon text-warning" id="star-1" onclick="setRating(1)">★</span>
+                        <span class="star-icon text-warning" id="star-2" onclick="setRating(2)">★</span>
+                        <span class="star-icon text-warning" id="star-3" onclick="setRating(3)">★</span>
+                        <span class="star-icon text-warning" id="star-4" onclick="setRating(4)">★</span>
+                        <span class="star-icon text-warning" id="star-5" onclick="setRating(5)">★</span>
+                    </div>
+                    <div class="fw-bold text-primary" id="rating-text">Tuyệt vời (5 sao)</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Nhận xét chi tiết:</label>
+                    <textarea name="NoiDung" class="form-control" rows="4"
+                              placeholder="Hãy chia sẻ cảm nhận của bạn về chất lượng sản phẩm..." required></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">
+                        Gửi đánh giá
+                    </button>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+
+<script>
+    function setRating(soSao) {
+        // 1. Gán giá trị vào ô input ẩn để gửi về server
+        document.getElementById('RatingValue').value = soSao;
+
+        // 2. Cập nhật giao diện sao
+        for (let i = 1; i <= 5; i++) {
+            let star = document.getElementById('star-' + i);
+            if (i <= soSao) {
+                // Sao được chọn -> Vàng, hình đặc
+                star.classList.remove('text-secondary');
+                star.classList.add('text-warning');
+                star.innerHTML = '★';
+            } else {
+                // Sao không chọn -> Xám, hình rỗng (hoặc đặc tùy ý)
+                star.classList.remove('text-warning');
+                star.classList.add('text-secondary');
+                star.innerHTML = '☆';
+            }
+        }
+
+        // 3. Cập nhật chữ hiển thị
+        let textLabel = document.getElementById('rating-text');
+        switch (soSao) {
+            case 1: textLabel.innerText = "Tệ (1 sao)"; break;
+            case 2: textLabel.innerText = "Không hài lòng (2 sao)"; break;
+            case 3: textLabel.innerText = "Bình thường (3 sao)"; break;
+            case 4: textLabel.innerText = "Hài lòng (4 sao)"; break;
+            case 5: textLabel.innerText = "Tuyệt vời (5 sao)"; break;
+        }
+    }
+</script>

@@ -24,6 +24,9 @@ namespace QuanLyBanGiay.Models
 
         public bool CoTheDanhGia { get; set; }
 
+        public string? PhanHoi { get; set; }
+        public DateTime? NgayPhanHoi { get; set; }
+
         public virtual Khachhang Khachhang { get; set; } = null!;
         public virtual Sanpham Sanpham { get; set; } = null!;
     }
